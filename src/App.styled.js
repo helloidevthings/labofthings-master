@@ -6,7 +6,7 @@ export default styled.main`
   justify-content: center;
   align-items: center;
   background-color: black;
-  color: #ff69d0;
+  color: #efadff;
   text-align: center;
   min-height: 100vh;
 `;
