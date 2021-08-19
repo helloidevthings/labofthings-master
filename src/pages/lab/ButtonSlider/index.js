@@ -12,7 +12,7 @@ const ButtonSlider = () => {
   ];
   const [active, setActive] = useState(0);
   const [positions, setPosition] = useState({
-    width: 0,
+    width: 116,
     X: 0,
     Y: 0,
   });
