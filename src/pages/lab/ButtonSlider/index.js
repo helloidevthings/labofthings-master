@@ -1,6 +1,5 @@
 import Styles from './styled';
 import React, { useState } from 'react';
-import Nav from '../../../components/Nav';
 import ButtonBG from '../../../components/Parts/ButtonBG';
 
 const ButtonSlider = () => {

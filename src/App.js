@@ -4,7 +4,6 @@ import { ThemeProvider } from '@emotion/react';
 import AppStyles from './App.styled.js';
 import GlobalStyles from './Global.styled.js';
 import Router from './Router';
-import Nav from './components/Nav';
 
 function App() {
   return (

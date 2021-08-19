@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import ButtonBG from '../Parts/ButtonBG';
+import React from 'react';
 // import Link from "next/link";
 import Styles from './styled';
 
@@ -12,7 +11,7 @@ const Nav = () => {
     // { name: "Blog", path: "/blog" },
   ];
 
-  return <Styles></Styles>;
+  return <Styles>{navItems}</Styles>;
 };
 
 export default Nav;
