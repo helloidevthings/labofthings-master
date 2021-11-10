@@ -5,15 +5,15 @@ import WorkHard from '../../../components/Icons/WorkHard';
 const Animation = () => {
   return (
     <Styles>
-  <article class="article">
-    <div class="article__wrapper-text">
-      <h1 class="title">I Like to Animate by Utlizing...</h1>
-      <h2 class="subtitle">CSS Animations {`&`} Transitions!</h2>
-      <p class="content">There are a lot of options when it comes to animationg on the web. You can use JavaScript libraries or export directly from design programs like After Effects. Some JavaScript libraries make it easier to use CSS transitions and animations, while others can be bulky and take a long time to download. I find that quickly writing a few lines of CSS tends to do the trick in most cases.</p>
+  <article className="article">
+    <div className="article__wrapper-text">
+      <h1 className="title">I Like to Animate by Utlizing...</h1>
+      <h2 className="subtitle">CSS Animations {`&`} Transitions!</h2>
+      <p className="content">There are a lot of options when it comes to animationg on the web. You can use JavaScript libraries or export directly from design programs like After Effects. Some JavaScript libraries make it easier to use CSS transitions and animations, while others can be bulky and take a long time to download. I find that quickly writing a few lines of CSS tends to do the trick in most cases.</p>
     </div>
   </article>
-  <div class="sidebar">
-    <div class="sidebar__wrapper-text">
+  <div className="sidebar">
+    <div className="sidebar__wrapper-text">
       <h3>Resources {`&`} Links</h3>
       <ul>
         <li><a href="https://css-tricks.com/using-multi-step-animations-transitions/">Multi-step Animations</a></li>
@@ -30,7 +30,7 @@ const Animation = () => {
         <li><a href="https://dixonandmoe.com/rellax/" target="blank">Best Parallax Library</a></li><li><a href="https://www.npmjs.com/package/in-view" target="blank">In-View JS Library</a></li>
       </ul>
     </div>
-    <div class="badge">
+    <div className="badge">
       <WorkHard />
     </div>
   </div>
