@@ -1,5 +1,6 @@
 import Styles from './styled';
 import React from 'react';
+import WorkHard from '../../../components/Icons/WorkHard';
 
 const Animation = () => {
   return (
@@ -30,6 +31,7 @@ const Animation = () => {
       </ul>
     </div>
     <div class="badge">
+      <WorkHard />
     </div>
   </div>
 </Styles>
