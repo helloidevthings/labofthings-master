@@ -1,4 +1,5 @@
 import React from 'react';
+import ButtonSlider from '../lab/ButtonSlider';
 import Styles from './styled';
 
 const Home = () => (
