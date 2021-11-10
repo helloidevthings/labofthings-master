@@ -21,7 +21,8 @@ const Animation = () => {
       src: 'https://jakearchibald.github.io/svgomg/',
     },
     { title: 'SVG to React', src: 'https://react-svgr.com/' },
-    { title: 'EX: HOwdy', src: '/howdy' },
+    { title: 'EX: Howdy', src: '/howdy' },
+    { title: 'EX: Cadre5', src: 'https://www.cadre5.com/' },
     { title: 'Framer Motion', src: 'https://www.framer.com/motion/' },
   ];
   return (
@@ -47,7 +48,7 @@ const Animation = () => {
             {links.map(({ title, src }, i) => {
               return (
                 <li key={`item ${i}`}>
-                  <a href={`${src}`} key={`link ${i}`}>
+                  <a href={`${src}`} key={`link ${i}`} target="blank">
                     {title}
                   </a>
                 </li>
