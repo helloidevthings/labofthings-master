@@ -4,14 +4,22 @@ import Styles from './styled';
 const Home = () => (
   <Styles>
     <main>
-      <h1>Hello I'm Joyanna</h1>
-      <a href="https://www.joyanna.dev">
-        <h4>Portfolio</h4>
-      </a>
-      <a href="https://www.joyanna.dev">
-        <h4>Lab</h4>
-      </a>
+      <div className="title">
+        <h1>Hello I'm Joyanna</h1>
+      </div>
     </main>
+    <nav>
+      <ul>
+        <li>
+          <a href="https://www.joyannahirst.com" target="blank">
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a href="/lab">Development</a>
+        </li>
+      </ul>
+    </nav>
   </Styles>
 );
 export default Home;

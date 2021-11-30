@@ -1,6 +1,9 @@
-// import styled from "../Header/node_modules/@emotion/styled";
+import styled from '@emotion/styled';
 
 export default styled.section`
-  color: pink;
-  background-color: blue;
+  color: #fff;
+  background: pink;
+  width: 100vw;
+  font-family: monospace;
+  font-size: 3rem;
 `;

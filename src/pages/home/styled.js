@@ -6,8 +6,6 @@ export default styled.section`
   display: flex;
   font-family: 'Open Sans', sans-serif;
   font-family: 'Roboto', sans-serif;
-  position: relative;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -16,24 +14,25 @@ export default styled.section`
   text-align: center;
   z-index: 0;
 
-  &:before {
-    content: '';
-    position: absolute;
-    display: block;
-    height: 30em;
-    width: 30em;
-    border-radius: 100%;
-    top: 30%;
-    left: 30%;
-    background: linear-gradient(180deg, #9e04fc 0%, #fc04fc 100%);
-    z-index: 1;
-    opacity: 0.5;
-    animation: rotation 7s linear infinite;
-  }
-
-  main {
-    z-index: 2;
+  .title {
     transition: all 1s ease-in-out;
+    z-index: 0;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 30em;
+      width: 30em;
+      border-radius: 100%;
+      top: 30%;
+      left: 30%;
+      background: linear-gradient(180deg, #9e04fc 0%, #fc04fc 100%);
+      z-index: -1;
+      opacity: 0.5;
+      animation: rotation 7s linear infinite;
+    }
 
     &:after {
       content: '';
@@ -42,28 +41,68 @@ export default styled.section`
       height: 20em;
       width: 20em;
       border-radius: 100%;
-      top: 50%;
-      right: 30%;
-      z-index: 3;
-      background: linear-gradient(180deg, #3a03ca 0%, #04fcfc 100%);
+      top: 0;
+      right: 0;
+      z-index: -1;
+      background: linear-gradient(180deg, #3a03ca 0%, #007b93 100%);
       opacity: 0.8;
+      animation: rotation 4s linear infinite;
     }
+
     &:hover {
       color: white;
-
-      &:after {
+      /* &:after {
         background: radial-gradient(
           50% 50% at 50% 50%,
           #3a03ca 0%,
           rgba(58, 3, 202, 0) 100%
-        );
+        ); */
       }
     }
   }
 
   h1 {
     font-size: 8em;
-    line-height: 1.45;
+    line-height: 1;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    li {
+      padding: 1rem;
+    }
+  }
+
+  nav {
+    z-index: 1;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 2rem;
+    position: relative; 
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      bottom: 0; 
+      right: 0;
+      height: 3px;
+      width: 100%;
+      background: linear-gradient(90deg, #9e04fc 0%, #fc04fc 100%);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease-in-out;
+      z-index: -1;
+    }
+    &:hover {
+      &:after {
+        transform: scaleX(1);
+      }
+    }
   }
 
   .thing1 {
@@ -72,7 +111,6 @@ export default styled.section`
   }
 
   // All Animations
-
   @keyframes rotation {
     from {
       transform: rotate(0deg);
@@ -82,7 +120,7 @@ export default styled.section`
     }
   }
 
-  @keyframes gradient-fade {
+  @keyframes gradientFade {
     from {
       transform: translate(50%, -50%) rotate(0deg);
     }
