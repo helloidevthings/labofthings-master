@@ -79,9 +79,14 @@ export default styled.section`
     z-index: 1;
   }
 
+  &:where(nav) a {
+    font-size: 2rem;
+    &:after {
+      height: 3px;
+    }
+  }
   a {
     text-decoration: none;
-    font-size: 2rem;
     position: relative; 
 
     &:after {
@@ -90,7 +95,7 @@ export default styled.section`
       position: absolute;
       bottom: 0; 
       right: 0;
-      height: 3px;
+      height: 2px;
       width: 100%;
       background: linear-gradient(90deg, #9e04fc 0%, #fc04fc 100%);
       transform: scaleX(0);

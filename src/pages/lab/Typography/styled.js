@@ -5,88 +5,101 @@ export default styled.main`
   height: 100vh;
   background-color: #ef4723;
   line-height: 1.45;
-  font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (2100 - 300)));
   font-family: 'Gentium Book Basic', serif;
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
   flex-wrap: wrap;
+  & > * {
+    font-size: 14px;
+  }
 
-  // These two elements share a space, but also use flexbox to prioritize.
-
-  .article {
-    flex: 3 1 auto;
-    margin: 3em;
-    // max-width: 900px;
-    position: relative;
-
-    &__wrapper-text {
-      max-width: 26em;
+  .columns {
+    display: flex;
+    flex-wrap: wrap;
+    & > * {
+      flex: 1 1 400px;
     }
   }
 
-  .sidebar {
-    flex: 1 5 auto;
-    text-align: left;
-    padding: 2em;
-    background-image: linear-gradient(black, #151414);
-    position: relative;
-    z-index: 1;
+  article {
+    padding: 3em;
+    max-width: 50rem;
+  }
 
-    &__wrapper-text {
-      max-width: 22em;
+  // Fluid Typography
+  .fluid {
+    font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2100 - 300)));
+
+    h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 3.45em;
+      line-height: 1.1;
+      margin-bottom: 0.3em;
     }
 
-    &:before {
-      content: '';
-      position: absolute;
-      background-image: linear-gradient(to left, #151414, black);
-      height: 13em;
-      width: 13em;
-      border-radius: 13em;
-      top: 0;
-      right: 2em;
-      z-index: -1;
+    h2 {
+      font-family: 'Open Sans', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.24em;
+      letter-spacing: 0.04em;
+      font-weight: 800;
+      line-height: 1.2;
     }
 
-    &__text {
-      &--light {
-        color: pink;
-      }
+    h3 {
+      font-family: 'Noto Serif JP', serif;
+      color: pink;
+      font-size: 2em;
+      font-weight: 800;
+      margin-bottom: 0.6em;
+      z-index: 1;
+    }
+    p {
+      line-height: 1.4;
+      margin: 0.5em 0;
     }
   }
 
-  // Typography
+  /* Responsive Typography */
+  .responsive {
+    font-size: 16px;
+    @media (min-width: 720px) {
+      font-size: 18px;
+    }
+    @media (min-width: 1440px) {
+      font-size: 20px;
+    }
+    @media (min-width: 2100px) {
+      font-size: 21px;
+    }
 
-  h1 {
-    font-family: 'Noto Serif JP', serif;
-    font-size: 3.45em;
-    line-height: 1.15;
-    margin-bottom: 0.4em;
-  }
+    h1 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 3.45em;
+      line-height: 1.1;
+      margin-bottom: 0.3em;
+    }
 
-  h2 {
-    font-family: 'Open Sans', sans-serif;
-    text-transform: uppercase;
-    font-size: 1.24em;
-    letter-spacing: 0.04em;
-    font-weight: 800;
-    line-height: 1.8;
-  }
+    h2 {
+      font-family: 'Open Sans', sans-serif;
+      text-transform: uppercase;
+      font-size: 1.24em;
+      letter-spacing: 0.04em;
+      font-weight: 800;
+      line-height: 1.2;
+    }
 
-  h3 {
-    font-family: 'Noto Serif JP', serif;
-    color: pink;
-    font-size: 2em;
-    font-weight: 800;
-    margin-bottom: 0.6em;
-    z-index: 1;
-  }
-
-  .subtitle {
-    border-top: 2px black solid;
-    border-bottom: 2px black solid;
-    margin: 0.8em 0;
+    h3 {
+      font-family: 'Noto Serif JP', serif;
+      color: pink;
+      font-size: 2em;
+      font-weight: 800;
+      margin-bottom: 0.6em;
+      z-index: 1;
+    }
+    p {
+      line-height: 1.4;
+      margin: 0.5em 0;
+    }
   }
 
   ul {
@@ -143,39 +156,14 @@ export default styled.main`
     }
   }
 
-  // SVG Code
-
-  .badge {
-    position: absolute;
-    bottom: 2em;
-    right: 2em;
-    width: 10em;
-    fill: #ef4723;
-    z-index: -1;
-  }
-
-  .thing1 {
-    transform-origin: center;
-    animation: rotation 7s linear infinite;
-  }
-
-  // All Animations
-
-  @keyframes rotation {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(-360deg);
-    }
-  }
-
-  @keyframes gradient-fade {
-    from {
-      transform: translate(50%, -50%) rotate(0deg);
-    }
-    to {
-      transform: translate(50%, -50%) rotate(360deg);
+  footer {
+    align-self: flex-end;
+    padding: 3rem;
+    background: #000;
+    color: #fff;
+    width: 100%;
+    p {
+      max-width: 40em;
     }
   }
 `;
