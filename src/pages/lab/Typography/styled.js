@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export default styled.main`
   width: 100%;
-  height: 100vh;
   background-color: #ef4723;
   line-height: 1.45;
   font-family: 'Gentium Book Basic', serif;
@@ -27,7 +26,7 @@ export default styled.main`
 
   // Fluid Typography
   .fluid {
-    font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2100 - 300)));
+    font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2100 - 320)));
 
     h1 {
       font-family: 'Noto Serif JP', serif;
@@ -41,21 +40,56 @@ export default styled.main`
       text-transform: uppercase;
       font-size: 1.24em;
       letter-spacing: 0.04em;
-      font-weight: 800;
+      font-weight: 700;
       line-height: 1.2;
     }
 
     h3 {
-      font-family: 'Noto Serif JP', serif;
+      font-family: 'Open Sans', sans-serif;
+      color: #000;
+      font-size: 1em;
+      font-weight: 700;
+      margin-bottom: 0.6em;
+    }
+
+    h5 {
+      font-family: 'Courier New', Courier, monospace;
+      letter-spacing: -0.03em;
+      font-size: 0.8em;
       color: pink;
-      font-size: 2em;
-      font-weight: 800;
+      font-weight: 600;
       margin-bottom: 0.6em;
       z-index: 1;
+      background: #000;
+      padding: 1em 1.4em;
+      border-radius: 2em;
     }
+
     p {
       line-height: 1.4;
       margin: 0.5em 0;
+    }
+    a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.9em;
+      font-weight: 700;
+      text-decoration: none;
+      color: #000;
+      position: relative;
+
+      &:hover {
+        color: #fff;
+      }
+
+      &:after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background: pink;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
     }
   }
 
@@ -99,6 +133,16 @@ export default styled.main`
     p {
       line-height: 1.4;
       margin: 0.5em 0;
+    }
+    a {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.9em;
+      font-weight: 700;
+      text-decoration: none;
+      color: pink;
+      &:hover {
+        color: #fff;
+      }
     }
   }
 
