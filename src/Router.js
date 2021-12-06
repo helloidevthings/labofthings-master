@@ -6,6 +6,7 @@ import Animations from './pages/lab/Animations';
 import ButtonSlider from './pages/lab/ButtonSlider';
 import Howdy from './pages/lab/Howdy';
 import Typography from './pages/lab/Typography';
+import HolidayHappyHour from './pages/lab/HolidayHappyHour';
 
 const Router = () => (
   <BrowserRouter>
@@ -15,6 +16,7 @@ const Router = () => (
       <Route path="/animations" component={Animations} />
       <Route path="/howdy" component={Howdy} />
       <Route path="/typography" component={Typography} />
+      <Route path="/HolidayHappyHour" component={HolidayHappyHour} />
       <Route path="/lab" component={Lab} />
     </Switch>
   </BrowserRouter>

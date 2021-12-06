@@ -15,7 +15,7 @@ export default styled.main`
     display: flex;
     flex-wrap: wrap;
     & > * {
-      flex: 1 1 400px;
+      flex: 1 1 50rem;
     }
   }
 
@@ -27,20 +27,6 @@ export default styled.main`
   // Fluid Typography
   .fluid {
     font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2100 - 320)));
-  }
-
-  /* Responsive Typography */
-  .responsive {
-    font-size: 16px;
-    @media (min-width: 720px) {
-      font-size: 18px;
-    }
-    @media (min-width: 1440px) {
-      font-size: 20px;
-    }
-    @media (min-width: 2100px) {
-      font-size: 21px;
-    }
   }
   h1 {
     font-family: 'Noto Serif JP', serif;
@@ -83,6 +69,7 @@ export default styled.main`
     line-height: 1.4;
     margin: 0.5em 0;
   }
+
   a {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9em;
@@ -110,9 +97,11 @@ export default styled.main`
     li {
       list-style: none;
       margin-bottom: 0.8em;
+      padding-inline-start: 0px;
+      margin-inline-start: 0px;
 
-      a {
-        color: #ef4723;
+      & a {
+        color: #000;
         text-decoration: none;
         padding-top: 0.2em;
         padding-bottom: 0.2em;
@@ -131,7 +120,7 @@ export default styled.main`
           position: absolute;
           width: 100%;
           height: 1px;
-          background-color: #ef4723;
+          background-color: #fff;
           transform: scaleX(0);
           transition: transform 0.8s cubic-bezier(0.6, -0.01, 0.11, 0.99);
         }
@@ -149,7 +138,7 @@ export default styled.main`
         }
 
         &:hover {
-          color: pink;
+          color: #fff;
 
           &:before,
           &:after {
