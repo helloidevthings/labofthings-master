@@ -70,6 +70,10 @@ export default styled.main`
     margin: 0.5em 0;
   }
 
+  small {
+    font-size: 0.9em;
+  }
+
   a {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.9em;
@@ -94,11 +98,20 @@ export default styled.main`
   }
 
   ul {
+    padding: 0;
     li {
       list-style: none;
       margin-bottom: 0.8em;
-      padding-inline-start: 0px;
-      margin-inline-start: 0px;
+      position: relative;
+      padding-left: 1.6em;
+
+      &:before {
+        content: '☞';
+        position: absolute;
+        left: 0;
+        top: -0.1em;
+        font-size: 1.2em;
+      }
 
       & a {
         color: #000;
