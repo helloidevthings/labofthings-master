@@ -27,13 +27,19 @@ const HolidayHappyHour = () => {
           <ul>
             <li>
               <h2>Zoom Zoom!</h2>
-              <a href="" target="blank">
+              <a
+                href="https://helloidevthings.com/holidayhappyhour"
+                target="blank"
+              >
                 Link to Zoom
               </a>
             </li>
             <li>
               <h2>WE'll Play a game!</h2>
-              <a href="" target="blank">
+              <a
+                href="https://helloidevthings.com/holidayhappyhour"
+                target="blank"
+              >
                 Vote on the game
               </a>
             </li>
