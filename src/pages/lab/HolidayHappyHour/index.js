@@ -14,7 +14,8 @@ const HolidayHappyHour = () => {
             as well. To do so we'll have a Zoom meeting at the office at 4pm.
           </p>
           <p>
-            We'll play a game online. Vote <a href="">HERE!</a>{' '}
+            We'll play a game online. Vote{' '}
+            <a href="http://www.strawpoll.me/45879779">HERE!</a>{' '}
           </p>
           <ul>
             <h3>TL;DR</h3>
