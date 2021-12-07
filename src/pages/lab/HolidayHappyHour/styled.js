@@ -52,6 +52,16 @@ export default styled.main`
     font-size: 5em;
   }
 
+  .title {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .snowflake {
+    position: absolute;
+    top: 10px;
+  }
+
   article {
     padding: 3em;
     max-width: 50rem;

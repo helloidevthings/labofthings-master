@@ -5,7 +5,18 @@ const HolidayHappyHour = () => {
   return (
     <Styles>
       <div className="columns fluid">
-        <article>
+        <article className="title">
+          <svg
+            width="38"
+            height="38"
+            viewBox="0 0 38 38"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="snowflake"
+          >
+            <circle cx="19" cy="19" r="19" fill="white" />
+          </svg>
+
           <h1 className="largest">Holiday Happy Hour</h1>
         </article>
         <article>
@@ -60,7 +71,9 @@ const HolidayHappyHour = () => {
               <h2>Zoom Zoom!</h2>
               <li>Everyone can join remotely via Zoom</li>
               <li>
-                <a href="">Here's the Link!</a>
+                <a href="https://us05web.zoom.us/j/88089635767?pwd=UGJjVE53Lzhmb1ljREhDUFNKU0tMdz09">
+                  Here's the Link!
+                </a>
               </li>
             </ul>
           </ul>
