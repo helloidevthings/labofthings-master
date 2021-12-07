@@ -79,8 +79,8 @@ const HolidayHappyHour = () => {
           </ul>
         </article>
         <article className="dark">
+          <h1>Gift Exchange</h1>
           <ul>
-            <h1>Gift Exchange</h1>
             <h2>What To buy?</h2>
             <li>
               <a
@@ -90,6 +90,21 @@ const HolidayHappyHour = () => {
                 target="blank"
               >
                 Ideas
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <h2>What {'&'} Where is Token?</h2>
+            <li>Token is a barcade in West Knoxville</li>
+            <li>They have arcade games, board games and pinball machines</li>
+            <li>
+              <a
+                href={
+                  'https://www.google.com/maps/place/Token+Game+Tavern/@35.9119309,-84.1005939,15z/data=!4m2!3m1!1s0x0:0x952536d67001ef6d?sa=X&ved=2ahUKEwik_YqB6NL0AhWczDgGHQKdDCoQ_BJ6BQiKARAF'
+                }
+                target="blank"
+              >
+                Token's Address
               </a>
             </li>
           </ul>
@@ -108,7 +123,7 @@ const HolidayHappyHour = () => {
             </small>
             <li>That strange blanket with Shane's Face</li>
             <li>Bryan's Hand-maid Checkered Cutting Board</li>
-            <li></li>
+            <li>Unicorn Water Bottle</li>
           </ul>
         </article>
       </div>
