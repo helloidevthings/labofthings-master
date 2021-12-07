@@ -5,37 +5,67 @@ const HolidayHappyHour = () => {
   return (
     <Styles>
       <div className="columns fluid">
-        <article className="fluid">
-          <h1>Holiday Happy Hour</h1>
-          <h2>HHH Thursday Dec 15th @4pm 🎄</h2>
+        <article>
+          <h1 className="largest">Holiday Happy Hour</h1>
+        </article>
+        <article>
+          <h2>HHH Dec 21st {'&'} 22nd HHH 🎄</h2>
           <p>
-            Welcome! Happy Festivities! We're having a Holiday party for our
-            corner of the office. The plan is to include our remote co-workers
-            as well. To do so we'll have a small game on Slack before lunch. The
-            game is called "Do You Hear What I Hear?--Nope, because there isn't
-            a Teams Meeting." Just kidding...
+            Welcome, Happy Merry Festivities! This year we're planning on two
+            different events to cater to our co-workers near and far!
           </p>
           <p>
-            The Slack Game is very simple and shouldn't take more than 15mins or
-            so. It's really just a poll that everyone can vote on. We'll have 5
-            pre-determined contestants that will provide the poll options.
-            Everyone else can vote!
+            On Tuesday December 21st we'll have an all online party at 2:30pm.
           </p>
           <p>
-            The Gift Exchange will take place after work hours at HiWire at 5pm.
+            The Gift Exchange will take place after work hours at Token at 5pm.
             If you would like to join that portion of the party feel free to
             bring a gift. You can also hang out if you aren't feeling gifty. 😁{' '}
             <small>
-              <em>Remotees Check your inboxes for this part!</em>
+              <em>Plenty of Games to Play!</em>
             </small>
           </p>
           <ul>
             <h3>TL;DR</h3>
-            <li>Slack Game before lunch at 11:30am</li>
-            <li>Gift Exchange @HiWire 5pm</li>
+            <li>Jackbox Games @2:30pm December 21st on Zoom</li>
+            <li>Gift Exchange @5:00pm December 22nd @Token</li>
           </ul>
         </article>
-        <article>
+        <article className="dark">
+          <h1>Jackbox Party</h1>
+          <ul>
+            <h2>What is Jackbox Games?</h2>
+            <li>
+              <a href="https://www.jackboxgames.com/quiplash-two-interlashional/">
+                This is Jackbox!
+              </a>
+            </li>
+            <li>We'll play games like Quiplash or Fibbage</li>
+          </ul>
+          <ul>
+            <h2>How does it work?</h2>
+            <li>Someone starts a gameroom and up to 8 players can join</li>
+            <li>
+              Once the game is created each player can join on their phone or
+              tablet
+            </li>
+            <li>
+              <a href="https://www.jackboxgames.com/how-to-play/">
+                Full Details on How it works
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <ul>
+              <h2>Zoom Zoom!</h2>
+              <li>Everyone can join remotely via Zoom</li>
+              <li>
+                <a href="">Here's the Link!</a>
+              </li>
+            </ul>
+          </ul>
+        </article>
+        <article className="dark">
           <ul>
             <h1>Gift Exchange</h1>
             <h2>What To buy?</h2>
@@ -49,10 +79,14 @@ const HolidayHappyHour = () => {
                 Ideas
               </a>
             </li>
+          </ul>
+          <ul>
             <h2>Regular Rules</h2>
             <li>Pricing: $25 Limit</li>
-            <li>Gift can be stolen 3x</li>
+            <li>Can't steal a gift you've already stolen</li>
             <li>Work Appropriate...</li>
+          </ul>
+          <ul>
             <h2>Epic Winners from Last Year</h2>
             <small>
               <em>
@@ -60,7 +94,7 @@ const HolidayHappyHour = () => {
               </em>
             </small>
             <li>That strange blanket with Shane's Face</li>
-            <li>Bryan's Covetted Checkered Cutting Block</li>
+            <li>Bryan's Hand-maid Checkered Cutting Board</li>
             <li></li>
           </ul>
         </article>

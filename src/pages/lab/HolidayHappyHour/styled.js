@@ -3,35 +3,72 @@ import styled from '@emotion/styled';
 export default styled.main`
   width: 100%;
   background-color: #ef4723;
+  background-color: #87678b;
+  color: black;
   line-height: 1.45;
   font-family: 'Gentium Book Basic', serif;
+  border: 8px #000 solid;
   display: flex;
   flex-wrap: wrap;
   & > * {
     font-size: 14px;
   }
 
+  *::selection {
+    color: #66a762;
+    background: #000;
+  }
+
+  .dark {
+    background: #4baf4f;
+    background: #6da96a;
+    /* color: pink; */
+    /* color: #4fb153; */
+    z-index: 1;
+    *::selection {
+      color: #dd5234;
+      background: #000;
+    }
+  }
+
   .columns {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     & > * {
-      flex: 1 1 50rem;
-    }
+      flex: 1 1 auto;
+    } */
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(27em, 1fr));
+    gap: 0px;
+    align-items: stretch;
+    align-content: stretch;
+    /* & > * {
+      justify-items: stretch;
+    } */
+  }
+
+  .largest {
+    font-size: 5em;
   }
 
   article {
     padding: 3em;
     max-width: 50rem;
+    background-color: #e15b3f;
+    outline: 8px #000 solid;
+    z-index: 2;
   }
 
   // Fluid Typography
   .fluid {
     font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2100 - 320)));
   }
+
   h1 {
     font-family: 'Noto Serif JP', serif;
-    font-size: 3.45em;
-    line-height: 1.1;
+    font-size: 3.3em;
+    line-height: 1;
     margin-bottom: 0.3em;
   }
 
@@ -99,9 +136,10 @@ export default styled.main`
 
   ul {
     padding: 0;
+    margin: 2rem 0;
     li {
       list-style: none;
-      margin-bottom: 0.8em;
+      margin: 0.4em 0;
       position: relative;
       padding-left: 1.6em;
 
@@ -116,13 +154,12 @@ export default styled.main`
       & a {
         color: #000;
         text-decoration: none;
-        padding-top: 0.2em;
-        padding-bottom: 0.2em;
+        padding-top: 0.1em;
+        padding-bottom: 0.1em;
         font-family: 'Open Sans', sans-serif;
-        text-transform: uppercase;
-        font-size: 0.8em;
-        letter-spacing: 0.24em;
-        font-weight: 800;
+        font-size: 0.9em;
+        /* letter-spacing: 0.24em; */
+        font-weight: 700;
         position: relative;
         transition: color 0.3s ease-in;
 
