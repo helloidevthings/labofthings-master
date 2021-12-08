@@ -8,7 +8,7 @@ const HolidayHappyHour2 = () => {
         <article>
           <h1>Gift Exchange</h1>
           <h2>Dec 22nd 🎄</h2>
-          <p>Again this year! We're having a gift exchange.</p>
+          <p>Back again for another round!</p>
           <p>
             On Wednesday December 22nd join us for a White Elephant Gift
             Exchange. 🎅 This will take place at Token Game Tavern at 5pm. You
