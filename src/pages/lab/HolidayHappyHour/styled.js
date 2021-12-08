@@ -115,6 +115,7 @@ export default styled.main`
   p {
     line-height: 1.4;
     margin: 0.5em 0;
+    font-size: 1.05em;
   }
 
   small {

@@ -6,7 +6,7 @@ const HolidayHappyHour = () => {
     <Styles>
       <div className="columns fluid">
         <article className="title">
-          <svg
+          {/* <svg
             width="38"
             height="38"
             viewBox="0 0 38 38"
@@ -15,23 +15,25 @@ const HolidayHappyHour = () => {
             className="snowflake"
           >
             <circle cx="19" cy="19" r="19" fill="white" />
-          </svg>
+          </svg> */}
 
           <h1 className="largest">Holiday Happy Hour</h1>
         </article>
         <article>
           <h2>HHH Dec 21st {'&'} 22nd HHH 🎄</h2>
           <p>
-            Welcome, Happy Merry Festivities! This year we're planning on two
-            different events to cater to our co-workers near and far!
+            Welcome, Happy Merry Festivities! This year we're planning two
+            Holiday events for our team members near and far!
           </p>
           <p>
             On Tuesday December 21st we'll have an all online party at 2:30pm.
+            This will be a Zoom meeting and we'll play simple online games from
+            Jackbox.
           </p>
           <p>
-            The Gift Exchange will take place after work hours at Token at 5pm.
-            If you would like to join that portion of the party feel free to
-            bring a gift. You can also hang out if you aren't feeling gifty. 😁{' '}
+            On Wednesday December 22nd join us for a White Elephant Gift
+            Exchange. 🎅 This will take place at Token Game Tavern at 5pm. You
+            can also hang out if you aren't feeling gifty. 🎮{' '}
             <small>
               <em>Plenty of Games to Play!</em>
             </small>
@@ -55,7 +57,7 @@ const HolidayHappyHour = () => {
           </ul>
           <ul>
             <h2>How does it work?</h2>
-            <li>Someone starts a gameroom and up to 8 players can join</li>
+            <li>One player starts a gameroom and up to 8 players can join</li>
             <li>
               Once the game is created each player can join on their phone or
               tablet
@@ -111,7 +113,10 @@ const HolidayHappyHour = () => {
           <ul>
             <h2>Regular Rules</h2>
             <li>Pricing: $25 Limit</li>
-            <li>Can't steal a gift you've already stolen</li>
+            <li>
+              You can't steal the same gift twice. (Meaning you can steal any
+              gift 1x)
+            </li>
             <li>Work Appropriate...</li>
           </ul>
           <ul>
