@@ -12,6 +12,7 @@ export default styled.main`
   flex-wrap: wrap;
   & > * {
     font-size: 14px;
+    box-sizing: border-box;
   }
 
   *::selection {
@@ -20,10 +21,7 @@ export default styled.main`
   }
 
   .dark {
-    background: #4baf4f;
     background: #6da96a;
-    /* color: pink; */
-    /* color: #4fb153; */
     z-index: 1;
     *::selection {
       color: #dd5234;
@@ -32,20 +30,12 @@ export default styled.main`
   }
 
   .columns {
-    /* display: flex;
-    flex-wrap: wrap;
-    & > * {
-      flex: 1 1 auto;
-    } */
     width: 100vw;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(27em, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     gap: 0px;
     align-items: stretch;
     align-content: stretch;
-    /* & > * {
-      justify-items: stretch;
-    } */
   }
 
   .largest {
@@ -55,6 +45,11 @@ export default styled.main`
   .title {
     position: relative;
     overflow: hidden;
+  }
+
+  .center {
+    text-align: center;
+    margin: auto;
   }
 
   .snowflake {
@@ -68,6 +63,15 @@ export default styled.main`
     background-color: #e15b3f;
     outline: 8px #000 solid;
     z-index: 2;
+
+    &:nth-of-type(even) {
+      background: #6da96a;
+      z-index: 1;
+      *::selection {
+        color: #dd5234;
+        background: #000;
+      }
+    }
   }
 
   // Fluid Typography
@@ -207,17 +211,6 @@ export default styled.main`
           }
         }
       }
-    }
-  }
-
-  footer {
-    align-self: flex-end;
-    padding: 3rem;
-    background: #000;
-    color: #fff;
-    width: 100%;
-    p {
-      max-width: 40em;
     }
   }
 `;

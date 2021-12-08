@@ -1,7 +1,7 @@
 import Styles from './styled';
 import React from 'react';
 
-const HolidayHappyHour = () => {
+const HolidayHappyHour2 = () => {
   return (
     <Styles>
       <div className="columns fluid">
@@ -18,17 +18,13 @@ const HolidayHappyHour = () => {
           </svg> */}
 
           <h1 className="largest">Holiday Happy Hour</h1>
+          <h2>White Elephant Gift Exchange!</h2>
         </article>
         <article>
-          <h2>HHH Dec 21st {'&'} 22nd HHH 🎄</h2>
+          <h2>HHH Dec 22nd 🎄</h2>
           <p>
-            Welcome, Happy Merry Festivities! This year we're planning two
-            Holiday events for our team members near and far!
-          </p>
-          <p>
-            On Tuesday December 21st we'll have an all online party at 2:30pm.
-            This will be a Zoom meeting and we'll play simple online games from
-            Jackbox.
+            Welcome, Happy Merry Festivities! This year's gift exchange, details
+            below.
           </p>
           <p>
             On Wednesday December 22nd join us for a White Elephant Gift
@@ -40,47 +36,10 @@ const HolidayHappyHour = () => {
           </p>
           <ul>
             <h3>TL;DR</h3>
-            <li>Jackbox Games @2:30pm December 21st on Zoom</li>
             <li>Gift Exchange @5:00pm December 22nd @Token</li>
           </ul>
         </article>
-        <article className="dark">
-          <h1>Jackbox Party</h1>
-          <ul>
-            <h2>What is Jackbox Games?</h2>
-            <li>
-              <a href="https://www.jackboxgames.com/quiplash-two-interlashional/">
-                This is Jackbox!
-              </a>
-            </li>
-            <li>We'll play games like Quiplash or Fibbage</li>
-          </ul>
-          <ul>
-            <h2>How does it work?</h2>
-            <li>One player starts a gameroom and up to 8 players can join</li>
-            <li>
-              Once the game is created each player can join on their phone or
-              tablet
-            </li>
-            <li>
-              <a href="https://www.jackboxgames.com/how-to-play/">
-                Full Details on How it works
-              </a>
-            </li>
-          </ul>
-          <ul>
-            <ul>
-              <h2>Zoom Zoom!</h2>
-              <li>Everyone can join remotely via Zoom</li>
-              <li>
-                <a href="https://us05web.zoom.us/j/88089635767?pwd=UGJjVE53Lzhmb1ljREhDUFNKU0tMdz09">
-                  Here's the Link!
-                </a>
-              </li>
-            </ul>
-          </ul>
-        </article>
-        <article className="dark">
+        <article>
           <h1>Gift Exchange</h1>
           <ul>
             <h2>What To buy?</h2>
@@ -131,9 +90,13 @@ const HolidayHappyHour = () => {
             <li>Unicorn Water Bottle</li>
           </ul>
         </article>
+        <article className="center">
+          <h2>See you There!</h2>
+          <p>🎁</p>
+        </article>
       </div>
     </Styles>
   );
 };
 
-export default HolidayHappyHour;
+export default HolidayHappyHour2;
