@@ -58,7 +58,7 @@ export default styled.main`
   }
 
   article {
-    padding: 3em;
+    padding: 2.8rem;
     max-width: 50rem;
     background-color: #e15b3f;
     outline: 8px #000 solid;
