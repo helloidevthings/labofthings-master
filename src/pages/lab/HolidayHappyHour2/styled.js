@@ -64,7 +64,7 @@ export default styled.main`
     outline: 8px #000 solid;
     z-index: 2;
 
-    &:nth-of-type(even) {
+    &:nth-of-type(odd) {
       background: #6da96a;
       z-index: 1;
       *::selection {

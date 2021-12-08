@@ -17,15 +17,12 @@ const HolidayHappyHour2 = () => {
             <circle cx="19" cy="19" r="19" fill="white" />
           </svg> */}
 
-          <h1 className="largest">Holiday Happy Hour</h1>
+          <h1 className="largest">Holiday</h1>
           <h2>White Elephant Gift Exchange!</h2>
         </article>
         <article>
-          <h2>HHH Dec 22nd 🎄</h2>
-          <p>
-            Welcome, Happy Merry Festivities! This year's gift exchange, details
-            below.
-          </p>
+          <h2>Dec 22nd 🎄</h2>
+          <p>Again this year! We're having a gift exchange.</p>
           <p>
             On Wednesday December 22nd join us for a White Elephant Gift
             Exchange. 🎅 This will take place at Token Game Tavern at 5pm. You
