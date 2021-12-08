@@ -5,22 +5,8 @@ const HolidayHappyHour2 = () => {
   return (
     <Styles>
       <div className="columns fluid">
-        <article className="title">
-          {/* <svg
-            width="38"
-            height="38"
-            viewBox="0 0 38 38"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="snowflake"
-          >
-            <circle cx="19" cy="19" r="19" fill="white" />
-          </svg> */}
-
-          <h1 className="largest">Holiday</h1>
-          <h2>White Elephant Gift Exchange!</h2>
-        </article>
         <article>
+          <h1>Gift Exchange</h1>
           <h2>Dec 22nd 🎄</h2>
           <p>Again this year! We're having a gift exchange.</p>
           <p>
@@ -37,7 +23,6 @@ const HolidayHappyHour2 = () => {
           </ul>
         </article>
         <article>
-          <h1>Gift Exchange</h1>
           <ul>
             <h2>What To buy?</h2>
             <li>
