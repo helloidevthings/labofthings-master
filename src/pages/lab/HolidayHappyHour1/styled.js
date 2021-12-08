@@ -54,7 +54,14 @@ export default styled.main`
 
   .snowflake {
     position: absolute;
-    top: 10px;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .snowflakeWrap {
+    position: relative;
+    z-index: 0;
   }
 
   article {
@@ -211,6 +218,29 @@ export default styled.main`
           }
         }
       }
+    }
+  }
+  .itemTo {
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transform-origin: top;
+  }
+
+  .bounce1 {
+    animation-name: bounce1;
+    animation-timing-function: ease;
+  }
+
+  @keyframes bounce1 {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(0, 100%);
+      bottom: 0;
+    }
+    100% {
+      transform: translate(0, 0);
     }
   }
 `;

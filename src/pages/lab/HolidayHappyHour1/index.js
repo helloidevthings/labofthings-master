@@ -2,21 +2,44 @@ import Styles from './styled';
 import React from 'react';
 
 const HolidayHappyHour1 = () => {
+  const Falala = [
+    { item: 'fa' },
+    { item: 'la' },
+    { item: 'la' },
+    { item: 'la' },
+    { item: 'la' },
+    { item: 'la' },
+    { item: 'la' },
+  ];
+
   return (
     <Styles>
       <div className="columns fluid">
         <article className="title">
-          {/* <svg
-            width="38"
-            height="38"
-            viewBox="0 0 38 38"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="snowflake"
-          >
-            <circle cx="19" cy="19" r="19" fill="white" />
-          </svg> */}
-
+          {Falala.map(({ item }, i) => (
+            <div
+              className="snowflakeWrap"
+              style={{
+                transform: `translateX(${20 * i}%)`,
+              }}
+            >
+              <h2>{item}</h2>
+              <svg
+                width="38"
+                height="38"
+                viewBox="0 0 38 38"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                className="snowflake itemTo bounce1"
+                style={{
+                  animationDelay: `${1 * i}s`,
+                }}
+                key={i}
+              >
+                <circle cx="19" cy="19" r="19" fill="white" />
+              </svg>
+            </div>
+          ))}
           <h1 className="largest">Holiday Happy Hour</h1>
         </article>
         <article>
