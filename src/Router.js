@@ -19,7 +19,7 @@ const Router = () => (
       <Route path="/typography" component={Typography} />
       <Route path="/onlineparty" component={HolidayHappyHour1} />
       <Route path="/giftexchange" component={HolidayHappyHour2} />
-      <Route path="/holidayhapphour" component={HolidayHappyHour1} />
+      <Route path="/holidayhappyhour" component={HolidayHappyHour1} />
       <Route path="/lab" component={Lab} />
     </Switch>
   </BrowserRouter>
