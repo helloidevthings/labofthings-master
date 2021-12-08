@@ -23,6 +23,11 @@ const Lab = () => {
       src: '/howdy',
       desc: 'Neon Sign Animating',
     },
+    {
+      title: 'Holiday Happy Hour',
+      src: '/onlineparty',
+      desc: 'Testing CSS Grid',
+    },
   ];
   return (
     <Styles>

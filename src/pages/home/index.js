@@ -20,7 +20,7 @@ const Home = () => (
         </li>
       </ul>
     </nav>
-    <section>
+    {/* <section>
       <h2>Design+Development</h2>
       <p>
         I fall into a hybrid role that InVision calls{' '}
@@ -31,8 +31,8 @@ const Home = () => (
         things and dabble in this and that. You can explore my work on this
         site.
       </p>
-    </section>
-    <section>
+    </section> */}
+    {/* <section>
       <h2>Work History</h2>
       <ul>
         <li>Designsensory</li>
@@ -43,7 +43,7 @@ const Home = () => (
         <li>Cadre5</li>
         <li>Cineworld</li>
       </ul>
-    </section>
+    </section> */}
   </Styles>
 );
 export default Home;

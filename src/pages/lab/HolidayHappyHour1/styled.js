@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export default styled.main`
   width: 100%;
-  background-color: #ef4723;
   background-color: #87678b;
   color: black;
   line-height: 1.45;
