@@ -63,7 +63,7 @@ export default styled.section`
 
   h1 {
     font-size: 8em;
-    line-height: 1;
+    line-height: .98;
   }
 
   ul {
