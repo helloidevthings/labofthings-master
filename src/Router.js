@@ -8,6 +8,7 @@ import Howdy from './pages/lab/Howdy';
 import Typography from './pages/lab/Typography';
 import HolidayHappyHour1 from './pages/lab/HolidayHappyHour1';
 import HolidayHappyHour2 from './pages/lab/HolidayHappyHour2';
+import StyleGuide from './pages/lab/StyleGuide';
 
 const Router = () => (
   <BrowserRouter>
@@ -20,6 +21,7 @@ const Router = () => (
       <Route path="/onlineparty" component={HolidayHappyHour1} />
       <Route path="/giftexchange" component={HolidayHappyHour2} />
       <Route path="/holidayhappyhour" component={HolidayHappyHour1} />
+      <Route path="/StyleGuide" component={StyleGuide} />
       <Route path="/lab" component={Lab} />
     </Switch>
   </BrowserRouter>
