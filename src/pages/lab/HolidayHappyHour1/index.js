@@ -80,6 +80,13 @@ const HolidayHappyHour1 = () => {
               tablet
             </li>
             <li>
+              Join by going to{' '}
+              <a href="https://jackbox.tv/" target="blank">
+                jackbox.tv
+              </a>{' '}
+              and entering the Room Code
+            </li>
+            <li>
               <a
                 href="https://www.jackboxgames.com/how-to-play/"
                 target="blank"
