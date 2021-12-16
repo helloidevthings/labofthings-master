@@ -94,7 +94,7 @@ const HolidayHappyHour1 = () => {
               <li>Everyone can join remotely via Zoom</li>
               <li>
                 <a
-                  href="https://us05web.zoom.us/j/88089635767?pwd=UGJjVE53Lzhmb1ljREhDUFNKU0tMdz09"
+                  href="https://us05web.zoom.us/j/81828959242?pwd=VFBJN1U5REZjd2VFR21WOThHUjgzUT09"
                   target="blank"
                 >
                   Here's the Link!
