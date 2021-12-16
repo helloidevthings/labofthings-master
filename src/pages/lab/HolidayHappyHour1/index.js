@@ -19,6 +19,7 @@ const HolidayHappyHour1 = () => {
           {Falala.map(({ item }, i) => (
             <div
               className="snowflakeWrap"
+              key={i + 2}
               style={{
                 transform: `translateX(${20 * i}%)`,
               }}
