@@ -20,7 +20,6 @@ const Router = () => (
       <Route path="/typography" component={Typography} />
       <Route path="/onlineparty" component={HolidayHappyHour1} />
       <Route path="/giftexchange" component={HolidayHappyHour2} />
-      <Route path="/holidayhappyhour" component={HolidayHappyHour1} />
       <Route path="/StyleGuide" component={StyleGuide} />
       <Route path="/lab" component={Lab} />
     </Switch>
