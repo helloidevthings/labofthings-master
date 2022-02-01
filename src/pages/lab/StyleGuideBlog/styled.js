@@ -15,13 +15,10 @@ export default styled.main`
   justify-content: center;
   flex-wrap: wrap;
   text-rendering: optimizeLegibility;
-  font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2100 - 320)));
-  line-height: 1.5;
 
   /* Global Resets */
   * {
     margin: 0;
-    line-height: calc(1em + 0.5rem);
   }
 
   *,
@@ -77,6 +74,8 @@ export default styled.main`
     display: flex;
     flex-direction: column;
     max-width: 50em;
+    line-height: 1.5;
+    font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2100 - 320)));
   }
 
   .dark {
@@ -89,7 +88,6 @@ export default styled.main`
       color: ${black};
     }
 
-    /* Heading Styles */
     & h1,
     h2,
     h3 {
@@ -116,50 +114,34 @@ export default styled.main`
   }
 
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.5em;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 2em;
   }
 
   h3 {
-    font-size: 1.7rem;
+    font-size: 1.7em;
   }
 
   h4 {
-    font-size: 1.6rem;
+    font-size: 1.6em;
   }
 
   h5 {
-    font-size: 1.2rem;
+    font-size: 1.2em;
   }
 
   h6 {
-    font-size: 1rem;
+    font-size: 1em;
   }
 
-  /* Paragraph Styles */
   p {
-    font-size: 1rem;
-    margin: 0.5rem 0;
+    font-size: 1em;
+    margin: 0.5em 0;
   }
 
-  small {
-    font-size: 0.9rem;
-  }
-
-  em,
-  i {
-    font-style: Italic;
-  }
-
-  strong,
-  b {
-    font-weight: 800;
-  }
-
-  /* Link Styles */
   a {
     color: ${black};
     font-size: 0.94em;
@@ -187,11 +169,6 @@ export default styled.main`
       transform-origin: right;
       transition: transform 0.3s ease-in-out, color 0.9s ease;
     }
-  }
-
-  /* Ul LI UL LI & OL LI OL LI */
-  ul {
-    padding-inline-start: 2rem;
   }
 
   hr {
@@ -229,8 +206,17 @@ export default styled.main`
     }
   }
 
-  /* Utility Classes */
-  .primary {
-    color: ${ltOrange};
+  /* Blog Styles */
+  .blog {
+    max-width: 60rem;
+
+    & figure {
+      width: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      max-width: 100%;
+    }
   }
 `;

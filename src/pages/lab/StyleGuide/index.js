@@ -42,7 +42,7 @@ const StyleGuide = () => {
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat. Duis aute irure dolor in
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. <a href="/">Link text for link</a> Excepteur sint occaecat
+          pariatur. <a href='/'>Link text for link</a> Excepteur sint occaecat
           cupidatat non proident, sunt in culpa qui officia deserunt mollit anim
           id est laborum.
         </p>
@@ -105,11 +105,11 @@ const StyleGuide = () => {
             alt="RegalCrownClub"
           />
         </picture> */}
-        <div className="buttons">
+        <div className='buttons'>
           <button>Primary Button Style</button>
         </div>
       </article>
-      <div className="dark">
+      <div className='dark'>
         <article>
           <h1>Heading 1</h1>
           <h2>Heading 2</h2>
@@ -143,7 +143,7 @@ const StyleGuide = () => {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat. Duis aute irure dolor in
             reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. <a href="/">Link text for link</a> Excepteur sint occaecat
+            pariatur. <a href='/'>Link text for link</a> Excepteur sint occaecat
             cupidatat non proident, sunt in culpa qui officia deserunt mollit
             anim id est laborum.
           </p>
@@ -200,15 +200,20 @@ const StyleGuide = () => {
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </li>
           </ul>
-          {/* <picture>
+          <figure className='full-width'>
             <img
-              src="https://res.cloudinary.com/labofthingsimages/image/upload/v1639084695/Earn_Credits_omvk5q.webp"
-              alt="RegalCrownClub"
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1643737110/f54abd91-1fb4-427f-a888-890f6fd1cc67-KNS-RegalReopening-0402_BP_16_s9apjz.jpg'
+              alt=''
             />
-          </picture> */}
-          <div className="buttons">
+            <figcaption>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut.
+            </figcaption>
+          </figure>
+          <div className='buttons'>
             <button>Primary Button Style</button>
           </div>
+          <hr />
         </article>
       </div>
     </Styles>
