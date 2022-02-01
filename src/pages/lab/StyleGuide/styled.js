@@ -21,7 +21,7 @@ export default styled.main`
   /* Global Resets */
   * {
     margin: 0;
-    line-height: calc(1em + 0.5rem);
+    line-height: calc(1em + 0.6rem);
   }
 
   *,
@@ -189,17 +189,15 @@ export default styled.main`
     }
   }
 
-  /* Ul LI UL LI & OL LI OL LI */
-  ul {
-    padding-inline-start: 2rem;
-  }
-
   hr {
     margin: 2rem;
   }
 
   blockquote {
-    font-weight: 700;
+    font-family: Exo;
+    font-size: 1.4rem; 
+    font-weight: 600;
+    letter-spacing: .02em; 
     margin: 0.8em 0;
     padding: 0 1.2em;
     position: relative;
@@ -232,5 +230,51 @@ export default styled.main`
   /* Utility Classes */
   .primary {
     color: ${ltOrange};
+  }
+
+  /* Ul LI UL LI & OL LI OL LI */
+  ul {
+    padding-block-start: 0;
+    padding: 1rem; 
+    margin-bottom: .4rem;
+  }
+  ul li {
+    list-style: none;
+    padding-left: 0.7em;
+    margin-bottom: 0.5em;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: ${ltOrange};
+      height: 5px;
+      width: 5px;
+      top: 0.6em;
+      left: -0.1em;
+      border-radius: 50%;
+    }
+
+    /* Reset any title inside an LI */
+    & h3, h4, h5 {
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+
+    /* Nested UL / LI */
+    ul {
+      padding-top: .2em; 
+      padding-left: 1em;
+
+      /* Reset any title inside the Nested UL */
+      & h3, h4, h5 {
+        font-size: 1.3rem;
+        font-weight: 600;
+      }  
+      li {
+        font-size: 1rem;
+      }
+    }
   }
 `;

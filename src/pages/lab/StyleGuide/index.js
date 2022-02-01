@@ -171,7 +171,7 @@ const StyleGuide = () => {
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
             aliquip ex ea commodo consequat.
           </p>
-          <ul>
+          <ul className='list'>
             <h3>Heading for List</h3>
             <li>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
