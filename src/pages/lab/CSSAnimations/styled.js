@@ -11,6 +11,11 @@ export default styled.main`
   letter-spacing: 0em;
   padding: 1em;
 
+  *::selection {
+    color: #fff;
+    background-color: #7026d3;
+  }
+
   h1 {
     padding: 0.1em 0.3em 0.3em;
     background: #fc04fc;
