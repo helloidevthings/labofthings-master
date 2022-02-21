@@ -11,12 +11,12 @@ const CSSAnimations = () => {
         <p>Quick Discussion</p>
       </article>
       <article>
-        <h2>Hello I'm Joyanna</h2>
+        <h2>👋 Hello I'm Joyanna</h2>
         <h3>Design {'&'} Development</h3>
         <p>I have worked in design and development for over 13 years.</p>
       </article>
       <article>
-        <h2>CSS Transitions {'&'} Animations</h2>
+        <h2>✨ CSS Transitions {'&'} Animations</h2>
         <h3>Transitions</h3>
         <ul>
           <li>Change between one state and another</li>
@@ -33,7 +33,7 @@ const CSSAnimations = () => {
         <p>image of bezier curve</p>
       </article>
       <article>
-        <h2>Buttery Smooth CSS Transitions</h2>
+        <h2>🍿 Buttery Smooth CSS Transitions</h2>
         <h3>Understanding How the Browser Works: Critical Rendering Path</h3>
         <ul>
           <li>
@@ -43,13 +43,16 @@ const CSSAnimations = () => {
                 Styles: calculates <code>styles/fonts</code>
               </li>
               <li>
-                Layout: <code>width/height; left/right/top/bottom;</code>
+                Layout: <code> width/height; left/right/top/bottom;</code>
               </li>
               <li>
                 Paint:{' '}
                 <code>border-radius;box-shadow; color; background-color;</code>{' '}
               </li>
-              <li>Composite: transform:translate/scale/rotate; opacity;</li>
+              <li>
+                Composite:{' '}
+                <code>transform:translate/scale/rotate; opacity;</code>
+              </li>
             </ol>
           </li>
           <li>
