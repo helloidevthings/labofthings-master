@@ -4,23 +4,36 @@ export default styled.main`
   width: 100vw;
   height: 100%;
   background: linear-gradient(45deg, #01016a, #7026d3, #fc04fc);
-  font-family: 'Gentium Book Basic', serif;
-  /* font-family: 'Fira Sans', sans-serif; */
-  /* font-family: 'Amaranth', sans-serif; */
-
-  font-weight: 400;
-
   font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (2100 - 300)));
+  font-family: 'Fira Sans', sans-serif;
   color: #000;
   line-height: 1.45;
+  letter-spacing: 0em;
   padding: 1em;
 
   h1 {
+    padding: 0.1em 0.3em 0.3em;
+    background: #fc04fc;
+    border: 0.2em solid #01016a;
+    color: #01016a;
+    font-family: 'loos-extended', sans-serif;
     font-size: 3em;
-    background: #fff;
-    padding: 0.1em 0.3em;
-    /* font-family: 'Amaranth', sans-serif; */
-    /* font-family: 'Secular One', sans-serif; */
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-family: 'loos-wide', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-family: 'loos-wide', sans-serif;
+  }
+  h3,
+  h4,
+  h5 {
+    font-family: 'loos-normal', sans-serif;
+    font-family: 'Fira Sans', sans-serif;
   }
 
   a {
@@ -40,5 +53,8 @@ export default styled.main`
   }
   ul li {
     line-height: 1.6;
+  }
+  ul {
+    margin-bottom: 1em;
   }
 `;

@@ -28,7 +28,11 @@ const CSSAnimations = () => {
   return (
     <Styles>
       <h1>CSS Animations in JavaScript {'&'} React</h1>
-      <article>Intro</article>
+      <article>
+        <h2>Animations</h2>
+        <h3>Various ways to create interactions</h3>
+        <p>Quick Discussion</p>
+      </article>
       <article>
         <h2>Hello I'm Joyanna</h2>
         <h3>Design {'&'} Development</h3>
@@ -56,7 +60,7 @@ const CSSAnimations = () => {
         <h3>Understanding How the Browser Works: Critical Rendering Path</h3>
         <ul>
           <li>
-            Styles > Layout > Paint > Composite
+            {`Styles > Layout > Paint > Composite`}
             <ol>
               <li>
                 Styles: calculates <code>styles/fonts</code>
