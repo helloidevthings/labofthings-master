@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './pages/home';
 import Lab from './pages/lab';
 import Animations from './pages/lab/Animations';
+import CSSAnimations from './pages/lab/CSSAnimations';
 import ButtonSlider from './pages/lab/ButtonSlider';
 import Howdy from './pages/lab/Howdy';
 import Typography from './pages/lab/Typography';
@@ -17,6 +18,7 @@ const Router = () => (
       <Route exact path='/' component={Home} />
       <Route path='/button-slider' component={ButtonSlider} />
       <Route path='/animations' component={Animations} />
+      <Route path='/css-animations' component={CSSAnimations} />
       <Route path='/howdy' component={Howdy} />
       <Route path='/typography' component={Typography} />
       <Route path='/onlineparty' component={HolidayHappyHour1} />

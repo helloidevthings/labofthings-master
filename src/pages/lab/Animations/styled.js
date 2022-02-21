@@ -4,9 +4,9 @@ export default styled.main`
   width: 100%;
   height: 100vh;
   background-color: #ef4723;
-  line-height: 1.45;
   font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (2100 - 300)));
   font-family: 'Gentium Book Basic', serif;
+  line-height: 1.45;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
