@@ -29,16 +29,17 @@ export default styled.main`
   }
 
   h2 {
-    font-family: 'loos-wide', sans-serif;
+    margin-bottom: 0.3em;
     font-weight: 700;
-    font-style: normal;
     font-family: 'loos-wide', sans-serif;
+    line-height: 1.1;
   }
   h3,
   h4,
   h5 {
     font-family: 'loos-normal', sans-serif;
     font-family: 'Fira Sans', sans-serif;
+    line-height: 1.3;
   }
 
   a {
@@ -50,7 +51,7 @@ export default styled.main`
 
   article {
     background: #fff;
-    margin: 1em;
+    margin: 1em 1em 1.3em;
     padding: 1em;
     position: relative;
     box-shadow: 8px 8px 0 #fc04fc;
@@ -64,6 +65,13 @@ export default styled.main`
     line-height: 1.6;
   }
   ul {
+    margin-block-start: 0;
     margin-bottom: 1em;
+    padding-inline-start: 1em;
+  }
+  ol {
+    margin-block-start: 0;
+    margin-bottom: 1em;
+    padding-inline-start: 1em;
   }
 `;
