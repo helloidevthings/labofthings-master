@@ -42,8 +42,12 @@ export default styled.main`
   }
 
   a {
+    font-family: 'loos-normal', sans-serif;
+    font-weight: 700;
     color: #fc04fc;
+    font-size: 1.1em;
   }
+
   article {
     background: #fff;
     margin: 1em;

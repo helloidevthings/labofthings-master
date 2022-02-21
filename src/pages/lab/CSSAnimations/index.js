@@ -1,30 +1,7 @@
 import Styles from './styled';
 import React from 'react';
-import WorkHard from '../../../components/Icons/WorkHard';
 
 const CSSAnimations = () => {
-  const links = [
-    {
-      title: 'Smooth As Butter',
-      src: 'https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108',
-    },
-    {
-      title: 'Good Animation Speed',
-      src: 'https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9',
-    },
-    {
-      title: 'Learn About SVGs',
-      src: 'https://www.pluralsight.com/authors/sarah-drasner?aid=701j0000001heIoAAI&promo=&utm_source=non_branded&utm_medium=digital_paid_search_google&utm_campaign=US_Dynamic&utm_content=&gclid=CjwKCAjwte71BRBCEiwAU_V9hyoo881PG7KxzppCMz4_nFr0Ouf4TdW_h_geKFzGKdcQwQ9adDdkpRoCficQAvD_BwE',
-    },
-    {
-      title: 'Clean your dirty svgs',
-      src: 'https://jakearchibald.github.io/svgomg/',
-    },
-    { title: 'SVG to React', src: 'https://react-svgr.com/' },
-    { title: 'EX: Howdy', src: '/howdy' },
-    { title: 'EX: Cadre5', src: 'https://www.cadre5.com/' },
-    { title: 'Framer Motion', src: 'https://www.framer.com/motion/' },
-  ];
   return (
     <Styles>
       <h1>CSS Animations in JavaScript {'&'} React</h1>
@@ -89,6 +66,7 @@ const CSSAnimations = () => {
         <a
           href='https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108'
           target='_blank'
+          rel='noreferrer'
         >
           Smooth As Butter Animations
         </a>
