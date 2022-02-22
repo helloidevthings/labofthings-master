@@ -158,6 +158,11 @@ const CSSAnimations = () => {
         </ul>
       </article>
       <article>
+        <h2>Transition Examples</h2>
+        <h3>Used on Buttons, Accordions {'&'} Many More!</h3>
+        <button>Example of a button</button>
+      </article>
+      <article>
         <h2>Basic Syntax of Animations</h2>
         <h3>Animations use Keyframes to change properties</h3>
         <ul>
@@ -173,7 +178,42 @@ const CSSAnimations = () => {
           </li>
         </ul>
       </article>
-      <article></article>
+      <article>
+        <h2>Animation Examples</h2>
+        <h3>This example is using SVGs with CSS classes.</h3>
+        <ul>
+          <li>Each class contains an animation</li>
+        </ul>
+        <figure className='circleCrop'>
+          <img
+            src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645551608/Screen_Shot_2022-02-22_at_12.35.06_PM_a7gkih.png'
+            alt=''
+          />
+          <figcaption>Link to This Project</figcaption>
+        </figure>
+      </article>
+      <article>
+        <h2>Utilizing Javascript + CSS Transitions</h2>
+        <hr />
+        <h3>Toggle a Class or Data-Attribute</h3>
+        <ul>
+          <li>
+            So now that we have classes, we can use Javascript to “toggle” a CSS
+            class on an HTML element. This will make the browser transition
+            between each of the properties. <code>{'.toggle(‘myClass’)'}</code>
+          </li>
+          <li>
+            We can do this a variety of ways, a very easy one is to use
+            Javascript to “listen” to see if an HTML element has been clicked.
+            That will trigger our function which will then add or remove the CSS
+            class from our element.
+            <code>{'addEventListener(‘click’, myfunction);'}</code>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h2>Vanilla Javascript Example</h2>
+      </article>
     </Styles>
   );
 };

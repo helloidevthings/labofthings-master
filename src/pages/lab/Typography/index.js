@@ -4,8 +4,8 @@ import React from 'react';
 const Typography = () => {
   return (
     <Styles>
-      <div className="columns">
-        <article className="fluid">
+      <div className='columns'>
+        <article className='fluid'>
           <h1>Fluid Type</h1>
           <h2>I Scale Based on Window</h2>
           <p>
@@ -22,8 +22,8 @@ const Typography = () => {
             There are a lot of different ways to create Fluid Type. Reference
             this{' '}
             <a
-              href="https://css-tricks.com/snippets/css/fluid-typography/"
-              target="blank"
+              href='https://css-tricks.com/snippets/css/fluid-typography/'
+              target='blank'
             >
               CSS Tricks artcle
             </a>{' '}
@@ -42,8 +42,8 @@ const Typography = () => {
             can look larger or smaller than others even though they are the same
             size. Because{' '}
             <a
-              href="https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/x-height"
-              target="blank"
+              href='https://www.fonts.com/content/learning/fontology/level-1/type-anatomy/x-height'
+              target='blank'
             >
               X-Height!
             </a>
@@ -82,13 +82,13 @@ const Typography = () => {
             Using fluid type can be taxing on the browser if you use too much of
             it, but it does take a LOT. It's good to keep in mind the way the
             browser's{' '}
-            <a href="https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108">
+            <a href='https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108'>
               "Critical Rendering Path"
             </a>
             .
           </p>
         </article>
-        <article className="responsive">
+        <article className='responsive'>
           <h1>Responsive Type</h1>
           <h2>I scale based on breakpoints</h2>
           <p>
@@ -113,12 +113,12 @@ const Typography = () => {
           </p>
           <p>
             So let's talk about{' '}
-            <a href="https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984">
+            <a href='https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984'>
               rems and ems.
             </a>{' '}
             They can be confusing for sure. By themselves they don't scale. Rem
             refers to the "root" element. The highest parent element in the{' '}
-            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">
+            <a href='https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model'>
               DOM.
             </a>{' '}
             Browsers by default use 16px. So you're just referencing that when
@@ -137,12 +137,11 @@ const Typography = () => {
           </p>
         </article>
       </div>
-      <footer>
+      {/* <footer>
         <h3>History Lesson</h3>
         <p>
           Wayyyy Back when Typography was young... We sized typography for
-          legibility and readability. We spent time setting type in various
-          metals...
+          legibility and readability. We spent time setting type...
         </p>
         <p>
           It makes me sad to see the way we size typography on the web. It's
@@ -153,7 +152,7 @@ const Typography = () => {
           There are still some great type designers and developers out there...
           Here are some examples!
         </p>
-      </footer>
+      </footer> */}
     </Styles>
   );
 };

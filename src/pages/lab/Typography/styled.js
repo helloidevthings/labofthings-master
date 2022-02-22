@@ -29,6 +29,11 @@ export default styled.main`
     font-size: calc(16px + (21 - 16) * ((100vw - 320px) / (2100 - 320)));
   }
 
+  *::selection {
+    color: #ef4723;
+    background-color: #000000;
+  }
+
   /* Responsive Typography */
   .responsive {
     font-size: 16px;
