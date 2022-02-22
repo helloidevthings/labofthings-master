@@ -1,5 +1,6 @@
 import Styles from './styled';
 import React, { useState } from 'react';
+import Circle from '../../../components/Icons/Circle';
 
 const CSSAnimations = () => {
   const [currentColor, updateColor] = useState('fuschia');
@@ -8,20 +9,20 @@ const CSSAnimations = () => {
     <Styles currentColor={currentColor} className={currentColor}>
       <h1>CSS Animations in JavaScript {'&'} React</h1>
       <button
-        className={currentColor === 'blue' ? 'active' : null}
-        onClick={() => {
-          updateColor('blue');
-        }}
-      >
-        Blue
-      </button>
-      <button
         className={currentColor === 'fuschia' ? 'active' : null}
         onClick={() => {
           updateColor('fuschia');
         }}
       >
         Pink
+      </button>
+      <button
+        className={currentColor === 'blue' ? 'active' : null}
+        onClick={() => {
+          updateColor('blue');
+        }}
+      >
+        Blue
       </button>
       <button
         className={currentColor === 'dark' ? 'active' : null}
@@ -48,6 +49,13 @@ const CSSAnimations = () => {
         <h2>👋 Hello I'm Joyanna</h2>
         <h3>Design {'&'} Development</h3>
         <p>I have worked in design and development for over 13 years.</p>
+        <Circle color={currentColor} />
+        <figure className='circleCrop'>
+          <img
+            src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645496037/20201227_174511_hcwxly.jpg'
+            alt='photo of Joyanna in a hat and jean jacket'
+          />
+        </figure>
       </article>
       <article>
         <h2>✨ CSS Transitions {'&'} Animations</h2>
