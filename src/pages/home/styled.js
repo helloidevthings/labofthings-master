@@ -1,117 +1,126 @@
 import styled from '@emotion/styled';
 
 export default styled.section`
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  font-family: 'loos-extended', sans-serif;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(180deg, #01006b 0%, #000000 100%);
-  color: #efadff;
-  text-align: center;
-  z-index: 0;
+  --fuschia: #ff48ff;
+  --blue: #00bbff;
+  --dark: #395cba;
+  --gray: #acadb9;
 
+  --fuschiaSecondary: #a600f9;
+  --blueSecondary: #01016a;
+  --darkSecondary: #fbbe5d;
+  --graySecondary: #292838;
+
+  --fuschiaGradient: linear-gradient(45deg, #01016a, #7028d1, #ff48ff);
+  --blueGradient: linear-gradient(45deg, #01016a, #0014ff, #009aff);
+  --darkGradient: linear-gradient(45deg, #000000, #2b2a37, #2f2f59);
+  --grayGradient: linear-gradient(45deg, #1e1e1e, #292838, #555768);
+
+  width: 100vw;
+  min-height: 100%;
+  background: var(--fuschiaGradient);
+  font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (2100 - 300)));
+  font-family: 'Fira Sans', sans-serif;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: 0em;
+  padding: 1em;
+  transition: all 0.4s ease-in-out;
+  @media only screen and (max-width: 600px) {
+    padding: 0.5em;
+  }
+
+  header {
+    max-width: 50rem;
+  }
+
+  main {
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; 
+  }
+
+  figure {
+    max-width: 12rem;
+    max-height: 12rem;
+    border-radius: 100%;
+    overflow: hidden; 
+    object-position: 50% 50%;
+    background-color: var(--primary);
+    
+    img {
+      max-height: 12rem; 
+      object-fit: cover;
+      mix-blend-mode: luminosity;
+    }
+  }
   .title {
     transition: all 1s ease-in-out;
     z-index: 0;
     position: relative;
-
-    &:before {
-      content: '';
-      position: absolute;
-      display: block;
-      height: 30em;
-      width: 30em;
-      border-radius: 100%;
-      top: 30%;
-      left: 30%;
-      background: linear-gradient(180deg, #9e04fc 0%, #fc04fc 100%);
-      z-index: -1;
-      opacity: 0.5;
-      animation: rotation 7s linear infinite;
-    }
-
-    &:after {
-      content: '';
-      position: absolute;
-      display: block;
-      height: 20em;
-      width: 20em;
-      border-radius: 100%;
-      top: 0;
-      right: 0;
-      z-index: -1;
-      background: linear-gradient(180deg, #3a03ca 0%, #007b93 100%);
-      opacity: 0.8;
-      animation: rotation 4s linear infinite;
-    }
-
-    &:hover {
-      color: white;
-      /* &:after {
-        background: radial-gradient(
-          50% 50% at 50% 50%,
-          #3a03ca 0%,
-          rgba(58, 3, 202, 0) 100%
-        ); */
-      }
     }
   }
 
   h1 {
-    font-size: 8em;
+    font-family: 'loos-wide', sans-serif;
+    font-size: 10em;
     line-height: .98;
+    @media only screen and (max-width: 600px) {
+      font-size: 5em;
+    }
   }
-
-  ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    li {
-      padding: 1rem;
+  h2 {
+    font-family: 'loos-wide', sans-serif;
+    font-size: 5em;
+    @media only screen and (max-width: 600px) {
+      font-size: 3em;
     }
   }
 
   nav {
     z-index: 1;
-  }
-
-  &:where(nav) a {
-    font-size: 2rem;
-    &:after {
-      height: 3px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1em .1em;
+    & > * {
+      margin: .3em;
     }
   }
+
   a {
-    text-decoration: none;
+    text-decoration: none; 
+    padding: 0 .1em; 
     position: relative; 
+    color: #fff;
+    font-family: 'loos-normal', sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    letter-spacing: .03em;
+    z-index: 0; 
+    transition: color .6s ease-in-out;
 
     &:after {
       content: '';
-      display: block;
-      position: absolute;
-      bottom: 0; 
-      right: 0;
-      height: 2px;
+      background: var(--fuschia);
+      height: 3px;
       width: 100%;
-      background: linear-gradient(90deg, #9e04fc 0%, #fc04fc 100%);
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease-in-out;
+      height: 100%; 
+      transform: scaleY(.1);
+      transform-origin: bottom; 
+      left: 0;
+      position: absolute;
+      bottom: 0;  
       z-index: -1;
+      transition: transform .5s cubic-bezier(0.62, 0.01, 0.64, 1.32);
     }
+
     &:hover {
+      color: var(--white);
       &:after {
-        transform: scaleX(1);
+        transform: scaleY(1);
       }
     }
-  }
-
-  .thing1 {
-    transform-origin: center;
-    animation: rotation 7s linear infinite;
   }
 
   // All Animations
