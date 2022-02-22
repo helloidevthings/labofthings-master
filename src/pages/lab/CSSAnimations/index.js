@@ -1,10 +1,44 @@
 import Styles from './styled';
-import React from 'react';
+import React, { useState } from 'react';
 
 const CSSAnimations = () => {
+  const [currentColor, updateColor] = useState('fuschia');
+
   return (
-    <Styles>
+    <Styles currentColor={currentColor} className={currentColor}>
       <h1>CSS Animations in JavaScript {'&'} React</h1>
+      <button
+        className={currentColor === 'blue' ? 'active' : null}
+        onClick={() => {
+          updateColor('blue');
+        }}
+      >
+        Blue
+      </button>
+      <button
+        className={currentColor === 'fuschia' ? 'active' : null}
+        onClick={() => {
+          updateColor('fuschia');
+        }}
+      >
+        Pink
+      </button>
+      <button
+        className={currentColor === 'dark' ? 'active' : null}
+        onClick={() => {
+          updateColor('dark');
+        }}
+      >
+        Dark
+      </button>
+      <button
+        className={currentColor === 'gray' ? 'active' : null}
+        onClick={() => {
+          updateColor('gray');
+        }}
+      >
+        Gray
+      </button>
       <article>
         <h2>Animations</h2>
         <h3>Various ways to create interactions</h3>
@@ -40,18 +74,20 @@ const CSSAnimations = () => {
             {`Styles > Layout > Paint > Composite`}
             <ol>
               <li>
-                Styles: calculates <code>styles/fonts</code>
+                Styles:
+                <em> calculates styles/fonts</em>
               </li>
               <li>
-                Layout: <code> width/height; left/right/top/bottom;</code>
+                Layout:
+                <em> width/height; left/right/top/bottom;</em>
               </li>
               <li>
-                Paint:{' '}
-                <code>border-radius;box-shadow; color; background-color;</code>{' '}
+                Paint:
+                <em> border-radius;box-shadow; color; background-color;</em>
               </li>
               <li>
-                Composite:{' '}
-                <code>transform:translate/scale/rotate; opacity;</code>
+                Composite:
+                <em> transform:translate/scale/rotate; opacity;</em>
               </li>
             </ol>
           </li>

@@ -1,34 +1,50 @@
 import styled from '@emotion/styled';
 
-const white = '#fff';
-const black = '#000';
-const fuschia = '#fc04fc';
-const orchid = '#a600f9';
-const navy = '#01016a';
-// const purple = '#7026d3';
-
 export default styled.main`
+  --primary: var(${(props) => `--${props.currentColor}`});
+  /* --primary-lightest: '94'; */
+
+  --secondary: var(${(props) => `--${props.currentColor}Secondary`});
+  --mainGradient: var(${(props) => `--${props.currentColor}Gradient`});
+ 
+  --black: ${(props) => (props.currentColor === 'dark' ? '#fff' : '#000')};
+  --white: ${(props) => (props.currentColor === 'dark' ? '#13131b' : '#fff')};
+  --fuschia: #ff48ff;
+  --blue: #00bbff;
+  --dark: #395cba;
+  --gray: #acadb9;
+
+  --fuschiaSecondary: #a600f9;
+  --blueSecondary: #01016a;
+  --darkSecondary: #848489;
+  --graySecondary: #292838;
+
+  --fuschiaGradient: linear-gradient(45deg, #01016a, #7028d1, #ff48ff);
+  --blueGradient: linear-gradient(45deg, #01016a, #0014ff, #009aff);
+  --darkGradient: linear-gradient(45deg, #000000, #2b2a37, #2f2f59);
+  --grayGradient: linear-gradient(45deg, #1e1e1e, #292838, #555768);
+ 
   width: 100vw;
   height: 100%;
-  background: linear-gradient(45deg, #01016a, #7028d1, #ff48ff);
+  background: var(--mainGradient);
   font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (2100 - 300)));
   font-family: 'Fira Sans', sans-serif;
-  color: ${black};
-  /* color: ${navy}; */
+  color: var(--black);
   line-height: 1.45;
   letter-spacing: 0em;
   padding: 1em;
+  transition: all .4s ease-in-out; 
 
   *::selection {
-    color: ${black};
+    color: var(--black);
     background-color: #f3ccff;
   }
 
   h1 {
     padding: 0.1em 0.3em 0.3em;
-    background: ${white};
-    border: 0.2em solid ${black};
-    color: ${black};
+    background: var(--white);
+    border: 0.2em solid var(--black);
+    color: var(--black);
     font-family: 'loos-extended', sans-serif;
     font-size: 3em;
     font-weight: 700;
@@ -53,25 +69,44 @@ export default styled.main`
   a {
     font-family: 'loos-normal', sans-serif;
     font-weight: 700;
-    color: ${orchid};
+    color: var(--secondary);
     font-size: 1.1em;
   }
 
+  button {
+    padding: .2em .7em .4em;
+    margin: 1em .2em;  
+    background: var(--primary);
+    color: var(--black);
+    border:none; 
+    border-radius: 1em; 
+    font-family: 'loos-normal', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .02em;
+    box-shadow: none; 
+    transition: box-shadow .4s ease-in-out;
+    
+    &.active {
+      box-shadow: 3px 1px 0px 1px #fff;
+    }
+  }
+
   article {
-    background: #fff;
+    background: var(--white);
     margin: 1em 1em 1.3em;
     padding: 1em;
     position: relative;
-    box-shadow: 8px 8px 0 #fc04fc;
+    box-shadow: 8px 8px 0 var(--primary);
   }
   code {
-    background: linear-gradient(45deg, #a900ff, #5500dd);
-    background: linear-gradient(45deg, #5701dd, #be40cd);
-    color: #fff;
+    font-weight: 500;
+    /* background: linear-gradient(45deg, #c59fff, #f390ff); */
+    background: var(--primary);
+    color: var(--black);
     padding: 0.1em 0.4em .2em;
     margin-left: .2em; 
-    background: linear-gradient(45deg, #c59fff, #f390ff);
-    color: #4b00cb;
+    opacity: .8; 
   }
 
   ul li {
@@ -84,7 +119,7 @@ export default styled.main`
       content: '';
       display: block;
       position: absolute;
-      background: ${fuschia};
+      background: var(--primary);
       height: .3em;
       width: .3em;
       top: 0.6em;
@@ -107,7 +142,7 @@ export default styled.main`
           counter-increment: my-awesome-counter;
           &:before {
             content: counter(my-awesome-counter) '. ';
-            color: ${fuschia};
+            color: var(--primary);
             font-weight: bold;
             font-family: 'loos-extended', sans-serif;
           }
