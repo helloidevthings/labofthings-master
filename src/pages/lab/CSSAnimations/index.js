@@ -53,7 +53,7 @@ const CSSAnimations = () => {
         <figure className='circleCrop'>
           <img
             src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645496037/20201227_174511_hcwxly.jpg'
-            alt='photo of Joyanna in a hat and jean jacket'
+            alt='Joyanna in a hat and jean jacket'
           />
         </figure>
       </article>
