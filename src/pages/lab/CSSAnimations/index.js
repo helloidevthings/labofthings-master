@@ -58,6 +58,21 @@ const CSSAnimations = () => {
         </figure>
       </article>
       <article>
+        <h2>The Problem</h2>
+        <h3>The way we create animations</h3>
+        <p>
+          As designers we use a variety of programs to create interactions. Some
+          of these can produce simple code, some of these do not. As developers
+          we can import libraries and packages to create animations. Some of
+          these are simple... some are not!
+        </p>
+        <p>
+          The purpose of this talk is to go over some of the easy solutions
+          using simple CSS to trigger accessible animations. I'll also go over
+          how we can do this when using React.
+        </p>
+      </article>
+      <article>
         <h2>✨ CSS Transitions {'&'} Animations</h2>
         <h3>Transitions</h3>
         <ul>

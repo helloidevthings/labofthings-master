@@ -4,8 +4,7 @@ export default styled.section`
   min-width: 100vw;
   min-height: 100vh;
   display: flex;
-  font-family: 'Open Sans', sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'loos-extended', sans-serif;
   flex-direction: column;
   justify-content: center;
   align-items: center;

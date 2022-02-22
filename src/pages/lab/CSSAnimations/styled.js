@@ -2,7 +2,6 @@ import styled from '@emotion/styled';
 
 export default styled.main`
   --primary: var(${(props) => `--${props.currentColor}`});
-  /* --primary-lightest: '94'; */
 
   --secondary: var(${(props) => `--${props.currentColor}Secondary`});
   --mainGradient: var(${(props) => `--${props.currentColor}Gradient`});
@@ -112,7 +111,7 @@ export default styled.main`
   }
 
   button {
-    padding: 0.2em 0.7em 0.4em;
+    padding: 0.2em 0.7em 0.25em;
     margin: 1em 0.2em;
     background: var(--primary);
     color: var(--black);
@@ -122,12 +121,14 @@ export default styled.main`
     font-weight: 700;
     letter-spacing: 0.02em;
     border: none;
-    border-radius: 1em;
-    box-shadow: none;
-    transition: box-shadow 0.4s ease-in-out;
+    border-radius: 30px;
+    box-shadow: 3px 1px 0px 1px #000;
+    transition: all 0.3s ease-in-out;
 
     &.active {
-      box-shadow: 3px 1px 0px 1px #fff;
+    box-shadow: inset 3px 1px 0px 1px #000;
+    background: var(--secondary);
+    color: var(--white);
     }
   }
 
