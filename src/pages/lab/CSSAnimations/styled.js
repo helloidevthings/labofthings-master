@@ -16,7 +16,7 @@ export default styled.main`
 
   --fuschiaSecondary: #a600f9;
   --blueSecondary: #01016a;
-  --darkSecondary: #848489;
+  --darkSecondary: #fbbe5d;
   --graySecondary: #292838;
 
   --fuschiaGradient: linear-gradient(45deg, #01016a, #7028d1, #ff48ff);
@@ -40,7 +40,7 @@ export default styled.main`
 
   *::selection {
     color: var(--black);
-    background-color: #f3ccff;
+    background-color: var(--primary);
   }
 
   h1 {
@@ -81,6 +81,34 @@ export default styled.main`
     font-weight: 700;
     color: var(--secondary);
     font-size: 1.1em;
+    text-decoration: none; 
+    padding: 0 .1em; 
+    position: relative; 
+    z-index: 0; 
+    transition: color .6s ease-in-out;
+  
+
+    &:after {
+      content: '';
+      background: var(--primary);
+      height: 3px;
+      width: 100%;
+      height: 100%; 
+      transform: scaleY(.1);
+      transform-origin: bottom; 
+      left: 0;
+      position: absolute;
+      bottom: 0;  
+      z-index: -1;
+      transition: transform .5s cubic-bezier(0.62, 0.01, 0.64, 1.32);
+    }
+
+    &:hover {
+      color: var(--white);
+      &:after {
+        transform: scaleY(1);
+      }
+    }
   }
 
   button {
@@ -109,10 +137,12 @@ export default styled.main`
     border-radius: 100%;
     overflow: hidden; 
     object-position: 50% 50%;
+    background-color: var(--primary);
     
     img {
       max-height: 12rem; 
       object-fit: cover;
+      mix-blend-mode: luminosity;
     }
   }
 
