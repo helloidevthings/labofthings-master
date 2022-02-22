@@ -30,7 +30,7 @@ export default styled.main`
   }
 
   *::selection {
-    color: #ef4723;
+    color: #ffffff;
     background-color: #000000;
   }
 
