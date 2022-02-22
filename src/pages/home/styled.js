@@ -2,19 +2,7 @@ import styled from '@emotion/styled';
 
 export default styled.section`
   --fuschia: #ff48ff;
-  --blue: #00bbff;
-  --dark: #395cba;
-  --gray: #acadb9;
-
-  --fuschiaSecondary: #a600f9;
-  --blueSecondary: #01016a;
-  --darkSecondary: #fbbe5d;
-  --graySecondary: #292838;
-
   --fuschiaGradient: linear-gradient(45deg, #01016a, #7028d1, #ff48ff);
-  --blueGradient: linear-gradient(45deg, #01016a, #0014ff, #009aff);
-  --darkGradient: linear-gradient(45deg, #000000, #2b2a37, #2f2f59);
-  --grayGradient: linear-gradient(45deg, #1e1e1e, #292838, #555768);
 
   width: 100vw;
   min-height: 100%;

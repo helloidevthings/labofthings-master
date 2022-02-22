@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 
 export default styled.main`
   --primary: var(${(props) => `--${props.currentColor}`});
-
   --secondary: var(${(props) => `--${props.currentColor}Secondary`});
+  --tertiary: var(${(props) => `--${props.currentColor}Tertiary`});
   --mainGradient: var(${(props) => `--${props.currentColor}Gradient`});
 
   --black: ${(props) => (props.currentColor === 'dark' ? '#fff' : '#000')};
@@ -13,10 +13,15 @@ export default styled.main`
   --dark: #395cba;
   --gray: #acadb9;
 
-  --fuschiaSecondary: #a600f9;
+  --fuschiaSecondary: #5c00d1;
   --blueSecondary: #01016a;
   --darkSecondary: #fbbe5d;
   --graySecondary: #292838;
+
+  --fuschiaTertiary: #b78dff;
+  --blueTertiary: #6f6fff;
+  --darkTertiary: #995200;
+  --grayTertiary: #5a5968;
 
   --fuschiaGradient: linear-gradient(45deg, #01016a, #7028d1, #ff48ff);
   --blueGradient: linear-gradient(45deg, #01016a, #0014ff, #009aff);
@@ -75,31 +80,35 @@ export default styled.main`
     stroke: var(--primary);
   }
 
+  hr {
+    border: 2px solid var(--primary);
+    margin: 0.5em 0;
+  }
+
   a {
     font-family: 'loos-normal', sans-serif;
     font-weight: 700;
     color: var(--secondary);
     font-size: 1.1em;
-    text-decoration: none; 
-    padding: 0 .1em; 
-    position: relative; 
-    z-index: 0; 
-    transition: color .6s ease-in-out;
-  
+    text-decoration: none;
+    padding: 0 0.1em;
+    position: relative;
+    z-index: 0;
+    transition: color 0.6s ease-in-out;
 
     &:after {
       content: '';
       background: var(--primary);
       height: 3px;
       width: 100%;
-      height: 100%; 
-      transform: scaleY(.1);
-      transform-origin: bottom; 
+      height: 100%;
+      transform: scaleY(0.1);
+      transform-origin: bottom;
       left: 0;
       position: absolute;
-      bottom: 0;  
+      bottom: 0;
       z-index: -1;
-      transition: transform .5s cubic-bezier(0.62, 0.01, 0.64, 1.32);
+      transition: transform 0.5s cubic-bezier(0.62, 0.01, 0.64, 1.32);
     }
 
     &:hover {
@@ -126,36 +135,99 @@ export default styled.main`
     transition: all 0.3s ease-in-out;
 
     &.active {
-    box-shadow: inset 3px 1px 0px 1px #000;
-    background: var(--secondary);
-    color: var(--white);
+      box-shadow: inset 3px 1px 0px 1px #000;
+      background: var(--secondary);
+      color: var(--white);
     }
+  }
+
+.twoCol {
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); */
+  grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+
+}
+
+figure {
+  margin: .3rem; 
+      box-shadow:8px 8px 0 var(--tertiary); 
   }
 
   .circleCrop {
-    max-width: 12rem;
-    max-height: 12rem;
-    border-radius: 100%;
-    overflow: hidden; 
-    object-position: 50% 50%;
+    max-width: 13rem;
+    max-height: 13rem;
+    position: relative;
+    /* overflow: hidden; */
     background-color: var(--primary);
-    
+    border-radius: 100%;
+    z-index: 1; 
+    box-shadow: none; 
+
     img {
-      max-height: 12rem; 
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+      border-radius: 12rem;
       mix-blend-mode: luminosity;
+      z-index: 2; 
+    }
+    figcaption {
+      position: absolute; 
+      z-index: 10; 
+      bottom: 0; 
+      right: 0; 
+      background: var(--secondary);
+      font-size: 1em;
+      color: var(--white);
+      padding: .1rem .7rem;
+      box-shadow:8px 8px 0 var(--tertiary); 
     }
   }
 
-  article {
-    background: var(--white);
-    margin: 1em 1em 1.3em;
-    padding: 1em;
-    position: relative;
-    box-shadow: 8px 8px 0 var(--primary);
-    @media only screen and (max-width: 600px) {
-      margin: 1em 0.1em 1.4em;
+    .exampleImg {
+      max-width: 30rem;
+      min-height: 14rem; 
+      z-index: 1;
+      background-color: var(--primary);
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        top: 0; 
+        /* mix-blend-mode: luminosity; */
+      }
+
+      figcaption {
+        position: absolute;
+        background: var(--secondary);
+        color: var(--white);
+        padding: 1rem 1.4rem;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+
+        a {
+          color: var(--white);
+        }
+      }
     }
+
+    article {
+      background: var(--white);
+      margin: 1em 1em 1.3em;
+      padding: 1.3em 2em 2.3em;
+      position: relative;
+      box-shadow: 8px 8px 0 var(--primary);
+      @media only screen and (max-width: 600px) {
+        margin: 1em 0.1em 1.4em;
+        padding: 1em;
+      }
     }
     code {
       font-weight: 500;
@@ -214,74 +286,74 @@ export default styled.main`
   }
 
   .draw-in {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 10;
-  animation: draw 15s ease-in-out alternate infinite;
-}
-
-@keyframes draw {
-  from {
-    stroke-dashoffset: 1000;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 10;
+    animation: draw 15s ease-in-out alternate infinite;
   }
 
-  to {
-    stroke-dashoffset: 0;
-  }
-}
-.item-to {
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  transform-origin: bottom;
-}
+  @keyframes draw {
+    from {
+      stroke-dashoffset: 1000;
+    }
 
-.bounce-1 {
-  animation-name: bounce-1;
-  animation-timing-function: ease;
-}
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .item-to {
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+  }
 
-.bounce-2 {
-  animation-name: bounce-2;
-  animation-timing-function: ease;
-}
+  .bounce-1 {
+    animation-name: bounce-1;
+    animation-timing-function: ease;
+  }
 
-.bounce-3 {
-  animation-name: bounce-3;
-  animation-timing-function: ease;
-}
+  .bounce-2 {
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+  }
 
-@keyframes bounce-1 {
-  0% {
-    transform: translateY(0);
+  .bounce-3 {
+    animation-name: bounce-3;
+    animation-timing-function: ease;
   }
-  50% {
-    transform: translateY(50px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 
-@keyframes bounce-2 {
-  0% {
-    transform: translateY(0);
+  @keyframes bounce-1 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
-  50% {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
 
-@keyframes bounce-3 {
-  0% {
-    transform: translateY(0);
+  @keyframes bounce-2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
-  50% {
-    transform: translateY(30px);
+
+  @keyframes bounce-3 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
   }
-  100% {
-    transform: translateY(0);
-  }
-}
 `;

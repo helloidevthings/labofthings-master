@@ -47,18 +47,24 @@ const CSSAnimations = () => {
       </article>
       <article>
         <h2>👋 Hello I'm Joyanna</h2>
-        <h3>Design {'&'} Development</h3>
-        <p>I have worked in design and development for over 13 years.</p>
-        <Circle color={currentColor} />
-        <figure className='circleCrop'>
-          <img
-            src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645496037/20201227_174511_hcwxly.jpg'
-            alt='Joyanna in a hat and jean jacket'
-          />
-        </figure>
+        <div className='twoCol'>
+          <div>
+            <h3>Design {'&'} Development</h3>
+            <p>I have worked in design and development for over 13 years.</p>
+          </div>
+          <figure className='circleCrop'>
+            <img
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645566998/Screen_Shot_2022-02-22_at_4.56.10_PM_oeu3be.png'
+              alt='Joyanna in a hat and jean jacket'
+            />
+            <figcaption>follow</figcaption>
+            {/* <Circle color={currentColor} /> */}
+          </figure>
+        </div>
       </article>
       <article>
         <h2>The Problem</h2>
+        <hr />
         <h3>The way we create animations</h3>
         <p>
           As designers we use a variety of programs to create interactions. Some
@@ -74,23 +80,34 @@ const CSSAnimations = () => {
       </article>
       <article>
         <h2>✨ CSS Transitions {'&'} Animations</h2>
-        <h3>Transitions</h3>
-        <ul>
-          <li>Change between one state and another</li>
-          <li>
-            Using Ease or a Bezier Curve defines how the browser transitions
-            between each state
-          </li>
-        </ul>
-        <h3>Animations</h3>
-        <ul>
-          <li>Uses Keyframes</li>
-          <li>Using Ease or a Bezier Curve define animation</li>
-        </ul>
-        <p>image of bezier curve</p>
+        <hr />
+        <div className='twoCol'>
+          <div>
+            <h3>Transitions</h3>
+            <ul>
+              <li>Change between one state and another</li>
+              <li>
+                Using Ease or a Bezier Curve defines how the browser transitions
+                between each state
+              </li>
+            </ul>
+            <h3>Animations</h3>
+            <ul>
+              <li>Uses Keyframes</li>
+              <li>Using Ease or a Bezier Curve define animation</li>
+            </ul>
+          </div>
+          <figure>
+            <img
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645566177/Screen_Shot_2022-02-22_at_4.42.33_PM_lwojn1.png'
+              alt='curve with handles known as the bezier curve'
+            />
+          </figure>
+        </div>
       </article>
       <article>
         <h2>🍿 Buttery Smooth CSS Transitions</h2>
+        <hr />
         <h3>Understanding How the Browser Works: Critical Rendering Path</h3>
         <ul>
           <li>
@@ -135,6 +152,7 @@ const CSSAnimations = () => {
       </article>
       <article>
         <h2>Basic Syntax of Transitions</h2>
+        <hr />
         <h3>The browser transitions from one property to another</h3>
         <ul>
           <li>
@@ -159,11 +177,13 @@ const CSSAnimations = () => {
       </article>
       <article>
         <h2>Transition Examples</h2>
+        <hr />
         <h3>Used on Buttons, Accordions {'&'} Many More!</h3>
         <button>Example of a button</button>
       </article>
       <article>
         <h2>Basic Syntax of Animations</h2>
+        <hr />
         <h3>Animations use Keyframes to change properties</h3>
         <ul>
           <li>
@@ -180,17 +200,20 @@ const CSSAnimations = () => {
       </article>
       <article>
         <h2>Animation Examples</h2>
-        <h3>This example is using SVGs with CSS classes.</h3>
-        <ul>
-          <li>Each class contains an animation</li>
-        </ul>
-        <figure className='circleCrop'>
-          <img
-            src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645551608/Screen_Shot_2022-02-22_at_12.35.06_PM_a7gkih.png'
-            alt=''
-          />
-          <figcaption>Link to This Project</figcaption>
-        </figure>
+        <hr />
+        <div className='twoCol'>
+          <h3>This example is using SVGs with CSS classes.</h3>
+          <ul>
+            <li>Each class contains an animation</li>
+          </ul>
+          <figure className='exampleImg'>
+            <img
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645551608/Screen_Shot_2022-02-22_at_12.35.06_PM_a7gkih.png'
+              alt=''
+            />
+            <figcaption>Link to This Project</figcaption>
+          </figure>
+        </div>
       </article>
       <article>
         <h2>Utilizing Javascript + CSS Transitions</h2>
@@ -212,7 +235,64 @@ const CSSAnimations = () => {
         </ul>
       </article>
       <article>
-        <h2>Vanilla Javascript Example</h2>
+        <h2>Example of Javascript + CSS Transitions</h2>
+        <hr />
+        <div className='twoCol'>
+          <h3>Changing a class on a button</h3>
+          <ul>
+            <li>
+              This example shows a light to dark color swap using a transition.
+            </li>
+            <li>
+              This is purely an example and isn't how you would normally do
+              this.
+            </li>
+          </ul>
+          <figure className='exampleImg'>
+            <img
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645560375/Screen_Shot_2022-02-22_at_3.06.02_PM_ddir9h.png'
+              alt=''
+            />
+            <figcaption>
+              Link to this:{' '}
+              <a href='https://codepen.io/joyanna/pen/jOPvoeX'>Click this!</a>
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+      <article>
+        <h2>Utilizing React + CSS Transitions</h2>
+        <hr />
+        <h3>The same class can be tied to State</h3>
+        <ul>
+          <li>
+            Instead of querying the DOM for our elements we can have each of
+            those elements update when there is a state change.
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h2>Example of React + CSS Transition</h2>
+        <h3>Updating State now changes the class</h3>
+      </article>
+      <article>
+        <h2>Using Aria Tags Instead</h2>
+        <h3>Aria Tags</h3>
+        <ul>
+          <li>Used for accessability</li>
+        </ul>
+      </article>
+      <article>
+        <h2>Example of Aria Tag Usage</h2>
+        <h3>Used on Accordion</h3>
+      </article>
+      <article>
+        <h2>Combine all this with Plugins</h2>
+        <h3>Dynamic Animation ability... </h3>
+        <ul>
+          <li>Loop over these elements</li>
+          <li>Each style can be multiplied by the ID of the el</li>
+        </ul>
       </article>
     </Styles>
   );
