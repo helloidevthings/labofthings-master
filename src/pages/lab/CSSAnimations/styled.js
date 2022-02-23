@@ -53,6 +53,7 @@ export default styled.main`
     border: 0.2em solid var(--black);
     color: var(--black);
     font-family: 'loos-extended', sans-serif;
+    font-weight: 800;
     font-size: 3em;
     @media only screen and (max-width: 600px) {
       font-size: 2em;
@@ -74,10 +75,6 @@ export default styled.main`
     font-family: 'loos-normal', sans-serif;
     font-family: 'Fira Sans', sans-serif;
     line-height: 1.3;
-  }
-
-  svg {
-    stroke: var(--primary);
   }
 
   hr {
@@ -117,10 +114,13 @@ export default styled.main`
         transform: scaleY(1);
       }
     }
+    & svg {
+      fill: var(--primary);
+    }
   }
 
   button {
-    padding: 0.2em 0.7em 0.25em;
+    padding: 3px 12px 4px;
     margin: 1em 0.2em;
     background: var(--primary);
     color: var(--black);
@@ -139,18 +139,80 @@ export default styled.main`
       background: var(--secondary);
       color: var(--white);
     }
+    &:hover {
+      background: var(--white);
+      color: var(--black);
+    }
   }
 
-.twoCol {
-  display: grid;
-  /* grid-template-columns: repeat(auto-fit, minmax(20em, 1fr)); */
-  grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+  .dropplet {
+    background: none; 
+    box-shadow: none;
+    padding: 0; 
+    margin: 0; 
+    position: relative;
+    transition: all .4s ease-in-out;
 
-}
+    & svg {
+      height: 1.5em;
+      width: 1.5em; 
+      stroke: none; 
+    }
 
-figure {
-  margin: .3rem; 
-      box-shadow:8px 8px 0 var(--tertiary); 
+    .tooltip {
+      width: max-content; 
+      height: max-content;
+      max-width: 97vw;
+      position: absolute;
+      padding: .7rem;
+      box-shadow: 8px 8px 0px var(--secondary); 
+      border: 4px var(--secondary) solid; 
+      left: 0; 
+      top: 100%; 
+      background: var(--tertiary);
+      border-radius: 1.1rem;
+      transform-origin: top left;
+      transform: scale(.2) translateX(-200%);
+      transition: all .4s ease-in-out;
+      z-index: 1000;
+  
+      h5 {
+        color: var(--black);
+        background: var(--white);
+        padding: .3rem .2rem;
+        font-size: 1em;
+      }
+      img {
+        max-width: 100%;
+        margin-top: .2rem;
+      }
+    }
+
+    &:hover {
+      .tooltip {
+        transform: scale(1);
+      }
+    }
+  }
+
+  .twoCol {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+    grid-column-gap: 1em;
+
+  }
+
+  figure {
+    width: max-content;
+    height: max-content;
+    margin: .3rem; 
+    background-color: var(--primary);
+    box-shadow:8px 8px 0 var(--tertiary); 
+    img {
+      max-width: 80vw;
+      filter: saturate(0) contrast(1);
+      /* opacity: .8; */
+    }
   }
 
   .circleCrop {
@@ -158,7 +220,6 @@ figure {
     max-height: 13rem;
     position: relative;
     /* overflow: hidden; */
-    background-color: var(--primary);
     border-radius: 100%;
     z-index: 1; 
     box-shadow: none; 
@@ -184,23 +245,25 @@ figure {
     }
   }
 
-    .exampleImg {
-      max-width: 30rem;
-      min-height: 14rem; 
-      z-index: 1;
-      background-color: var(--primary);
-      position: relative;
+  .exampleImg {
+    width: 100%;
+    height: 100%; 
+    max-width: 30rem;
+    min-height: 18rem; 
+    z-index: 1;
+    background-color: var(--primary);
+    position: relative;
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; 
-        z-index: 1;
-        position: absolute;
-        left: 0;
-        top: 0; 
-        /* mix-blend-mode: luminosity; */
-      }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      top: 0; 
+      /* mix-blend-mode: luminosity; */
+    }
 
       figcaption {
         position: absolute;
@@ -229,6 +292,7 @@ figure {
         padding: 1em;
       }
     }
+
     code {
       font-weight: 500;
       /* background: linear-gradient(45deg, #c59fff, #f390ff); */
