@@ -1,6 +1,6 @@
 import Styles from './styled';
 import React, { useState } from 'react';
-import Circle from '../../../components/Icons/Circle';
+// import Circle from '../../../components/Icons/Circle';
 
 const CSSAnimations = () => {
   const [currentColor, updateColor] = useState('fuschia');
@@ -57,8 +57,10 @@ const CSSAnimations = () => {
               src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645566998/Screen_Shot_2022-02-22_at_4.56.10_PM_oeu3be.png'
               alt='Joyanna in a hat and jean jacket'
             />
-            <figcaption>follow</figcaption>
-            {/* <Circle color={currentColor} /> */}
+            <figcaption>
+              follow
+              {/* <Circle color={currentColor} /> */}
+            </figcaption>
           </figure>
         </div>
       </article>
@@ -79,7 +81,22 @@ const CSSAnimations = () => {
         </p>
       </article>
       <article>
+        <h2>Before We Dive Into the Code</h2>
+        <h3>Let's talk about GOOD Animations</h3>
+        <ul>
+          <li>Choreography in interfaces animation</li>
+          <li>Equal interaction</li>
+        </ul>
+        <a
+          href='https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9'
+          target='_blank'
+        >
+          Ref: Animation in UX
+        </a>
+      </article>
+      <article>
         <h2>✨ CSS Transitions {'&'} Animations</h2>
+        <h3>What are they?</h3>
         <hr />
         <div className='twoCol'>
           <div>
@@ -104,6 +121,16 @@ const CSSAnimations = () => {
             />
           </figure>
         </div>
+      </article>
+      <article>
+        <h2>The First Thing Anyone Ever Does...</h2>
+        <h3>Trying to Animate Height or Width</h3>
+        <ul>
+          <li>
+            If you've ever tried doing this you've probably walked away annoyed
+            with CSS.
+          </li>
+        </ul>
       </article>
       <article>
         <h2>🍿 Buttery Smooth CSS Transitions</h2>
