@@ -9,22 +9,22 @@ export default styled.main`
   --black: ${(props) => (props.currentColor === 'dark' ? '#fff' : '#000')};
   --white: ${(props) => (props.currentColor === 'dark' ? '#13131b' : '#fff')};
   --fuschia: #ff48ff;
-  --blue: #00bbff;
+  --blue: #55d2ff;
   --dark: #395cba;
-  --gray: #acadb9;
+  --gray: #acabb7;
 
   --fuschiaSecondary: #5c00d1;
-  --blueSecondary: #01016a;
+  --blueSecondary: #1e1ec3;
   --darkSecondary: #fbbe5d;
   --graySecondary: #292838;
 
   --fuschiaTertiary: #b78dff;
-  --blueTertiary: #6f6fff;
+  --blueTertiary: #76d4ff;
   --darkTertiary: #995200;
-  --grayTertiary: #5a5968;
+  --grayTertiary: #acabb7;
 
-  --fuschiaGradient: linear-gradient(45deg, #01016a, #7028d1, #ff48ff);
-  --blueGradient: linear-gradient(45deg, #01016a, #0014ff, #009aff);
+  --fuschiaGradient: linear-gradient(45deg, #01016a, #7028d1, #ff93e3);
+  --blueGradient: linear-gradient(45deg, #3838b8, #2232f0, #55bcff);
   --darkGradient: linear-gradient(45deg, #000000, #2b2a37, #2f2f59);
   --grayGradient: linear-gradient(45deg, #1e1e1e, #292838, #555768);
 
