@@ -8,14 +8,22 @@ import ColorChangeCircle from '../../../components/Icons/ColorChangeCircle';
 
 const CSSAnimations = () => {
   const [currentColor, updateColor] = useState('fuschia');
+  const [toolTip, toggleToolTip] = useState(false);
+  const handleDropplet = () => {
+    toolTip === true ? toggleToolTip(false) : toggleToolTip(true);
+    console.log(toolTip);
+  };
 
   return (
     <Styles currentColor={currentColor} className={currentColor}>
       <h1>CSS Animations in JavaScript {'&'} React</h1>
       <div>
-        <button className='dropplet'>
-          Color:
-          {/* <Dropplet /> */}
+        <button
+          className='dropplet'
+          aria-haspopup={toolTip}
+          onClick={handleDropplet}
+        >
+          Color ? Pink : {/* <Dropplet /> */}
           <div className='tooltip'>
             <h5>🪄 Options to Change colors!</h5>
             <img
@@ -76,7 +84,7 @@ const CSSAnimations = () => {
             <ol>
               <li>What Animation Tools Do We Have?</li>
               <li>What are the Pros {'&'} Cons to using These?</li>
-              <li>How does The Browser Manage Animations?</li>
+              <li>How does The Browser Render Animations?</li>
               <li>What Makes Good UX Animations?</li>
               <li>CSS Syntax</li>
               <li>React {'&'} CSS Animations</li>
@@ -86,8 +94,9 @@ const CSSAnimations = () => {
             <br />
           </div>
           <aside>
-            <h3>👋 Hello I'm Joyanna</h3>
-            <h4>Design {'&'} Development</h4>
+            <h3 className='typeIt'>👋 Hello I'm Joyanna</h3>
+            <h5>Design {'&'} Development</h5>
+            <hr />
             <p>
               I have worked in design and development for over 13 years. I am
               currently working at Regal Cinemas, but I have worked at Cadre5,
@@ -171,7 +180,13 @@ const CSSAnimations = () => {
               </li>
               <li>
                 <p>
-                  <a href='https://docs.animaapp.com/'>Anima</a>
+                  <a
+                    href='https://docs.animaapp.com/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Anima
+                  </a>
                 </p>
               </li>
               <li>
@@ -273,6 +288,17 @@ const CSSAnimations = () => {
                 other tools.
               </li>
             </ul>
+            <h3>Communication</h3>
+            <ul>
+              <li>
+                Creates clear concept of what kind of animations you would like
+                the developer to create.
+              </li>
+              <li>
+                In some cases you can export code, but most likely will need to
+                be looked at.
+              </li>
+            </ul>
             <h4>References</h4>
             <ol>
               <li>
@@ -303,9 +329,11 @@ const CSSAnimations = () => {
               />
               <figcaption>Using Prototyping + Smart Animate</figcaption>
             </figure>
+            <br />
             <figure>
               <img
-                src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646787154/figma-animation_zrmsf6.gif'
+                className='smallFig'
+                src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646852241/figma-animation_lcrtri.gif'
                 alt=''
               />
               <figcaption>
@@ -406,11 +434,12 @@ const CSSAnimations = () => {
             <h3>because Spiderman...</h3>
             <figure>
               <img
+                className='smallFig'
                 src='https://media.giphy.com/media/SF9Z0shNT07T2/giphy.gif'
                 alt=''
               />
               <figcaption>
-                Actual footage of the browser your animations...
+                Actual footage of the browser loading your animations...
               </figcaption>
             </figure>
             {/* <figure>
@@ -466,12 +495,22 @@ const CSSAnimations = () => {
         </article>
       </section>
       <section>
-        <h2>Let's Break This Down</h2>
+        <h2>🍳 Let's Break This Down</h2>
         <hr />
         <article>
           <h3>How Does the Browser Read Animations?</h3>
+          <ul>
+            <li>Which Properties render first</li>
+            <li>How to create Smooth Animations</li>
+          </ul>
           <h3>What Makes Good Animations?</h3>
+          <ul>
+            <li>UX Standards for Animations</li>
+          </ul>
           <h3>Syntax of CSS Animations</h3>
+          <ul>
+            <li>Writing CSS Transitions for buttons</li>
+          </ul>
         </article>
       </section>
       <section className='twoCol'>
@@ -517,23 +556,7 @@ const CSSAnimations = () => {
               <li>Using Ease or a Bezier Curve define animation</li>
             </ul>
           </div>
-          <figure>
-            <img
-              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645644394/beziercurve_aohk3q.png'
-              alt='curve with handles known as the bezier curve'
-            />
-          </figure>
         </div>
-      </section>
-      <section>
-        <h2>The First Thing Anyone Ever Does...</h2>
-        <h3>Trying to Animate Height or Width</h3>
-        <ul>
-          <li>
-            If you've ever tried doing this you've probably walked away annoyed
-            with CSS.
-          </li>
-        </ul>
       </section>
       <section>
         <h2>🍿 Buttery Smooth CSS Transitions</h2>
@@ -583,48 +606,42 @@ const CSSAnimations = () => {
       <section>
         <h2>Basic Syntax of Transitions</h2>
         <hr />
-        <h3>The browser transitions from one property to another</h3>
-        <ul>
-          <li>
-            Common Transitions <code>transition: all 3s ease-in-out;</code>
-          </li>
-          <li>
-            Calling out a property
-            <code>
-              transition: color .2s ease-in, transform 8s ease-in-out;{' '}
-            </code>
-          </li>
-          <li>
-            Can be combined with hover-states and pseudo elements
-            <code>
-              {`a { color: blue;  
+        <div className='twoFlex'>
+          <div>
+            <h3>The browser transitions from one property to another</h3>
+            <ul>
+              <li>
+                Common Transitions <code>transition: all 3s ease-in-out;</code>
+              </li>
+              <li>
+                Calling out a property
+                <code>
+                  transition: color .2s ease-in, transform 8s ease-in-out;{' '}
+                </code>
+              </li>
+              <li>
+                Can be combined with hover-states and pseudo elements
+                <code>
+                  {`a { color: blue;  
                   transform: color .2s ease-in; 
                   &:hover {color: pink}
               }`}
-            </code>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Transition Examples</h2>
-        <hr />
-        <h3>Used on Buttons, Accordions {'&'} Many More!</h3>
-        <button>Example of a button</button>
-      </section>
-      <section>
-        <h2>Basic Syntax of Animations</h2>
-        <hr />
-        <h3>Animations use Keyframes to change properties</h3>
-        <ul>
-          <li>
-            Using Keyframes
-            <code>{`@keyframes {from {color:pink} to {color:blue}}`}</code>
-          </li>
-          <li>
-            Keyframe %
-            <code>{`0%{color: pink} 50%{color: purple} 100%{color:blue};`}</code>
-          </li>
-        </ul>
+                </code>
+              </li>
+            </ul>
+          </div>
+          <figure>
+            <source
+              srcSet='https://res.cloudinary.com/labofthingsimages/image/upload/v1646838938/bezierCurve_eyxamd.gif'
+              media='(min-width: 600px)'
+            ></source>
+            <img
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646838938/bezierCurve_eyxamd.gif'
+              alt='circle rotates as javascript constantly changes the in-line style on an svg circle'
+            />
+            {/* <figcaption>Javascript re-rendering in-line CSS</figcaption> */}
+          </figure>
+        </div>
       </section>
       <section>
         <h2>Animation Examples</h2>
@@ -692,7 +709,13 @@ const CSSAnimations = () => {
             />
             <figcaption>
               Link to this:{' '}
-              <a href='https://codepen.io/joyanna/pen/jOPvoeX'>Click this!</a>
+              <a
+                href='https://codepen.io/joyanna/pen/jOPvoeX'
+                target='_blank'
+                rel='noreferrer'
+              >
+                Click this!
+              </a>
             </figcaption>
           </figure>
         </div>
@@ -711,6 +734,23 @@ const CSSAnimations = () => {
       <section>
         <h2>Example of React + CSS Transition</h2>
         <h3>Updating State now changes the class</h3>
+      </section>
+      <section>
+        <h2>Aria Tags</h2>
+        <hr />
+        <article>
+          <h3>Accessibility</h3>
+          <ul>
+            <li>These are great!</li>
+          </ul>
+          <br />
+          <h4>References</h4>
+          <a
+            href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA'
+            target='_blank'
+            rel='noreferrer'
+          ></a>
+        </article>
       </section>
       <section>
         <h2>Using Aria Tags Instead</h2>

@@ -31,13 +31,13 @@ export default styled.main`
   width: 100vw;
   height: 100%;
   background: var(--mainGradient);
-  font-size: calc(14px + (23 - 14) * ((100vw - 300px) / (2100 - 300)));
+  font-size: calc(14px + (24 - 14) * ((100vw - 300px) / (2100 - 300)));
   font-family: 'Fira Sans', sans-serif;
   color: var(--black);
-  line-height: 1.45;
+  line-height: 1.51;
   letter-spacing: 0em;
   padding: 1em;
-  transition: all 0.4s ease-in-out;
+  /* transition: all 0.4s ease-in-out; */
   @media only screen and (max-width: 600px) {
     padding: 0.3em;
   }
@@ -86,7 +86,7 @@ p, h1, h2, h3, h4, h5, h6 {
     line-height: 1.3;
   }
 
-  h4 {
+  h4, h5 {
     text-transform: uppercase;
     font-family: 'loos-wide', sans-serif;
     font-weight: 600;
@@ -202,7 +202,12 @@ p, h1, h2, h3, h4, h5, h6 {
       color: var(--black);
     }
   }
-
+    [aria-haspopup='true'] {
+    .tooltip {
+      transform: scale(1);
+    }
+    }
+  
   .dropplet {
     background: none; 
     box-shadow: none;
@@ -247,9 +252,7 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
     &:hover {
-      .tooltip {
-        transform: scale(1);
-      }
+      background: none; 
     }
   }
 
@@ -264,25 +267,39 @@ p, h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
     align-items: center;
   }
 
   figure {
+    display:flex;
+    flex-wrap: wrap;
     width: inherit;
-    margin: .3rem; 
+    margin: .3rem;
     box-shadow: 8px 8px 0 var(--tertiary);
-    background-color: var(--primary);
+    background: var(--mainGradient);
+    border: 3px solid var(--secondary);
     position: relative;
     z-index: 1;
-
+    
+    & > * {
+      flex: 1 1 auto; 
+    }
+    
     img {
       filter: saturate(0) contrast(1);
       transition: filter .3s ease-in-out;
 
       &:hover {
         filter: none;
+        /* mix-blend-mode: luminosity; */
       }
+    }
+
+    .smallFig {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; 
+      max-height: 20rem;
     }
 
     figcaption {
@@ -355,6 +372,9 @@ p, h1, h2, h3, h4, h5, h6 {
       border: 4px var(--tertiary) solid; 
       padding: 1em;
       box-shadow: 9px 8px 0px 0px var(--tertiary);   
+      & hr {
+        border-color: var(--tertiary);
+      }
     }
 
     code {
@@ -434,10 +454,30 @@ p, h1, h2, h3, h4, h5, h6 {
     }
   }
 
-  .draw-in {
+  .drawIn {
     stroke-dasharray: 1000;
     stroke-dashoffset: 10;
     animation: draw 15s ease-in-out alternate infinite;
+  }
+
+  .typeIt {
+    width: 18ch;
+    animation: typing 2s steps(18), effect .5s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--tertiary);
+  }
+
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes effect {
+    50% {
+      border-color: transparent
+    }
   }
 
   @keyframes draw {
@@ -467,7 +507,7 @@ p, h1, h2, h3, h4, h5, h6 {
       fill: var(--secondary);
     }
     100% {
-      fill: var(---tertiary);
+      fill: var(--tertiary);
     }
   }
 
