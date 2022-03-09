@@ -56,41 +56,49 @@ const CSSAnimations = () => {
           Gray
         </button>
       </div>
-      <section className='twoCol'>
+      <section>
         <article>
-          <h2>This is a Presentation</h2>
-          <h3>(That's actually a webpage)</h3>
-          <p>
-            We'll cover animation libraries, animation software and using CSS to
-            quickly code animations.
-          </p>
-          <ColorChangeCircle classes={'colorCircle'} />
+          <h2>Things and stuff and stuff</h2>
         </article>
-        <article>
-          <h2>👋 Hello I'm Joyanna</h2>
-          <h3>Design {'&'} Development</h3>
-          <p>
-            I have worked in design and development for over 13 years. I am
-            currently working at Regal Cinemas, but I have worked at Cadre5,
-            Pyxl, Robin Easter, Morris Creative {'&'} DesignSensory.
-          </p>
-          <Circle color={currentColor} />
-          <figure className='circleCrop'>
-            <img
-              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645566998/Screen_Shot_2022-02-22_at_4.56.10_PM_oeu3be.png'
-              alt='Joyanna in a hat and jean jacket'
-            />
-            <figcaption>
-              <a
-                href='https://twitter.com/joyannahirst'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Follow
-                <Arrow />
-              </a>
-            </figcaption>
-          </figure>
+        <article className='twoCol'>
+          <div>
+            <h3>(That's actually a webpage)</h3>
+            <p>
+              We'll cover animation libraries, animation software and using CSS
+              to quickly code animations.
+            </p>
+            <hr />
+            <ul>
+              <li>Things to do</li>
+            </ul>
+            <ColorChangeCircle classes={'colorCircle'} />
+            <br />
+          </div>
+          <aside>
+            <h3>👋 Hello I'm Joyanna</h3>
+            <h4>Design {'&'} Development</h4>
+            <p>
+              I have worked in design and development for over 13 years. I am
+              currently working at Regal Cinemas, but I have worked at Cadre5,
+              Pyxl, Robin Easter, Morris Creative {'&'} DesignSensory.
+            </p>
+            <Circle color={currentColor} />
+            <figure className='circleCrop'>
+              <img
+                src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645566998/Screen_Shot_2022-02-22_at_4.56.10_PM_oeu3be.png'
+                alt='Joyanna in a hat and jean jacket'
+              />
+              <figcaption>
+                <a
+                  href='https://twitter.com/joyannahirst'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Follow <Arrow />
+                </a>
+              </figcaption>
+            </figure>
+          </aside>
         </article>
       </section>
       <section>
@@ -113,9 +121,10 @@ const CSSAnimations = () => {
           <li>Then we'll talk about Y</li>
         </ul>
       </section>
-      <section className='twoCol'>
+      <section>
+        <h2>Various Design Tools with Figma</h2>
+        <hr />
         <article>
-          <h2>Various Design Tools with Figma</h2>
           <h3>Figma has built in tools for Animations</h3>
           <ul>
             <li>Smart Animations using Prototypes</li>
@@ -139,33 +148,98 @@ const CSSAnimations = () => {
               </p>
             </li>
           </ul>
-          <a
-            href='https://uxdesign.cc/figma-5-ways-to-add-animation-to-your-designs-e3c521aa8902'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Figma Animations <Launch />
-          </a>
         </article>
-        <figure>
-          <img
-            src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646787154/figma-animation_zrmsf6.gif'
-            alt=''
-          />
-        </figure>
       </section>
-      <section className='twoCol'>
-        <article>
+      <section>
+        <h2>Figma Smart Animate</h2>
+        <p>
+          <i>
+            Smart Animate makes it easy to quickly mock-up animations from
+            screen to screen.
+          </i>
+        </p>
+        <hr />
+        <article className='twoCol'>
+          <div>
+            <ul>
+              <li>pretty cool</li>
+              <li>Fast and easy</li>
+            </ul>
+            <h4>References</h4>
+            <ol>
+              <li>
+                <a
+                  href='https://uxdesign.cc/figma-5-ways-to-add-animation-to-your-designs-e3c521aa8902'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Figma Animations <Launch />
+                </a>
+              </li>
+            </ol>
+          </div>
+          <div>
+            <figure>
+              <img
+                src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646795927/SmartAnimateExample_v21bga.png'
+                alt=''
+              />
+              <figcaption>Using Prototyping + Smart Animate</figcaption>
+            </figure>
+            <figure>
+              <img
+                src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646787154/figma-animation_zrmsf6.gif'
+                alt=''
+              />
+              <figcaption>
+                Figma creates the transition between screens
+              </figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
+      <section>
+        <header>
           <h2>Lottie</h2>
-          <h3>👍 It's great for complex animations!</h3>
-          <ul>
-            <li>Can be exported from After Effects and other programs</li>
-            <li>
-              Has plugin support for our favorite programs: Figma, Framer,
-              Webflow, etc
-            </li>
-            <li>Install NPM package to work with exported files</li>
-          </ul>
+          <p>
+            <i>
+              Helps Designers be able to create complex animations. Exports JSON
+              files for developers to use.
+            </i>
+          </p>
+          <hr />
+        </header>
+        <article className='twoCol'>
+          <div>
+            <h3>👍 It's great for complex animations!</h3>
+            <ul>
+              <li>Can be exported from After Effects and other programs</li>
+              <li>
+                Has plugin support for our favorite programs: Figma, Framer,
+                Webflow, etc
+              </li>
+              <li>Can Be Installed with an NPM package</li>
+            </ul>
+            <br />
+            <h3>👎 Not as good for simple animations</h3>
+            <ul>
+              <li>Powerful in-line CSS that's updated by Javascript</li>
+              <li>Can impact performance if not used sparingly</li>
+            </ul>
+            <br />
+            <h4>References</h4>
+            <ol>
+              <li>
+                <a
+                  href='https://uxdesign.cc/figma-5-ways-to-add-animation-to-your-designs-e3c521aa8902'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Figma Animations <Launch />
+                </a>
+              </li>
+            </ol>
+          </div>
           {/* <figure>
             <source
               srcSet='https://res.cloudinary.com/labofthingsimages/image/upload/v1646788830/circle-rotation-css_vgv1le.gif'
@@ -177,24 +251,19 @@ const CSSAnimations = () => {
             />
             <figcaption>CSS does not Re-Render</figcaption>
           </figure> */}
-        </article>
-        <article>
-          <h3>👎 Not as good for simple animations</h3>
-          <ul>
-            <li>Powerful in-line CSS that's updated by Javascript</li>
-            <li>Can impact performance if not used sparingly</li>
-          </ul>
-          <figure>
-            <source
-              srcSet='https://res.cloudinary.com/labofthingsimages/image/upload/v1646774466/circle-rotation-lottie_edg4u1.gif'
-              media='(min-width: 600px)'
-            ></source>
-            <img
-              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646774466/circle-rotation-lottie_edg4u1.gif'
-              alt='circle rotates as javascript constantly changes the in-line style on an svg circle'
-            />
-            <figcaption>Javascript re-rendering in-line CSS</figcaption>
-          </figure>
+          <div>
+            <figure>
+              <source
+                srcSet='https://res.cloudinary.com/labofthingsimages/image/upload/v1646774466/circle-rotation-lottie_edg4u1.gif'
+                media='(min-width: 600px)'
+              ></source>
+              <img
+                src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646774466/circle-rotation-lottie_edg4u1.gif'
+                alt='circle rotates as javascript constantly changes the in-line style on an svg circle'
+              />
+              <figcaption>Javascript re-rendering in-line CSS</figcaption>
+            </figure>
+          </div>
         </article>
       </section>
       <section className='twoCol'>
@@ -210,7 +279,7 @@ const CSSAnimations = () => {
             target='_blank'
             rel='noreferrer'
           >
-            Ref: Animation in UX <Launch />
+            Animation in UX <Launch />
           </a>
         </div>
         <figure>
@@ -300,7 +369,7 @@ const CSSAnimations = () => {
           target='_blank'
           rel='noreferrer'
         >
-          Smooth As Butter Animations
+          Smooth As Butter Animations <Launch />
         </a>
       </section>
       <section>

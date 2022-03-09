@@ -59,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
   h1 {
     padding: 0.1em 0.3em 0.3em;
     background: var(--white);
-    border: 0.2em solid var(--black);
+    border: 4px solid var(--black);
     color: var(--black);
     font-family: 'loos-extended', sans-serif;
     font-weight: 800;
@@ -85,15 +85,22 @@ p, h1, h2, h3, h4, h5, h6 {
     font-family: 'Fira Sans', sans-serif;
     line-height: 1.3;
   }
+
+  h4 {
+    text-transform: uppercase;
+    font-family: 'loos-wide', sans-serif;
+    font-weight: 600;
+    letter-spacing: .03em ;
+  }
    
   hr {
     border: 2px solid var(--primary);
-    margin: 0.5em 0;
+    margin: 0.9em 0;
   }
 
   p {
     font-size: 1em;
-    max-width: 40em;
+    /* max-width: 40em; */
 
     & > a {
       font-size: 1em;
@@ -114,7 +121,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
       &:hover {
         color: var(--white);
-        
+
         &:after {
           transform: scaleY(1);
         }
@@ -126,7 +133,7 @@ p, h1, h2, h3, h4, h5, h6 {
     font-family: 'loos-normal', sans-serif;
     font-weight: 700;
     color: var(--secondary);
-    font-size: 1.1em;
+    font-size: 1.2em;
     text-decoration: none;
     padding: 0 0.1em;
     position: relative;
@@ -219,7 +226,7 @@ p, h1, h2, h3, h4, h5, h6 {
       box-shadow: 8px 8px 0px var(--secondary); 
       border: 4px var(--secondary) solid; 
       left: 0; 
-      top: 100%; 
+      top: 100%;
       background: var(--tertiary);
       border-radius: 1.1rem;
       transform-origin: top left;
@@ -249,7 +256,8 @@ p, h1, h2, h3, h4, h5, h6 {
   .twoCol {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-    grid-column-gap: 1em;
+    grid-column-gap: 2em;
+  grid-template-rows: auto;
   }
 
   .twoFlex {
@@ -262,7 +270,6 @@ p, h1, h2, h3, h4, h5, h6 {
 
   figure {
     margin: .3rem; 
-    background-color: var(--primary);
     box-shadow: 8px 8px 0 var(--tertiary);
     background-color: var(--primary);
     position: relative;
@@ -284,7 +291,7 @@ p, h1, h2, h3, h4, h5, h6 {
       position: absolute;
       background: var(--secondary);
       color: var(--white);
-      padding: 1rem 1.4rem;
+      padding: .8rem 1rem;
       bottom: 0;
       left: 0;
       width: 100%;
@@ -321,6 +328,7 @@ p, h1, h2, h3, h4, h5, h6 {
       mix-blend-mode: luminosity;
       z-index: 2; 
     }
+    
     figcaption {
       position: absolute; 
       z-index: 10; 
@@ -346,6 +354,13 @@ p, h1, h2, h3, h4, h5, h6 {
       }
     }
 
+    aside {
+      /* background: var(--tertiary); */
+      border: 4px var(--tertiary) solid; 
+      padding: 1em;
+      box-shadow: 9px 8px 0px 0px var(--tertiary);   
+    }
+
     code {
       font-weight: 500;
       /* background: linear-gradient(45deg, #c59fff, #f390ff); */
@@ -360,7 +375,7 @@ p, h1, h2, h3, h4, h5, h6 {
       line-height: 1.6;
       position: relative;
       list-style: none;
-      margin-bottom: 0.2em;
+      margin: 0.2em 0;
 
       &:after {
         content: '';
@@ -398,6 +413,27 @@ p, h1, h2, h3, h4, h5, h6 {
             content: none;
           }
         }
+      }
+    }
+  }
+
+    ol {
+    margin-block-start: 0;
+    margin-bottom: 1em;
+    padding-inline-start: 0;
+    list-style: none;
+    counter-reset: my-awesome-counter;
+
+    li {
+      counter-increment: my-awesome-counter;
+      &:before {
+        content: counter(my-awesome-counter) '. ';
+        color: var(--primary);
+        font-weight: bold;
+        font-family: 'loos-extended', sans-serif;
+      }
+      &:after {
+        content: none;
       }
     }
   }
