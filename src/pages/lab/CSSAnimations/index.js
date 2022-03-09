@@ -1,7 +1,7 @@
 import Styles from './styled';
 import React, { useState } from 'react';
 import Arrow from '../../../components/Icons/Arrow';
-import Dropplet from '../../../components/Icons/Dropplet';
+// import Dropplet from '../../../components/Icons/Dropplet';
 import Circle from '../../../components/Icons/Circle';
 import Launch from '../../../components/Icons/Launch';
 import ColorChangeCircle from '../../../components/Icons/ColorChangeCircle';
@@ -14,7 +14,8 @@ const CSSAnimations = () => {
       <h1>CSS Animations in JavaScript {'&'} React</h1>
       <div>
         <button className='dropplet'>
-          <Dropplet />
+          Color:
+          {/* <Dropplet /> */}
           <div className='tooltip'>
             <h5>🪄 Options to Change colors!</h5>
             <img
@@ -56,6 +57,10 @@ const CSSAnimations = () => {
           Gray
         </button>
       </div>
+      {/* <div>
+        <button className='dropplet'>Text:</button>
+        <button>Small</button>
+      </div> */}
       <section>
         <article>
           <h2>Things and stuff and stuff</h2>
@@ -68,9 +73,15 @@ const CSSAnimations = () => {
               to quickly code animations.
             </p>
             <hr />
-            <ul>
-              <li>Things to do</li>
-            </ul>
+            <ol>
+              <li>What Animation Tools Do We Have?</li>
+              <li>What are the Pros {'&'} Cons to using These?</li>
+              <li>How does The Browser Manage Animations?</li>
+              <li>What Makes Good UX Animations?</li>
+              <li>CSS Syntax</li>
+              <li>React {'&'} CSS Animations</li>
+              <li>Styled Components {'&'} Accessability</li>
+            </ol>
             <ColorChangeCircle classes={'colorCircle'} />
             <br />
           </div>
@@ -122,36 +133,124 @@ const CSSAnimations = () => {
         </ul>
       </section>
       <section>
-        <h2>Various Design Tools with Figma</h2>
+        <h2>🛠 Animation Tools</h2>
+        <p>
+          <i>
+            Here are a few tools and libraries that we use to animate web.
+            (Sorry if your favorite isn't listed)
+          </i>
+        </p>
         <hr />
-        <article>
-          <h3>Figma has built in tools for Animations</h3>
-          <ul>
-            <li>Smart Animations using Prototypes</li>
-            <li>
-              <p>
-                <a
-                  href='https://lottiefiles.com/'
-                  target='_blank'
-                  rel='noreferrer'
-                >
-                  Lottie Plugin
-                </a>{' '}
-                for Figma
-              </p>
-            </li>
-            <li>
-              <p>
-                <a href='https://webflow.com/' target='_blank' rel='noreferrer'>
-                  Webflow
-                </a>
-              </p>
-            </li>
-          </ul>
+        <article className='twoCol'>
+          <div>
+            <h3>Design Tools</h3>
+            <ul>
+              <li>
+                <p>
+                  Figma:{' '}
+                  <a
+                    href='https://help.figma.com/hc/en-us/articles/360039818874-Create-advanced-animations-with-smart-animate'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Smart Animations
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Framer:{' '}
+                  <a
+                    href='https://www.framer.com/examples/svg-animation/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    SVG Animations
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href='https://docs.animaapp.com/'>Anima</a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a
+                    href='https://lottiefiles.com/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Lottie Files
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a
+                    href='https://webflow.com/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Webflow
+                  </a>
+                </p>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3>Development Tools</h3>
+            <ul>
+              <li>
+                <p>
+                  <a
+                    href='https://www.framer.com/motion/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Framer Motion
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a
+                    href='https://react-spring.io/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    React-Spring
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a
+                    href='https://animejs.com/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Anime.js
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a
+                    href='https://threejs.org/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Three.js
+                  </a>
+                </p>
+              </li>
+            </ul>
+          </div>
         </article>
       </section>
       <section>
-        <h2>Figma Smart Animate</h2>
+        <h2>Design Programs: Smart Animations</h2>
         <p>
           <i>
             Smart Animate makes it easy to quickly mock-up animations from
@@ -161,9 +260,18 @@ const CSSAnimations = () => {
         <hr />
         <article className='twoCol'>
           <div>
+            <h3>Transition between two states/frames in a component.</h3>
             <ul>
-              <li>pretty cool</li>
-              <li>Fast and easy</li>
+              <li>Figma: Smart Animate</li>
+              <li>Framer: Smart Components</li>
+            </ul>
+            <h3>Fast {'&'} Easy</h3>
+            <ul>
+              <li>Quick solution for protoyping and communicating an idea.</li>
+              <li>
+                These don't necessarily export code, but there are plugins and
+                other tools.
+              </li>
             </ul>
             <h4>References</h4>
             <ol>
@@ -174,6 +282,15 @@ const CSSAnimations = () => {
                   rel='noreferrer'
                 >
                   Figma Animations <Launch />
+                </a>
+              </li>
+              <li>
+                <a
+                  href='https://www.framer.com/blog/posts/announcing-smart-components/'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Framer Animations <Launch />
                 </a>
               </li>
             </ol>
@@ -199,7 +316,7 @@ const CSSAnimations = () => {
         </article>
       </section>
       <section>
-        <header>
+        <div>
           <h2>Lottie</h2>
           <p>
             <i>
@@ -208,10 +325,10 @@ const CSSAnimations = () => {
             </i>
           </p>
           <hr />
-        </header>
+        </div>
         <article className='twoCol'>
           <div>
-            <h3>👍 It's great for complex animations!</h3>
+            <h3>It's great for complex animations!</h3>
             <ul>
               <li>Can be exported from After Effects and other programs</li>
               <li>
@@ -221,37 +338,105 @@ const CSSAnimations = () => {
               <li>Can Be Installed with an NPM package</li>
             </ul>
             <br />
-            <h3>👎 Not as good for simple animations</h3>
-            <ul>
-              <li>Powerful in-line CSS that's updated by Javascript</li>
-              <li>Can impact performance if not used sparingly</li>
-            </ul>
-            <br />
             <h4>References</h4>
             <ol>
               <li>
                 <a
-                  href='https://uxdesign.cc/figma-5-ways-to-add-animation-to-your-designs-e3c521aa8902'
+                  href='https://webflow.com/blog/after-effects-and-lottie-meet-webflow?utm_source=google&utm_medium=search&utm_campaign=general-paid-workhorse&utm_term=keyword-targeting&utm_content=dynamic-search-ads-t1&gclid=CjwKCAiAvaGRBhBlEiwAiY-yMOCVyCJwaW7uidHYkV0TZBbdW-ojVYB5ceOjXY03ELk0KDtaDTz5xRoCHnQQAvD_BwE'
                   target='_blank'
                   rel='noreferrer'
                 >
-                  Figma Animations <Launch />
+                  Lottie + Webflow <Launch />
+                </a>
+              </li>
+              <li>
+                {' '}
+                <a
+                  href='https://lottiefiles.com/plugins/figma?gclid=CjwKCAiAvaGRBhBlEiwAiY-yMISTBKr3Hz69zpWFmGjeUSFPGKN33fTMwyJcBW_7AOrACd4gqp06yRoCXR8QAvD_BwE'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Lottie + Figma <Launch />
+                </a>
+              </li>
+              <li>
+                {' '}
+                <a
+                  href='https://lottiefiles.com/'
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Lottie Files <Launch />
                 </a>
               </li>
             </ol>
           </div>
-          {/* <figure>
-            <source
-              srcSet='https://res.cloudinary.com/labofthingsimages/image/upload/v1646788830/circle-rotation-css_vgv1le.gif'
-              media='(min-width: 600px)'
-            ></source>
-            <img
-              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646788830/circle-rotation-css_vgv1le.gif'
-              alt='circle rotates as javascript constantly changes the in-line style on an svg circle'
-            />
-            <figcaption>CSS does not Re-Render</figcaption>
-          </figure> */}
+        </article>
+      </section>
+      <section>
+        <h2>Framer + Framer-Motion</h2>
+        <hr />
+        <article></article>
+      </section>
+      <section>
+        <h2>💪 Powerful Tools</h2>
+        <p>
+          <i>
+            Especially when using Libraries {'&'} Design-to-Dev plugins, we need
+            to be careful of how often we use them.
+          </i>
+        </p>
+        <hr />
+        <article className='twoCol'>
           <div>
+            <h3>Should be used sparingly!</h3>
+            <ul>
+              <li>Can Effect Performance</li>
+              <li>Not always supported in all browsers</li>
+              <li>Not always UX friendly</li>
+            </ul>
+            <h3>Right Tool for the Right Problem</h3>
+            <ul>
+              <li>In many cases these are exactly what you need!</li>
+              <li>Let's deep dive and see what they are actually doing.</li>
+            </ul>
+          </div>
+          <div>
+            <h2>Why?</h2>
+            <h3>because Spiderman...</h3>
+            <figure>
+              <img
+                src='https://media.giphy.com/media/SF9Z0shNT07T2/giphy.gif'
+                alt=''
+              />
+              <figcaption>
+                Actual footage of the browser your animations...
+              </figcaption>
+            </figure>
+            {/* <figure>
+            <img
+              src='https://media.giphy.com/media/BWD3CtcudWL28/giphy.gif'
+              alt=''
+            />
+          </figure> */}
+          </div>
+        </article>
+      </section>
+      <section>
+        <h2>🙅🏻‍♀️ A Bad Example</h2>
+        <hr />
+        <h3>This Example</h3>
+        <p>
+          This shows two SVG circles that are rotated 360. One is exported using
+          a plugin, the other is using CSS. For complex animations this plugin
+          is perfect! In this case, we're asking the browser to use JavaScript
+          to constantly re-render a transform.
+        </p>
+        <br />
+        <br />
+        <article className='twoCol'>
+          <div>
+            <h3>Don't do this:</h3>
             <figure>
               <source
                 srcSet='https://res.cloudinary.com/labofthingsimages/image/upload/v1646774466/circle-rotation-lottie_edg4u1.gif'
@@ -261,9 +446,32 @@ const CSSAnimations = () => {
                 src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646774466/circle-rotation-lottie_edg4u1.gif'
                 alt='circle rotates as javascript constantly changes the in-line style on an svg circle'
               />
-              <figcaption>Javascript re-rendering in-line CSS</figcaption>
+              {/* <figcaption>Javascript re-rendering in-line CSS</figcaption> */}
             </figure>
           </div>
+          <div>
+            <h3>When you can do this:</h3>
+            <figure>
+              <source
+                srcSet='https://res.cloudinary.com/labofthingsimages/image/upload/v1646788830/circle-rotation-css_vgv1le.gif'
+                media='(min-width: 600px)'
+              ></source>
+              <img
+                src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646788830/circle-rotation-css_vgv1le.gif'
+                alt='circle rotates as javascript constantly changes the in-line style on an svg circle'
+              />
+              {/* <figcaption>In-line CSS... That's it.</figcaption> */}
+            </figure>
+          </div>
+        </article>
+      </section>
+      <section>
+        <h2>Let's Break This Down</h2>
+        <hr />
+        <article>
+          <h3>How Does the Browser Read Animations?</h3>
+          <h3>What Makes Good Animations?</h3>
+          <h3>Syntax of CSS Animations</h3>
         </article>
       </section>
       <section className='twoCol'>

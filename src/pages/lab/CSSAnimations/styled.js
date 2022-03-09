@@ -257,7 +257,7 @@ p, h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     grid-column-gap: 2em;
-  grid-template-rows: auto;
+    grid-template-rows: auto;
   }
 
   .twoFlex {
@@ -269,6 +269,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 
   figure {
+    width: inherit;
     margin: .3rem; 
     box-shadow: 8px 8px 0 var(--tertiary);
     background-color: var(--primary);
@@ -278,9 +279,6 @@ p, h1, h2, h3, h4, h5, h6 {
     img {
       filter: saturate(0) contrast(1);
       transition: filter .3s ease-in-out;
-      left: 0;
-      top: 0; 
-      z-index: 1;
 
       &:hover {
         filter: none;
@@ -288,12 +286,10 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
     figcaption {
-      position: absolute;
+      /* position: absolute; */
       background: var(--secondary);
       color: var(--white);
       padding: .8rem 1rem;
-      bottom: 0;
-      left: 0;
       width: 100%;
       z-index: 10;
 
