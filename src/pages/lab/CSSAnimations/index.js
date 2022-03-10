@@ -122,24 +122,37 @@ const CSSAnimations = () => {
         </article>
       </section>
       <section>
-        <h2>The Problem</h2>
+        <h2>Preface</h2>
         <hr />
         <h3>The way we create animations</h3>
         <p>
-          As designers we use a variety of programs to create interactions. Some
-          of these can produce simple code, some of these do not. As developers
-          we can import libraries and packages to create animations. Some of
-          these are simple... some are not!
+          Web animations has changed a lot over the years. We used tools like
+          Flash and JQuery. With the release of CSS3 and HTML5 we moved forward
+          with a different way of animating. We have access to many various
+          tools for animating today. Including plugins that work with design
+          programs and generate code and physics-based motion using JavaScript
+          libraries.
         </p>
+        <br />
         <p>
-          The purpose of this talk is to go over some of the easy solutions
-          using simple CSS to trigger accessible animations. I'll also go over
-          how we can do this when using React.
+          With so many tools at our disposal, it's important to use the right
+          tool for the right problem. It can be easy to over use animations and
+          impact performance and accessibility. The purpose of this talk is to
+          go over some of the simple solutions for common UI patterns that don't
+          require downloading packages or using libraries.
         </p>
-        <ul>
-          <li>First we'll talk about X</li>
-          <li>Then we'll talk about Y</li>
-        </ul>
+
+        <br />
+        <h4>References</h4>
+        <p>
+          <a
+            href='https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance'
+            target='_blank'
+            rel='noreferrer'
+          >
+            CSS {'&'} JavaScript Animation Performance - MDMN Web Docs • 2022
+          </a>
+        </p>
       </section>
       <section>
         <h2>🛠 Animation Tools</h2>
@@ -235,6 +248,17 @@ const CSSAnimations = () => {
                     rel='noreferrer'
                   >
                     React-Spring
+                  </a>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a
+                    href='http://velocityjs.org/'
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    Velocity.js
                   </a>
                 </p>
               </li>
@@ -424,9 +448,13 @@ const CSSAnimations = () => {
               <li>Not always UX friendly</li>
             </ul>
             <h3>Right Tool for the Right Problem</h3>
+            <p>
+              <i>In many cases these are exactly what you need!</i>
+            </p>
             <ul>
-              <li>In many cases these are exactly what you need!</li>
-              <li>Let's deep dive and see what they are actually doing.</li>
+              <li>Physics-based Motion</li>
+              <li>Interactive Graphic Elements</li>
+              <li>Intro Screens / Custom Animations</li>
             </ul>
           </div>
           <div>
@@ -442,12 +470,6 @@ const CSSAnimations = () => {
                 Actual footage of the browser loading your animations...
               </figcaption>
             </figure>
-            {/* <figure>
-            <img
-              src='https://media.giphy.com/media/BWD3CtcudWL28/giphy.gif'
-              alt=''
-            />
-          </figure> */}
           </div>
         </article>
       </section>
@@ -492,6 +514,41 @@ const CSSAnimations = () => {
               {/* <figcaption>In-line CSS... That's it.</figcaption> */}
             </figure>
           </div>
+        </article>
+      </section>
+      <section>
+        <h2>A Note on Performance</h2>
+        <p>
+          <i>
+            It's not really a matter of JavaScript vs CSS in many cases they can
+            be about the same from a performance standpoint. (for most modern
+            browsers)
+          </i>
+        </p>
+        <hr />
+        <article>
+          <h3>UI </h3>
+          <p>
+            <i>
+              "CSS transitions/animations are resampling element styles in the
+              main UI thread before each repaint event happens, which is almost
+              the same as resampling element styles via a
+              <code>requestAnimationFrame()</code> callback, also triggered
+              before the next repaint. If both animations are made in the main
+              UI thread, there is no difference performance-wise."
+            </i>{' '}
+            <br />
+            <b> – MDN Web Docs, CSS {'&'} JavaScript Animation Performance</b>
+          </p>
+          <br />
+          <h4>References</h4>
+          <a
+            href='https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance'
+            target='_blank'
+            rel='noreferrer'
+          >
+            MDN Article <Launch />
+          </a>
         </article>
       </section>
       <section>
