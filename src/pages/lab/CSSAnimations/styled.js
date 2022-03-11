@@ -129,6 +129,16 @@ p, h1, h2, h3, h4, h5, h6 {
     }
   }
 
+  small {
+    font-size: .8em; 
+    & > a {
+      text-decoration: underline;
+      &:after {
+        content: none; 
+      }
+    }
+  }
+
   a {
     font-family: 'loos-normal', sans-serif;
     font-weight: 700;

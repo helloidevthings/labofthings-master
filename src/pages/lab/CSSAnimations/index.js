@@ -145,13 +145,15 @@ const CSSAnimations = () => {
         <br />
         <h4>References</h4>
         <p>
-          <a
-            href='https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance'
-            target='_blank'
-            rel='noreferrer'
-          >
-            CSS {'&'} JavaScript Animation Performance - MDMN Web Docs • 2022
-          </a>
+          <small>
+            <a
+              href='https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance'
+              target='_blank'
+              rel='noreferrer'
+            >
+              CSS {'&'} JavaScript Animation Performance - MDMN Web Docs • 2022
+            </a>
+          </small>
         </p>
       </section>
       <section>
@@ -428,7 +430,43 @@ const CSSAnimations = () => {
       <section>
         <h2>Framer + Framer-Motion</h2>
         <hr />
-        <article></article>
+        <article>
+          <div>
+            <h3>Framer</h3>
+            <ul>
+              <li>Is a Deisgn Program</li>
+              <li>Very flexible, you can use CSS in this program</li>
+            </ul>
+            <h3>Framer-Motion</h3>
+            <ul>
+              <li>Animation Library for JavaScript</li>
+              <li>Can be installed with an NPM Package</li>
+            </ul>
+          </div>
+          <figure>
+            <img
+              className='smallFig'
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646867435/framer-motion-example_mj34ew.gif'
+              alt=''
+            />
+            <figcaption>
+              Actual footage of the browser loading your animations...
+            </figcaption>
+          </figure>
+          <br />
+          <h4>References</h4>
+          <a href='https://www.framer.com/' target='_blank' rel='noreferrer'>
+            Framer Design Software <Launch />
+          </a>
+          <br />
+          <a
+            href='https://www.framer.com/motion/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Framer Motion Library <Launch />
+          </a>
+        </article>
       </section>
       <section>
         <h2>💪 Powerful Tools</h2>
@@ -806,7 +844,9 @@ const CSSAnimations = () => {
             href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA'
             target='_blank'
             rel='noreferrer'
-          ></a>
+          >
+            Aria Tags
+          </a>
         </article>
       </section>
       <section>
