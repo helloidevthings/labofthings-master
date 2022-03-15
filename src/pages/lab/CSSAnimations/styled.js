@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+// const unicode = `'\201C'`;
+
 export default styled.main`
   --primary: var(${(props) => `--${props.currentColor}`});
   --secondary: var(${(props) => `--${props.currentColor}Secondary`});
@@ -167,8 +169,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
     svg {
       display: inline; 
-      fill: var(--primary);
-      max-width: .8em;
+      max-height: 0.78em;
+      max-width: 1em;
       transform: translateX(0px);
       transition: transform .3s cubic-bezier(0.46, 0, 0.28, 1.2);
     }
@@ -271,6 +273,7 @@ p, h1, h2, h3, h4, h5, h6 {
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
     grid-column-gap: 2em;
     grid-template-rows: auto;
+    align-items: start;
   }
 
   .twoFlex {
@@ -280,10 +283,30 @@ p, h1, h2, h3, h4, h5, h6 {
     align-items: center;
   }
 
+
+  blockquote {
+    font-family:'loos-normal', sans-serif;
+    position: relative;
+    padding: 0 1em;
+
+    &:before {
+      content: '"';
+      display: block;
+      width: 1.2em;
+      height: 1em; 
+      font-family:'loos-normal', sans-serif;
+      font-size: 3em;
+      position: absolute;
+      left:0;
+      top: 0; 
+    }
+  }
+
   figure {
     display:flex;
     flex-wrap: wrap;
     width: inherit;
+    max-width: 40rem;
     margin: .3rem;
     box-shadow: 8px 8px 0 var(--tertiary);
     background: var(--mainGradient);
@@ -319,6 +342,7 @@ p, h1, h2, h3, h4, h5, h6 {
       padding: .8rem 1rem;
       width: 100%;
       z-index: 10;
+      font-size: .97em;
 
       a {
         color: var(--white);
@@ -472,7 +496,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
   .typeIt {
     width: 18ch;
-    animation: typing 2s steps(18), effect .5s step-end infinite alternate;
+    animation: typing 2s steps(15), effect .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
     border-right: 3px solid var(--tertiary);

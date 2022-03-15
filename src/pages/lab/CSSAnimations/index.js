@@ -155,6 +155,18 @@ const CSSAnimations = () => {
             </a>
           </small>
         </p>
+
+        <p>
+          <small>
+            <a
+              href='https://css-tricks.com/myth-busting-css-animations-vs-javascript/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Myth Busting: CSS Animations vs. JavaScript
+            </a>
+          </small>
+        </p>
       </section>
       <section>
         <h2>🛠 Animation Tools</h2>
@@ -450,7 +462,13 @@ const CSSAnimations = () => {
               alt=''
             />
             <figcaption>
-              Actual footage of the browser loading your animations...
+              <a
+                href='https://codesandbox.io/s/testing-framer-motion-5snsg'
+                target='_blank'
+                rel='noreferrer'
+              >
+                View Example <Arrow />
+              </a>
             </figcaption>
           </figure>
           <br />
@@ -514,12 +532,20 @@ const CSSAnimations = () => {
       <section>
         <h2>🙅🏻‍♀️ A Bad Example</h2>
         <hr />
-        <h3>This Example</h3>
+        <h3>Rotating Circle Example</h3>
         <p>
           This shows two SVG circles that are rotated 360. One is exported using
           a plugin, the other is using CSS. For complex animations this plugin
           is perfect! In this case, we're asking the browser to use JavaScript
           to constantly re-render a transform.
+        </p>
+        <br />
+        <h3>The "Problem"</h3>
+        <p>
+          The problem here isn't that we're using javascript instead of CSS. The
+          problem is that we're loading an entire library to rotate a circle. If
+          all we want to do is rotate a complicated svg, we can do so without
+          loading an entire animation library.
         </p>
         <br />
         <br />
@@ -558,26 +584,35 @@ const CSSAnimations = () => {
         <h2>A Note on Performance</h2>
         <p>
           <i>
-            It's not really a matter of JavaScript vs CSS in many cases they can
-            be about the same from a performance standpoint. (for most modern
+            It's not really a matter of JavaScript vs CSS in some cases it's
+            about the same from a performance standpoint. (for most modern
             browsers)
           </i>
         </p>
         <hr />
         <article>
-          <h3>UI </h3>
-          <p>
-            <i>
-              "CSS transitions/animations are resampling element styles in the
-              main UI thread before each repaint event happens, which is almost
-              the same as resampling element styles via a
-              <code>requestAnimationFrame()</code> callback, also triggered
-              before the next repaint. If both animations are made in the main
-              UI thread, there is no difference performance-wise."
-            </i>{' '}
+          <h3>It's all in the Timing!</h3>
+          <blockquote>
+            "CSS transitions/animations are resampling element styles in the
+            main UI thread before each repaint event happens, which is almost
+            the same as resampling element styles via a
+            <code>requestAnimationFrame()</code> callback, also triggered before
+            the next repaint. If both animations are made in the main UI thread,
+            there is no difference performance-wise."
             <br />
-            <b> – MDN Web Docs, CSS {'&'} JavaScript Animation Performance</b>
-          </p>
+            <cite>
+              <b> – MDN Web Docs, CSS {'&'} JavaScript Animation Performance</b>
+            </cite>
+          </blockquote>
+          <br />
+          <blockquote>
+            Setting a transform with a 3D characteristic (like translate3d() or
+            matrix3d()) triggers the browser to create a GPU layer for that
+            element. So the GPU speed boost is not just for CSS animations –
+            JavaScript animation can benefit too!
+            <cite>Jack Doyle </cite>
+          </blockquote>
+
           <br />
           <h4>References</h4>
           <a
@@ -587,25 +622,14 @@ const CSSAnimations = () => {
           >
             MDN Article <Launch />
           </a>
-        </article>
-      </section>
-      <section>
-        <h2>🍳 Let's Break This Down</h2>
-        <hr />
-        <article>
-          <h3>How Does the Browser Read Animations?</h3>
-          <ul>
-            <li>Which Properties render first</li>
-            <li>How to create Smooth Animations</li>
-          </ul>
-          <h3>What Makes Good Animations?</h3>
-          <ul>
-            <li>UX Standards for Animations</li>
-          </ul>
-          <h3>Syntax of CSS Animations</h3>
-          <ul>
-            <li>Writing CSS Transitions for buttons</li>
-          </ul>
+          <br />
+          <a
+            href='https://css-tricks.com/myth-busting-css-animations-vs-javascript/'
+            target='_blank'
+            rel='noreferrer'
+          >
+            CSS Tricks Article <Launch />
+          </a>
         </article>
       </section>
       <section className='twoCol'>
@@ -741,14 +765,37 @@ const CSSAnimations = () => {
       <section>
         <h2>Animation Examples</h2>
         <hr />
-        <div className='twoCol'>
-          <h3>This example is using SVGs with CSS classes.</h3>
-          <ul>
-            <li>Each class contains an animation</li>
-          </ul>
-          <figure className='exampleImg'>
+        <article className='twoCol'>
+          <div>
+            <h3>This example is using SVGs and CSS classes.</h3>
+            <ul>
+              <li>Each class contains an animation</li>
+              <li>
+                You can add those classes to different SVG elements and groups
+              </li>
+            </ul>
+            <h3>How this Example was built</h3>
+            <ol>
+              <li>Create a vector in your fav design program</li>
+              <li>Copy as SVG</li>
+              <li>Paste into your fav SVG Optimizer (SVGOMG)</li>
+              <li>
+                Copy and Paste the code into a browser-based code editing
+                platform. (I'm using Codepen, but there many others)
+              </li>
+              <li>Write some fun CSS Animations. 🤩</li>
+            </ol>
+            <em>
+              There is a lot going on in this particular example. Tons of
+              absolute positioned items and pseudo elements. The point here was
+              to show a few svgs animating. ☝️ It's not necessarily the most
+              performant example.
+            </em>
+            <hr />
+          </div>
+          <figure>
             <img
-              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645551608/Screen_Shot_2022-02-22_at_12.35.06_PM_a7gkih.png'
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647351457/css_svg_animations.gif'
               alt=''
             />
             <figcaption>
@@ -761,11 +808,38 @@ const CSSAnimations = () => {
               </a>
             </figcaption>
           </figure>
-        </div>
+          <div>
+            <h4>References</h4>
+            <a
+              href='https://jakearchibald.github.io/svgomg/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              SVGOMG <Launch />
+            </a>
+            <br />
+            <a
+              href='https://codepen.io/your-work'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Codepen <Launch />
+            </a>
+            <br />
+            <a
+              href='https://codesandbox.io/?from-app=1'
+              target='_blank'
+              rel='noreferrer'
+            >
+              CodeSandbox <Launch />
+            </a>
+          </div>
+        </article>
       </section>
       <section>
         <h2>Utilizing Javascript + CSS Transitions</h2>
         <hr />
+        <article className='twoCol'></article>
         <h3>Toggle a Class or Data-Attribute</h3>
         <ul>
           <li>
