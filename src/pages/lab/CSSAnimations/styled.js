@@ -6,6 +6,7 @@ export default styled.main`
   --primary: var(${(props) => `--${props.currentColor}`});
   --secondary: var(${(props) => `--${props.currentColor}Secondary`});
   --tertiary: var(${(props) => `--${props.currentColor}Tertiary`});
+  --tertLight: var(${(props) => `--${props.currentColor}TertLT`});
   --mainGradient: var(${(props) => `--${props.currentColor}Gradient`});
 
   --black: ${(props) => (props.currentColor === 'dark' ? '#fff' : '#000')};
@@ -24,6 +25,11 @@ export default styled.main`
   --blueTertiary: #76d4ff;
   --darkTertiary: #995200;
   --grayTertiary: #acabb7;
+
+  --fuschiaTertLT: #f7bfff;
+  --blueTertLT: #c6d6ff;
+  --darkTertLT: #24243d;
+  --grayTertLT: #e1e0ec;
 
   --fuschiaGradient: linear-gradient(45deg, #01016a, #7028d1, #ff93e3);
   --blueGradient: linear-gradient(45deg, #3838b8, #2232f0, #55bcff);
@@ -214,11 +220,6 @@ p, h1, h2, h3, h4, h5, h6 {
       color: var(--black);
     }
   }
-    [aria-haspopup='true'] {
-    .tooltip {
-      transform: scale(1);
-    }
-    }
   
   .dropplet {
     background: none; 
@@ -268,6 +269,12 @@ p, h1, h2, h3, h4, h5, h6 {
     }
   }
 
+  [aria-haspopup=true] {
+    .tooltip {
+      transform: scale(1) translateX(0);      
+    }
+  }
+
   .twoCol {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
@@ -285,20 +292,27 @@ p, h1, h2, h3, h4, h5, h6 {
 
 
   blockquote {
-    font-family:'loos-normal', sans-serif;
+    /* font-family:'loos-normal', sans-serif; */
     position: relative;
-    padding: 0 1em;
+    padding: 0.2em 1.5em;
+    font-style: italic;
+    background: var(--tertLight);
 
     &:before {
       content: '"';
-      display: block;
-      width: 1.2em;
-      height: 1em; 
       font-family:'loos-normal', sans-serif;
       font-size: 3em;
+      color: var(--primary);
       position: absolute;
       left:0;
       top: 0; 
+      line-height: 1em;
+    }
+    cite {
+      font-weight: 800;
+      &:before {
+        content: '–';
+      }
     }
   }
 
@@ -306,7 +320,7 @@ p, h1, h2, h3, h4, h5, h6 {
     display:flex;
     flex-wrap: wrap;
     width: inherit;
-    max-width: 40rem;
+    /* max-width: 40rem; */
     margin: .3rem;
     box-shadow: 8px 8px 0 var(--tertiary);
     background: var(--mainGradient);
@@ -329,8 +343,8 @@ p, h1, h2, h3, h4, h5, h6 {
     }
 
     .smallFig {
-      width: 100%;
-      height: 100%;
+      /* width: 100%;
+      height: 100%; */
       object-fit: contain; 
       max-height: 20rem;
     }

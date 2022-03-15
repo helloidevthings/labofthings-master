@@ -442,7 +442,7 @@ const CSSAnimations = () => {
       <section>
         <h2>Framer + Framer-Motion</h2>
         <hr />
-        <article>
+        <article className='twoCol'>
           <div>
             <h3>Framer</h3>
             <ul>
@@ -454,6 +454,19 @@ const CSSAnimations = () => {
               <li>Animation Library for JavaScript</li>
               <li>Can be installed with an NPM Package</li>
             </ul>
+            <br />
+            <h4>References</h4>
+            <a href='https://www.framer.com/' target='_blank' rel='noreferrer'>
+              Framer Design Software <Launch />
+            </a>
+            <br />
+            <a
+              href='https://www.framer.com/motion/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Framer Motion Library <Launch />
+            </a>
           </div>
           <figure>
             <img
@@ -471,19 +484,6 @@ const CSSAnimations = () => {
               </a>
             </figcaption>
           </figure>
-          <br />
-          <h4>References</h4>
-          <a href='https://www.framer.com/' target='_blank' rel='noreferrer'>
-            Framer Design Software <Launch />
-          </a>
-          <br />
-          <a
-            href='https://www.framer.com/motion/'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Framer Motion Library <Launch />
-          </a>
         </article>
       </section>
       <section>
@@ -792,23 +792,6 @@ const CSSAnimations = () => {
               performant example.
             </em>
             <hr />
-          </div>
-          <figure>
-            <img
-              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647351457/css_svg_animations.gif'
-              alt=''
-            />
-            <figcaption>
-              <a
-                href='https://codepen.io/joyanna/pen/NWGYLNW'
-                target='_blank'
-                rel='noreferrer'
-              >
-                View Project <Arrow />
-              </a>
-            </figcaption>
-          </figure>
-          <div>
             <h4>References</h4>
             <a
               href='https://jakearchibald.github.io/svgomg/'
@@ -833,61 +816,68 @@ const CSSAnimations = () => {
             >
               CodeSandbox <Launch />
             </a>
+            <br />
           </div>
+          <figure>
+            <img
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647351457/css_svg_animations.gif'
+              alt=''
+            />
+            <figcaption>
+              <a
+                href='https://codepen.io/joyanna/pen/NWGYLNW'
+                target='_blank'
+                rel='noreferrer'
+              >
+                View Project <Arrow />
+              </a>
+            </figcaption>
+          </figure>
         </article>
       </section>
       <section>
         <h2>Utilizing Javascript + CSS Transitions</h2>
         <hr />
-        <article className='twoCol'></article>
-        <h3>Toggle a Class or Data-Attribute</h3>
-        <ul>
-          <li>
-            So now that we have classes, we can use Javascript to “toggle” a CSS
-            class on an HTML element. This will make the browser transition
-            between each of the properties. <code>{'.toggle(‘myClass’)'}</code>
-          </li>
-          <li>
-            We can do this a variety of ways, a very easy one is to use
-            Javascript to “listen” to see if an HTML element has been clicked.
-            That will trigger our function which will then add or remove the CSS
-            class from our element.
-            <code>{'addEventListener(‘click’, myfunction);'}</code>
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Example of Javascript + CSS Transitions</h2>
-        <hr />
-        <div className='twoCol'>
-          <h3>Changing a class on a button</h3>
-          <ul>
-            <li>
-              This example shows a light to dark color swap using a transition.
-            </li>
-            <li></li>
-            <li>
-              This is purely an example and isn't how you would normally do
-              this.
-            </li>
-          </ul>
-          <figure className='exampleImg'>
-            <img
-              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645560375/Screen_Shot_2022-02-22_at_3.06.02_PM_ddir9h.png'
-              alt=''
-            />
-            <figcaption>
-              Link to this:{' '}
-              <a
-                href='https://codepen.io/joyanna/pen/jOPvoeX'
-                target='_blank'
-                rel='noreferrer'
-              >
-                Click this!
-              </a>
-            </figcaption>
-          </figure>
-        </div>
+        <article className='twoCol'>
+          <div>
+            <h3>Classic Vanilla Javascript</h3>
+          </div>
+
+          <div>
+            <h3>Toggle a Class or Data-Attribute</h3>
+            <ul>
+              <li>
+                So now that we have classes, we can use Javascript to “toggle” a
+                CSS class on an HTML element. This will make the browser
+                transition between each of the properties.{' '}
+                <code>{'.toggle(‘myClass’)'}</code>
+              </li>
+              <li>
+                We can do this a variety of ways, a very easy one is to use
+                Javascript to “listen” to see if an HTML element has been
+                clicked. That will trigger our function which will then add or
+                remove the CSS class from our element.
+                <code>{'addEventListener(‘click’, myfunction);'}</code>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <br />
+        <figure>
+          <img
+            src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647371334/hot-right-now-animation_dtyk1q.gif'
+            alt=''
+          />
+          <figcaption>
+            <a
+              href='https://codepen.io/joyanna/pen/jOPvoeX'
+              target='_blank'
+              rel='noreferrer'
+            >
+              View Project <Arrow />
+            </a>
+          </figcaption>
+        </figure>
       </section>
       <section>
         <h2>Utilizing React + CSS Transitions</h2>
@@ -899,10 +889,6 @@ const CSSAnimations = () => {
             those elements update when there is a state change.
           </li>
         </ul>
-      </section>
-      <section>
-        <h2>Example of React + CSS Transition</h2>
-        <h3>Updating State now changes the class</h3>
       </section>
       <section>
         <h2>Aria Tags</h2>
@@ -920,6 +906,14 @@ const CSSAnimations = () => {
             rel='noreferrer'
           >
             Aria Tags
+          </a>
+          <br />
+          <a
+            href='https://reactjs.org/docs/accessibility.html'
+            target='_blank'
+            rel='noreferrer'
+          >
+            React: Accessibility
           </a>
         </article>
       </section>
