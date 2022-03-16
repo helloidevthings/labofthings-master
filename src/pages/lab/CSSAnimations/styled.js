@@ -1,7 +1,5 @@
 import styled from '@emotion/styled';
 
-// const unicode = `'\201C'`;
-
 export default styled.main`
   --primary: var(${(props) => `--${props.currentColor}`});
   --secondary: var(${(props) => `--${props.currentColor}Secondary`});
