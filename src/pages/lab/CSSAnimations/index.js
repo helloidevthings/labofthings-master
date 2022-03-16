@@ -71,14 +71,15 @@ const CSSAnimations = () => {
       </div> */}
       <section>
         <article>
-          <h2>Things and stuff and stuff</h2>
+          <h2>Welcome to the Presentation</h2>
         </article>
         <article className='twoCol'>
           <div>
-            <h3>(That's actually a webpage)</h3>
+            <h3>It's actually a webpage...</h3>
+            <br />
             <p>
-              We'll cover animation libraries, animation software and using CSS
-              to quickly code animations.
+              There's a lot to cover! Feel free to use this webpage as a
+              resource for all of the topics we'll be covering.
             </p>
             <hr />
             <ol>
@@ -86,9 +87,9 @@ const CSSAnimations = () => {
               <li>What are the Pros {'&'} Cons to using These?</li>
               <li>How does The Browser Render Animations?</li>
               <li>What Makes Good UX Animations?</li>
-              <li>CSS Syntax</li>
-              <li>React {'&'} CSS Animations</li>
-              <li>Styled Components {'&'} Accessability</li>
+              <li>CSS Transitions {'&'}</li>
+              <li>JavaScript {'&'} CSS Animations</li>
+              <li>React + ARIA + CSS Transitions</li>
             </ol>
             <ColorChangeCircle classes={'colorCircle'} />
             <br />
@@ -99,8 +100,13 @@ const CSSAnimations = () => {
             <hr />
             <p>
               I have worked in design and development for over 13 years. I am
-              currently working at Regal Cinemas, but I have worked at Cadre5,
-              Pyxl, Robin Easter, Morris Creative {'&'} DesignSensory.
+              currently working at Regal Cinemas. I have worked at Cadre5, Pyxl,
+              Robin Easter, Morris Creative {'&'} DesignSensory.
+            </p>
+            <br />
+            <p>
+              I love typography, hanging out on the couch with my cat, hot yoga
+              and anything cheese.
             </p>
             <Circle color={currentColor} />
             <figure className='circleCrop'>
@@ -126,20 +132,20 @@ const CSSAnimations = () => {
         <hr />
         <h3>The way we create animations</h3>
         <p>
-          Web animations has changed a lot over the years. We used tools like
-          Flash and JQuery. With the release of CSS3 and HTML5 we moved forward
-          with a different way of animating. We have access to many various
-          tools for animating today. Including plugins that work with design
-          programs and generate code and physics-based motion using JavaScript
-          libraries.
+          Web animations have changed a lot over the years. We used to use tools
+          like Flash and JQuery. With the release of CSS3 and HTML5 we moved
+          forward with a different way of animating. Today, we have access to a
+          variety of tools for animating. Including plugins that work with
+          design programs to generate code and JavaScript libraries that use
+          physics-based motion.
         </p>
         <br />
         <p>
           With so many tools at our disposal, it's important to use the right
-          tool for the right problem. It can be easy to over use animations and
-          impact performance and accessibility. The purpose of this talk is to
-          go over some of the simple solutions for common UI patterns that don't
-          require downloading packages or using libraries.
+          tool for the right problem. It can be easy to over-use animations
+          which impact performance and accessibility. The purpose of this talk
+          is to go over some of the simple solutions for common UI patterns that
+          don't require downloading packages or using libraries.
         </p>
 
         <br />
@@ -163,7 +169,7 @@ const CSSAnimations = () => {
               target='_blank'
               rel='noreferrer'
             >
-              Myth Busting: CSS Animations vs. JavaScript
+              Myth Busting: CSS Animations vs. JavaScript • 2016
             </a>
           </small>
         </p>
@@ -601,7 +607,8 @@ const CSSAnimations = () => {
             there is no difference performance-wise."
             <br />
             <cite>
-              <b> – MDN Web Docs, CSS {'&'} JavaScript Animation Performance</b>
+              {' '}
+              MDN Web Docs, CSS {'&'} JavaScript Animation Performance
             </cite>
           </blockquote>
           <br />
@@ -632,34 +639,11 @@ const CSSAnimations = () => {
           </a>
         </article>
       </section>
-      <section className='twoCol'>
-        <div>
-          <h2>Before We Dive Into the Code</h2>
-          <h3>Let's talk about GOOD Animations</h3>
-          <ul>
-            <li>Choreography in interfaces animation</li>
-            <li>Equal interaction</li>
-          </ul>
-          <a
-            href='https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Animation in UX <Launch />
-          </a>
-        </div>
-        <figure>
-          <img
-            src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645645406/Screen_Shot_2022-02-23_at_2.43.20_PM_khyo5a.png'
-            alt='example showing a choppy animation and a smooth one that loads in sections'
-          />
-        </figure>
-      </section>
       <section>
         <h2>✨ CSS Transitions {'&'} Animations</h2>
         <h3>What are they?</h3>
         <hr />
-        <div className='twoCol'>
+        <article className='twoCol'>
           <div>
             <h3>Transitions</h3>
             <ul>
@@ -674,7 +658,81 @@ const CSSAnimations = () => {
               <li>Uses Keyframes</li>
               <li>Using Ease or a Bezier Curve define animation</li>
             </ul>
+            <h4>REFERENCES</h4>
+            <a
+              href='https://webcode.tools/generators/css/keyframe-animation'
+              target='_blank'
+              rel='noreferrer'
+            >
+              CSS3 Generator <Launch />
+            </a>
           </div>
+          <figure>
+            <img
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647450651/CSS-Generator_cxdws8.gif'
+              alt='example showing a choppy animation and a smooth one that loads in sections'
+            />
+          </figure>
+        </article>
+      </section>
+      <section>
+        <h2>Basic Syntax</h2>
+        <hr />
+        <div className='twoFlex'>
+          <div>
+            <h3>The browser transitions from one property to another</h3>
+            <ul>
+              <li>
+                Common Transitions <code>transition: all 3s ease-in-out;</code>
+              </li>
+              <li>
+                Calling out a property
+                <code>
+                  transition: color .2s ease-in, transform 8s ease-in-out;{' '}
+                </code>
+              </li>
+              <li>
+                Can be combined with hover-states and pseudo elements
+                <code>
+                  {`a { color: blue;  
+                  transform: color .2s ease-in; 
+                  &:hover {color: pink}
+              }`}
+                </code>
+              </li>
+              <br />
+              <h3>Animations use Keyframes to change properties</h3>
+              <li>
+                Using Keyframes @keyframes
+                <code>{`{from {color:pink} to {color:blue}}`}</code>
+              </li>
+              <li>
+                Keyframe % 0%
+                <code>
+                  {`{color: pink} 50%{color: purple} 100%{color:blue}; `}
+                </code>
+              </li>
+              <li>
+                Using Keyframes @keyframes
+                <code>{`{from {color:pink} to {color:blue}}`}</code>
+              </li>
+              <li>
+                Reference the animation on the element you want to apply it to.
+                <code>animation: rotation 2s ease-in-out</code>
+              </li>
+            </ul>
+          </div>
+          <figure>
+            <source
+              srcSet='https://res.cloudinary.com/labofthingsimages/image/upload/v1646838938/bezierCurve_eyxamd.gif'
+              media='(min-width: 600px)'
+            ></source>
+            <img
+              className='smallFig'
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646838938/bezierCurve_eyxamd.gif'
+              alt='circle rotates as javascript constantly changes the in-line style on an svg circle'
+            />
+          </figure>
         </div>
       </section>
       <section>
@@ -722,45 +780,28 @@ const CSSAnimations = () => {
           Smooth As Butter Animations <Launch />
         </a>
       </section>
-      <section>
-        <h2>Basic Syntax of Transitions</h2>
-        <hr />
-        <div className='twoFlex'>
-          <div>
-            <h3>The browser transitions from one property to another</h3>
-            <ul>
-              <li>
-                Common Transitions <code>transition: all 3s ease-in-out;</code>
-              </li>
-              <li>
-                Calling out a property
-                <code>
-                  transition: color .2s ease-in, transform 8s ease-in-out;{' '}
-                </code>
-              </li>
-              <li>
-                Can be combined with hover-states and pseudo elements
-                <code>
-                  {`a { color: blue;  
-                  transform: color .2s ease-in; 
-                  &:hover {color: pink}
-              }`}
-                </code>
-              </li>
-            </ul>
-          </div>
-          <figure>
-            <source
-              srcSet='https://res.cloudinary.com/labofthingsimages/image/upload/v1646838938/bezierCurve_eyxamd.gif'
-              media='(min-width: 600px)'
-            ></source>
-            <img
-              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646838938/bezierCurve_eyxamd.gif'
-              alt='circle rotates as javascript constantly changes the in-line style on an svg circle'
-            />
-            {/* <figcaption>Javascript re-rendering in-line CSS</figcaption> */}
-          </figure>
+      <section className='twoCol'>
+        <div>
+          <h2>Before We Dive Into the Code</h2>
+          <h3>Let's talk about GOOD Animations</h3>
+          <ul>
+            <li>Choreography in interfaces animation</li>
+            <li>Equal interaction</li>
+          </ul>
+          <a
+            href='https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9'
+            target='_blank'
+            rel='noreferrer'
+          >
+            Animation in UX <Launch />
+          </a>
         </div>
+        <figure>
+          <img
+            src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645645406/Screen_Shot_2022-02-23_at_2.43.20_PM_khyo5a.png'
+            alt='example showing a choppy animation and a smooth one that loads in sections'
+          />
+        </figure>
       </section>
       <section>
         <h2>Animation Examples</h2>
@@ -836,13 +877,28 @@ const CSSAnimations = () => {
         </article>
       </section>
       <section>
-        <h2>Utilizing Javascript + CSS Transitions</h2>
+        <h2>🍦 Utilizing Javascript + CSS Transitions</h2>
         <hr />
         <article className='twoCol'>
           <div>
             <h3>Classic Vanilla Javascript</h3>
+            <p>
+              This is the typical way of using CSS transitions with Javascript.
+              With the introduction of JavaScript Frameworks. We are able to
+              manage state inside our application.
+            </p>
+            <ol>
+              <li>Query The DOM</li>
+              <li>Grab all the elements</li>
+              <li>Turn it into an array...</li>
+              <li>Loop over it</li>
+              <li>Add an Event Listener</li>
+              <li>Swap out the Class</li>
+            </ol>
+            <p>
+              <em>And VOILA! You've made changes to the DOM...</em>
+            </p>
           </div>
-
           <div>
             <h3>Toggle a Class or Data-Attribute</h3>
             <ul>
@@ -880,61 +936,172 @@ const CSSAnimations = () => {
         </figure>
       </section>
       <section>
-        <h2>Utilizing React + CSS Transitions</h2>
+        <h2>🖼 Utilizing React + CSS Transitions</h2>
+        <em>
+          Instead of querying the DOM for our elements, we can update elements
+          when there is a state change.
+        </em>
         <hr />
-        <h3>The same class can be tied to State</h3>
-        <ul>
-          <li>
-            Instead of querying the DOM for our elements we can have each of
-            those elements update when there is a state change.
-          </li>
-        </ul>
-      </section>
-      <section>
-        <h2>Aria Tags</h2>
-        <hr />
-        <article>
-          <h3>Accessibility</h3>
-          <ul>
-            <li>These are great!</li>
-          </ul>
+        <article className='twoCol'>
+          <div>
+            <h3>This example is using Styled Components / Emotion</h3>
+            <ul>
+              <li>
+                You can use the
+                <code>useState</code> to toggle a menu open and closed.
+              </li>
+              <li>
+                First set up the initial state and the function...
+                <code>const [isOpen, setIsOpen] = useState(true);</code>
+              </li>
+              <li>
+                Then pass the prop to the styles, or use them directly in the
+                file.
+                <br />
+                <code>
+                  {`transform: translateX( $
+                {(props) => (props.isOpen ? '-100%' : '0%')}
+                );`}
+                </code>
+                {/* <br />
+              <code>
+                {`transition: transform 0.6s cubic-bezier(0.59, 0, 0.11, 0.97),`}
+                <br />
+                {`background-color 0.7s ease-in-out; }`}
+              </code> */}
+              </li>
+            </ul>
+          </div>
+          <figure>
+            <img
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647451935/cadre5-menu_soxklz.gif'
+              alt=''
+            />
+            <figcaption>
+              You can see the pre-generated classes swap out to open the menu.
+            </figcaption>
+          </figure>
           <br />
-          <h4>References</h4>
-          <a
-            href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA'
-            target='_blank'
-            rel='noreferrer'
-          >
-            Aria Tags
-          </a>
-          <br />
-          <a
-            href='https://reactjs.org/docs/accessibility.html'
-            target='_blank'
-            rel='noreferrer'
-          >
-            React: Accessibility
-          </a>
         </article>
+        <h3>This is fine... 🤨</h3>
+        <p>
+          <em>Let's make it even better!</em>
+        </p>
       </section>
       <section>
-        <h2>Using Aria Tags Instead</h2>
-        <h3>Aria Tags</h3>
-        <ul>
-          <li>Used for accessability</li>
-        </ul>
+        <h2>🔖 Accessibility: ARIA Tags</h2>
+        <hr />
+        <article className='twoCol'>
+          <div>
+            <h3>What are ARIA tags?</h3>
+            <blockquote>
+              Accessible Rich Internet Applications (ARIA) is a set of
+              attributes that define ways to make web content and web
+              applications (especially those developed with JavaScript) more
+              accessible to people with disabilities.
+              <br />
+              <cite> MDN Web Docs • 2022</cite>
+            </blockquote>
+          </div>
+          <div>
+            <h3>What are some good places to use ARIA Tags? </h3>
+            <ul>
+              <li>Drop-downs</li>
+              <li>Accordions</li>
+              <li>Menus</li>
+              <li>Buttons</li>
+              <li>Forms</li>
+            </ul>
+          </div>
+        </article>
+        <br />
+        <h4>References</h4>
+        <a
+          href='https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA'
+          target='_blank'
+          rel='noreferrer'
+        >
+          Aria Tags <Launch />
+        </a>
+        <br />
+        <a
+          href='https://reactjs.org/docs/accessibility.html'
+          target='_blank'
+          rel='noreferrer'
+        >
+          React: Accessibility <Launch />
+        </a>
+        <br />
+        <a
+          href='https://bitsofco.de/sectioning-content-in-html5/#:~:text=So%20which%20should%20you%20use,%2C%20use%20a%20.'
+          target='_blank'
+          rel='noreferrer'
+        >
+          Semantics: Article/Section/Div <Launch />
+        </a>
       </section>
       <section>
-        <h2>Example of Aria Tag Usage</h2>
-        <h3>Used on Accordion</h3>
-      </section>
-      <section>
-        <h2>Combine all this with Plugins</h2>
-        <h3>Dynamic Animation ability... </h3>
-        <ul>
-          <li>Loop over these elements</li>
-          <li>Each style can be multiplied by the ID of the el</li>
-        </ul>
+        <h2>💪 ARIA + React</h2>
+        <hr />
+        <article className='twoCol'>
+          <div>
+            <h3>The way we do thing!</h3>
+            <ul>
+              <li>
+                Similarily we can use <code>useState</code> to set up our state.
+              </li>
+              <li>
+                Then we can toggle <code>aria-hidden</code> and{' '}
+                <code>aria-expanded</code> with our state.
+              </li>
+              <li>
+                Using thesea attributes makes it easy for someone using a
+                screenreader.{' '}
+              </li>
+              <li>
+                Additionally you can use <code>id</code> and{' '}
+                <code>aria-labelledby</code> to closely pair the button and
+                content
+              </li>
+              <li>
+                It's not required to use <code>aria-labelledby</code>, but it
+                helps to create a structure that screen readers can pick up on.
+                Similar to labels and inputs.
+              </li>
+            </ul>
+            <h4>References</h4>
+            <a
+              href='https://www.aditus.io/patterns/accordion/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              Accessible Accordions <Launch />
+            </a>
+            <br />
+            <a
+              href='https://www.w3.org/TR/wai-aria-practices-1.2/'
+              target='_blank'
+              rel='noreferrer'
+            >
+              WAI-ARIA Authoring Practices 1.2 <Launch />
+            </a>
+          </div>
+          <figure>
+            <img
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647458003/aria-expanded_rpvk4f.gif'
+              alt=''
+            />
+            <figcaption>
+              <a
+                href='https://codesandbox.io/s/accessible-accordions-react-xdjni7?file=/src/styles.css'
+                target='_blank'
+                rel='noreferrer'
+              >
+                View Project <Arrow />
+              </a>
+            </figcaption>
+          </figure>
+        </article>
       </section>
     </Styles>
   );

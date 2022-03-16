@@ -166,8 +166,8 @@ p, h1, h2, h3, h4, h5, h6 {
       height: 2px;
       transform: scaleX(0);
       transform-origin: left;
-      left: 0;
       position: absolute;
+      left: 0;
       bottom: 0;
       z-index: -1;
       transition: color 0.3s ease-in-out, transform .2s ease-in-out;
@@ -294,7 +294,8 @@ p, h1, h2, h3, h4, h5, h6 {
   blockquote {
     /* font-family:'loos-normal', sans-serif; */
     position: relative;
-    padding: 0.2em 1.5em;
+    padding: 1em 2em;
+    margin: .3em; 
     font-style: italic;
     background: var(--tertLight);
 
@@ -304,8 +305,8 @@ p, h1, h2, h3, h4, h5, h6 {
       font-size: 3em;
       color: var(--primary);
       position: absolute;
-      left:0;
-      top: 0; 
+      left:.1em;
+      top: .1em; 
       line-height: 1em;
     }
     cite {
@@ -321,7 +322,7 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-wrap: wrap;
     width: inherit;
     /* max-width: 40rem; */
-    margin: .3rem;
+    margin: .3rem .3rem 1rem;
     box-shadow: 8px 8px 0 var(--tertiary);
     background: var(--mainGradient);
     border: 3px solid var(--secondary);
