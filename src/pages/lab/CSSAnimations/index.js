@@ -23,7 +23,7 @@ const CSSAnimations = () => {
           aria-haspopup={toolTip}
           onClick={handleDropplet}
         >
-          Color ? Pink : {/* <Dropplet /> */}
+          Color ? {currentColor} : {/* <Dropplet /> */}
           <div className='tooltip'>
             <h5>🪄 Options to Change colors!</h5>
             <img
@@ -598,17 +598,22 @@ const CSSAnimations = () => {
         <hr />
         <article>
           <h3>It's all in the Timing!</h3>
+          <p>
+            With how quickly web changes, it's important to take everything with
+            a grain of salt. Each application is different.
+          </p>
+          <br />
           <blockquote>
-            "CSS transitions/animations are resampling element styles in the
-            main UI thread before each repaint event happens, which is almost
-            the same as resampling element styles via a
+            CSS transitions/animations are resampling element styles in the main
+            UI thread before each repaint event happens, which is almost the
+            same as resampling element styles via a
             <code>requestAnimationFrame()</code> callback, also triggered before
             the next repaint. If both animations are made in the main UI thread,
-            there is no difference performance-wise."
+            there is no difference performance-wise.
             <br />
             <cite>
               {' '}
-              MDN Web Docs, CSS {'&'} JavaScript Animation Performance
+              MDN Web Docs, CSS {'&'} JavaScript Animation Performance • 2022
             </cite>
           </blockquote>
           <br />
@@ -617,7 +622,8 @@ const CSSAnimations = () => {
             matrix3d()) triggers the browser to create a GPU layer for that
             element. So the GPU speed boost is not just for CSS animations –
             JavaScript animation can benefit too!
-            <cite>Jack Doyle </cite>
+            <br />
+            <cite>Jack Doyle • CSS Tricks • 2017</cite>
           </blockquote>
 
           <br />
@@ -832,6 +838,8 @@ const CSSAnimations = () => {
               to show a few svgs animating. ☝️ It's not necessarily the most
               performant example.
             </em>
+
+            <p>"props.theme.animation.drawIn"</p>
             <hr />
             <h4>References</h4>
             <a
@@ -1094,6 +1102,33 @@ const CSSAnimations = () => {
             <figcaption>
               <a
                 href='https://codesandbox.io/s/accessible-accordions-react-xdjni7?file=/src/styles.css'
+                target='_blank'
+                rel='noreferrer'
+              >
+                View Project <Arrow />
+              </a>
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+      <section>
+        <h2>ARIA + React + Styled Components</h2>
+        <hr />
+        <article className='twoCol'>
+          <div>
+            <h3>So, now that we have our Aria Tags working...</h3>
+            <ul>
+              <li>Let's add Styled Components in!</li>
+            </ul>
+          </div>
+          <figure>
+            <img
+              src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647458003/aria-expanded_rpvk4f.gif'
+              alt=''
+            />
+            <figcaption>
+              <a
+                href='https://codesandbox.io/s/accessible-accordions-with-styled-components-mm66ty?file=/src/Components/AccordionItem.js'
                 target='_blank'
                 rel='noreferrer'
               >

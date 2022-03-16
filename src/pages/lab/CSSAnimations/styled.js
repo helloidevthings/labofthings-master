@@ -310,7 +310,9 @@ p, h1, h2, h3, h4, h5, h6 {
       line-height: 1em;
     }
     cite {
-      font-weight: 800;
+      font-weight: 500;
+      color: var(--secondary);
+
       &:before {
         content: '–';
       }
@@ -414,7 +416,11 @@ p, h1, h2, h3, h4, h5, h6 {
         margin: 1em 0.1em 1.4em;
         padding: 1em;
       }
+
+      animation: fadeIn .2s forwards; 
     }
+
+    ${({ theme }) => theme.animations.fadeIn}
 
     aside {
       /* background: var(--tertiary); */
@@ -574,11 +580,11 @@ p, h1, h2, h3, h4, h5, h6 {
     }
   }
 
-  .item-to {
+  /* .item-to {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     transform-origin: bottom;
-  }
+  } */
 
   .bounce-1 {
     animation-name: bounce-1;
@@ -590,10 +596,10 @@ p, h1, h2, h3, h4, h5, h6 {
     animation-timing-function: ease;
   }
 
-  .bounce-3 {
+  /* .bounce-3 {
     animation-name: bounce-3;
     animation-timing-function: ease;
-  }
+  } */
 
   @keyframes bounce-1 {
     0% {
@@ -619,7 +625,7 @@ p, h1, h2, h3, h4, h5, h6 {
     }
   }
 
-  @keyframes bounce-3 {
+  /* @keyframes bounce-3 {
     0% {
       transform: translateY(0);
     }
@@ -629,5 +635,5 @@ p, h1, h2, h3, h4, h5, h6 {
     100% {
       transform: translateY(0);
     }
-  }
+  } */
 `;
