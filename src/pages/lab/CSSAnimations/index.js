@@ -614,6 +614,11 @@ const CSSAnimations = () => {
 			</section>
 			<section>
 				<h2>A Note on Performance</h2>
+				<h3>
+					Google penalizes you for poor performance. Check Lighthouse for your
+					performance score and suggested modifications.
+				</h3>
+
 				<p>
 					<i>
 						It's not really a matter of JavaScript vs CSS in some cases it's
@@ -813,81 +818,6 @@ const CSSAnimations = () => {
 				</a>
 			</section>
 			<section>
-				<h2>Animation Examples</h2>
-				<hr />
-				<article className='twoCol'>
-					<div>
-						<h3>This example is using SVGs and CSS classes.</h3>
-						<ul>
-							<li>Each class contains an animation</li>
-							<li>
-								You can add those classes to different SVG elements and groups
-							</li>
-						</ul>
-						<h3>How this Example was built</h3>
-						<ol>
-							<li>Create a vector in your fav design program</li>
-							<li>Copy as SVG</li>
-							<li>Paste into your fav SVG Optimizer (SVGOMG)</li>
-							<li>
-								Copy and Paste the code into a browser-based code editing
-								platform. (I'm using Codepen, but there many others)
-							</li>
-							<li>Write some fun CSS Animations. 🤩</li>
-						</ol>
-						<em>
-							There is a lot going on in this particular example. Tons of
-							absolute positioned items and pseudo elements. The point here was
-							to show a few svgs animating. ☝️ It's not necessarily the most
-							performant example.
-						</em>
-
-						<p>"props.theme.animation.drawIn"</p>
-						<hr />
-						<h4>References</h4>
-						<a
-							href='https://jakearchibald.github.io/svgomg/'
-							target='_blank'
-							rel='noreferrer'
-						>
-							SVGOMG <Launch />
-						</a>
-						<br />
-						<a
-							href='https://codepen.io/your-work'
-							target='_blank'
-							rel='noreferrer'
-						>
-							Codepen <Launch />
-						</a>
-						<br />
-						<a
-							href='https://codesandbox.io/?from-app=1'
-							target='_blank'
-							rel='noreferrer'
-						>
-							CodeSandbox <Launch />
-						</a>
-						<br />
-					</div>
-					<figure>
-						<img
-							src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647351457/css_svg_animations.gif'
-							alt=''
-						/>
-						<figcaption>
-							<a
-								href='https://codepen.io/joyanna/pen/NWGYLNW'
-								target='_blank'
-								rel='noreferrer'
-							>
-								View Project <Arrow />
-							</a>
-						</figcaption>
-					</figure>
-				</article>
-			</section>
-			<section>
 				<h2>🍦 Utilizing Javascript + CSS Transitions</h2>
 				<hr />
 				<article className='twoCol'>
@@ -998,6 +928,84 @@ const CSSAnimations = () => {
 				<p>
 					<em>Let's make it even better!</em>
 				</p>
+			</section>
+			<section>
+				<h2>Animation Examples</h2>
+				<hr />
+				<article className='twoCol'>
+					<div>
+						<h3>This example is using SVGs and CSS classes.</h3>
+						<ul>
+							<li>Each class contains an animation</li>
+							<li>
+								You can add those classes to different SVG elements and groups
+							</li>
+						</ul>
+						<h3>How this Example was built</h3>
+						<ol>
+							<li>Create a vector in your fav design program</li>
+							<li>Copy as SVG</li>
+							<li>Paste into your fav SVG Optimizer (SVGOMG)</li>
+							<li>
+								Copy and Paste the code into a browser-based code editing
+								platform. (I'm using Codepen, but there many others)
+							</li>
+							<li>Write some fun CSS Animations. 🤩</li>
+						</ol>
+						<em>
+							There is a lot going on in this particular example. Tons of
+							absolute positioned items and pseudo elements. The point here was
+							to show a few svgs animating. ☝️ It's not necessarily the most
+							performant example.
+						</em>
+
+						<p>"props.theme.animation.drawIn"</p>
+						<hr />
+						<h4>References</h4>
+						<a
+							href='https://jakearchibald.github.io/svgomg/'
+							target='_blank'
+							rel='noreferrer'
+						>
+							SVGOMG <Launch />
+						</a>
+						<br />
+						<a
+							href='https://codepen.io/your-work'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Codepen <Launch />
+						</a>
+						<br />
+						<a
+							href='https://codesandbox.io/?from-app=1'
+							target='_blank'
+							rel='noreferrer'
+						>
+							CodeSandbox <Launch />
+						</a>
+						<br />
+					</div>
+					<figure>
+						<img
+							src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647351457/css_svg_animations.gif'
+							alt=''
+						/>
+						<figcaption>
+							<a
+								href='https://codepen.io/joyanna/pen/NWGYLNW'
+								target='_blank'
+								rel='noreferrer'
+							>
+								View Project <Arrow />
+							</a>
+						</figcaption>
+					</figure>
+				</article>
+			</section>
+			<section>
+				<h2>SVG Pulling in Animation from Theme</h2>
 			</section>
 			<section>
 				<h2>🔖 Accessibility: ARIA Tags</h2>
