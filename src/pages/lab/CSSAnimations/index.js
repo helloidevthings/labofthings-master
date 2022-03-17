@@ -546,7 +546,7 @@ const CSSAnimations = () => {
 					<div>
 						<h3>Framer</h3>
 						<ul>
-							<li>Is a Deisgn Program</li>
+							<li>Is a Design Program</li>
 							<li>Very flexible, you can use CSS in this program</li>
 						</ul>
 						<h3>Framer-Motion</h3>
@@ -1147,7 +1147,7 @@ const CSSAnimations = () => {
 					<div className='twoCol'>
 						<figure>
 							<img
-								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647526289/theme-to-svg_zztbng.png'
+								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647531690/theme-to-svg_rmogge.png'
 								alt=''
 							/>
 							<figcaption>
