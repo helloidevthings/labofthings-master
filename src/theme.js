@@ -53,16 +53,14 @@ const theme = {
 
     `,
 		itemTo: `
-    .item-to {
     animation-duration: 10s;
     animation-iteration-count: infinite;
     transform-origin: bottom;
-  }`,
+	`,
 
 		bounce3: `  
-			.bounce-3 {
 			animation-name: bounce-3;
-			animation-timing-function: ease; }
+			animation-timing-function: ease; 
 		
 			@keyframes bounce-3 {
 			0% {
@@ -74,7 +72,6 @@ const theme = {
 			100% {
 			transform: translateY(0);
 			}
-		}
   `,
 		drawIn: `.draw-in {
 	  stroke-dasharray: 1000;
