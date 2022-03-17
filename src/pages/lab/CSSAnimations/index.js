@@ -23,7 +23,7 @@ const CSSAnimations = () => {
 					aria-haspopup={toolTip}
 					onClick={handleDropplet}
 				>
-					Color ? {currentColor} : {/* <Dropplet /> */}
+					💄 Color : {/* <Dropplet /> */}
 					<div className='tooltip'>
 						<h5>🪄 Options to Change colors!</h5>
 						<img
@@ -83,13 +83,15 @@ const CSSAnimations = () => {
 						</p>
 						<hr />
 						<ol>
+							<li>Why do Animations Matter?</li>
 							<li>What Animation Tools Do We Have?</li>
-							<li>What are the Pros {'&'} Cons to using These?</li>
+							<li>What are the Pros {'&'} Cons to using These Tools?</li>
 							<li>How does The Browser Render Animations?</li>
 							<li>What Makes Good UX Animations?</li>
-							<li>CSS Transitions {'&'}</li>
+							<li>CSS Transitions {'&'} Animations</li>
 							<li>JavaScript {'&'} CSS Animations</li>
 							<li>React + ARIA + CSS Transitions</li>
+							<li>Accessibility: Semantics {'&'} Aria</li>
 						</ol>
 						<ColorChangeCircle classes={'colorCircle'} />
 						<br />
@@ -175,30 +177,96 @@ const CSSAnimations = () => {
 				</p>
 			</section>
 			<section>
-				<h2>Why Animations Matter -- Conversion User Engagement</h2>
+				<h2>❇️ Why Animations Matter</h2>
+				<em>Animation Drives User Engagement and Conversion</em>
+				<hr />
+				<article className='twoCol'>
+					<div>
+						<h3>It grabs the User's Attention</h3>
+						<ul>
+							<li>Which can be a good thing... or a bad thing</li>
+							<li>
+								Subtle animations provide user feedback. It shows the user your
+								app is actually "doing" something.{' '}
+							</li>
+							<li>
+								"The human visual system is sensitive to motion..." which can be
+								used for good or bad.
+							</li>
+							<li>
+								Either way! If you're using animations, studies show that your
+								users are paying attention. Unless... you're using too much, and
+								then they are annoyed.
+							</li>
+						</ul>
+						<br />
+						<h4>References</h4>
+						<a
+							href='https://www.nngroup.com/articles/animation-purpose-ux/'
+							target='_blank'
+							rel='noreferrer'
+						>
+							The Role of Animation... <Launch />
+						</a>
+					</div>
+					<blockquote>
+						In UX, motion and animation can be helpful and communicative, if
+						used with restraint. Motion is most often appropriate as a form of
+						subtle feedback for microinteractions, rather than to induce delight
+						or entertain users.
+						<br />
+						<cite>Page Laubheimer, Nielson Norman Group • 2020</cite>
+					</blockquote>
+				</article>
 			</section>
-			<section className='twoCol'>
-				<div>
-					<h2>Before We Dive Into the Code</h2>
-					<h3>Let's talk about GOOD Animations</h3>
-					<ul>
-						<li>Choreography in interfaces animation</li>
-						<li>Equal interaction</li>
-					</ul>
-					<a
-						href='https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9'
-						target='_blank'
-						rel='noreferrer'
-					>
-						Animation in UX <Launch />
-					</a>
-				</div>
-				<figure>
-					<img
-						src='https://res.cloudinary.com/labofthingsimages/image/upload/v1645645406/Screen_Shot_2022-02-23_at_2.43.20_PM_khyo5a.png'
-						alt='example showing a choppy animation and a smooth one that loads in sections'
-					/>
-				</figure>
+			<section>
+				<h2>🐌 Before We Dive Into the Code</h2>
+				<h3>Let's talk about GOOD Animation Practices</h3>
+				<hr />
+				<article className='twoCol'>
+					<div>
+						<ul>
+							<li>Our brains are in-tune with the subtlety of animtations.</li>
+							<li>UI elements should enhance an app.</li>
+							<li>
+								Animations shouldn't get in the way of the functionality of the
+								UI elements
+							</li>
+							<li>Material Design has guidelines</li>
+							<li>Animations are different from Mobile to Web</li>
+							<li>
+								The goal is to animate in a way that makes sense to our brains,
+								by mimicing what we see in the real world.{' '}
+							</li>
+						</ul>
+						<h4>References</h4>
+						<a
+							href='https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9'
+							target='_blank'
+							rel='noreferrer'
+						>
+							The Ultimate Guide... <Launch />
+						</a>
+						<br />
+						<a
+							href='https://material.io/design/motion/speed.html'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Material Design: Motion <Launch />
+						</a>
+					</div>
+					<blockquote>
+						So, if we sum up all of the above-mentioned rules and principles,
+						the animation in the interface should reflect the movements that we
+						know from the physical world — friction, acceleration, etc.
+						Imitating the behavior of objects from the real world we can create
+						a sequence that allows users to understand what to expect from the
+						interface.
+						<br />
+						<cite>Taras Skytskyi • UX Collective • 2018</cite>
+					</blockquote>
+				</article>
 			</section>
 			<section>
 				<h2>🛠 Animation Tools</h2>
@@ -613,12 +681,7 @@ const CSSAnimations = () => {
 				</article>
 			</section>
 			<section>
-				<h2>A Note on Performance</h2>
-				<h3>
-					Google penalizes you for poor performance. Check Lighthouse for your
-					performance score and suggested modifications.
-				</h3>
-
+				<h2>📝 A Note on Performance</h2>
 				<p>
 					<i>
 						It's not really a matter of JavaScript vs CSS in some cases it's
@@ -674,6 +737,175 @@ const CSSAnimations = () => {
 					>
 						CSS Tricks Article <Launch />
 					</a>
+				</article>
+			</section>
+			<section>
+				<h2>💯 Google, SEO {'&'} Lighthouse</h2>
+				<em>
+					We want all these to be good... Therefore we need to pay attention to
+					our performance.
+				</em>
+				<hr />
+				<article className='twoCol'>
+					<div>
+						<h3>Bad UX affects Rankings</h3>
+						<em>
+							Many factors can effect a site's SEO, it's good to stay up-to-date
+							on what is being calculated.{' '}
+						</em>
+						<ul>
+							<li>Google penalizes you for poor performance.</li>
+							<li>
+								Check Lighthouse for your performance score and suggested
+								modifications.
+							</li>
+							<li>
+								With the increase in users on mobile devices browsers, site
+								speed plays a big factor.
+							</li>
+							<li>HTML Structure {'&'} Quality</li>
+							<li>Semantic HTML</li>
+						</ul>
+						<br />
+						<h4>References</h4>
+						<a
+							href='https://developers.google.com/web/tools/lighthouse'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Lighthouse <Launch />
+						</a>
+						<br />
+						<a
+							href='https://support.google.com/webmasters/thread/104436075/core-web-vitals-page-experience-faqs-updated-march-2021'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Core Web Vitals... <Launch />
+						</a>
+					</div>
+					<blockquote>
+						Lighthouse is an open-source, automated tool for improving the
+						quality of web pages. You can run it against any web page, public or
+						requiring authentication. It has audits for performance,
+						accessibility, progressive web apps, SEO and more.
+						<br />
+						<cite>Tools for Web Developers • 2021</cite>
+					</blockquote>
+				</article>
+			</section>
+			<section>
+				<h2>🤦🏻‍♀️ Wait... What's Semantic HTML?</h2>
+				<em>
+					Semantic HTML relates the structure of the content to the browser.
+					When search engines crawl the site, or when screen readers dictate the
+					content the relevance remains the same.
+				</em>
+				<hr />
+				<article className='twoCol'>
+					<div>
+						<h3>Visual Hierarchy is well... Visual 👀</h3>
+						<em>
+							So naturally anything that needs to interpret your content is
+							relying on the relationships of HTML elements to convey the
+							structure.
+						</em>
+						<ul>
+							<li>
+								If your text isn't in an HTML tag AT ALL{' '}
+								<code>{`<p>Hello!</p>`}</code> it will not be dictated by a
+								screen reader, that content will not be dictated.
+							</li>
+							<li>
+								It's a negative mark on any scoring. (And will influence SEO)
+							</li>
+							<li>
+								You can use plugins to test your accessibility. Axe Dev Tools is
+								a good one.
+							</li>
+							<li>You can test your semantic validation. (see link below)</li>
+						</ul>
+						<br />
+						<h3>When to use which thing? </h3>
+						<em>
+							I tend to struggle knowing which element of these elements to use:
+							div/section/article. I linked an article below on this topic.{' '}
+						</em>
+						<ul>
+							<li>
+								Is the content semantically related? or is the content self
+								contained.
+							</li>
+							<li>When in doubt, decide if it's a content or a wrapper.</li>
+							<li>
+								Does the content go together? Should you then use a
+								header/footer as well?{' '}
+							</li>
+							<li>Linking to an article below.</li>
+						</ul>
+						<br />
+						<h3>☝️ Take Aways</h3>
+						<ul>
+							<li>NO NAKED TEXT! Put a tag on it!</li>
+							<li>Stop using so many DIVS!</li>
+						</ul>
+					</div>
+					<div>
+						<blockquote>
+							When approaching which markup to use, ask yourself, "What
+							element(s) best describe/represent the data that I'm going to
+							populate?" For example, is it a list of data?; ordered,
+							unordered?; is it an article with sections and an aside of related
+							information?; does it list out definitions?; is it a figure or
+							image that needs a caption?; should it have a header and a footer
+							in addition to the global site-wide header and footer?; etc.
+							<br />
+							<cite>MDN Web Docs • 2021</cite>
+						</blockquote>
+						<br />
+						<h4>References</h4>
+						<a
+							href='https://developer.mozilla.org/en-US/docs/Glossary/Semantics'
+							target='_blank'
+							rel='noreferrer'
+						>
+							MDN Docs: Semantics <Launch />
+						</a>
+						<br />
+						<a
+							href='https://validator.w3.org/'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Markup Validation Service <Launch />
+						</a>
+						<br />
+						<a
+							href='https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US&utm_term=axe%20plugin&utm_campaign=Search%20-%20axe%20DevTools%20-%20Branded&utm_source=adwords&utm_medium=ppc&hsa_src=g&hsa_ad=567862381916&hsa_tgt=aud-604281216905:kwd-1186988429728&hsa_mt=p&hsa_ver=3&hsa_acc=7854167720&hsa_kw=axe%20plugin&hsa_grp=122011560847&hsa_cam=12428499999&hsa_net=adwords&gclid=Cj0KCQjwuMuRBhCJARIsAHXdnqOhpoZCD0-7tHYrvYIM2wqyCoEux1TBbyEAm99U3AQXyYSEoDNnS4AaAskXEALw_wcB'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Axe DevTools <Launch />
+						</a>
+						<br />
+						<a
+							href='https://bitsofco.de/sectioning-content-in-html5/#:~:text=So%20which%20should%20you%20use,%2C%20use%20a%20.'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Semantics: Article/Section/Div <Launch />
+						</a>
+						<br />
+						<a
+							href='https://dev.to/kenbellows/stop-using-so-many-divs-an-intro-to-semantic-html-3i9i'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Stop Using so MANY DIVs! <Launch />
+						</a>
+
+						<hr />
+					</div>
 				</article>
 			</section>
 			<section>
@@ -818,6 +1050,122 @@ const CSSAnimations = () => {
 				</a>
 			</section>
 			<section>
+				<h2>Animation Examples</h2>
+				<hr />
+				<article className='twoCol'>
+					<div>
+						<h3>This example is using SVGs and CSS classes.</h3>
+						<ul>
+							<li>Each class contains an animation</li>
+							<li>
+								You can add those classes to different SVG elements and groups
+							</li>
+						</ul>
+						<h3>How this Example was built</h3>
+						<ol>
+							<li>Create a vector in your fav design program</li>
+							<li>Copy as SVG</li>
+							<li>Paste into your fav SVG Optimizer (SVGOMG)</li>
+							<li>
+								Copy and Paste the code into a browser-based code editing
+								platform. (I'm using Codepen, but there many others)
+							</li>
+							<li>Write some fun CSS Animations. 🤩</li>
+						</ol>
+						<em>
+							There is a lot going on in this particular example. Tons of
+							absolute positioned items and pseudo elements. The point here was
+							to show a few svgs animating. ☝️ It's not necessarily the most
+							performant example.
+						</em>
+
+						<p>"props.theme.animation.drawIn"</p>
+						<hr />
+						<h4>References</h4>
+						<a
+							href='https://jakearchibald.github.io/svgomg/'
+							target='_blank'
+							rel='noreferrer'
+						>
+							SVGOMG <Launch />
+						</a>
+						<br />
+						<a
+							href='https://codepen.io/your-work'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Codepen <Launch />
+						</a>
+						<br />
+						<a
+							href='https://codesandbox.io/?from-app=1'
+							target='_blank'
+							rel='noreferrer'
+						>
+							CodeSandbox <Launch />
+						</a>
+						<br />
+					</div>
+					<figure>
+						<img
+							src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647351457/css_svg_animations.gif'
+							alt=''
+						/>
+						<figcaption>
+							<a
+								href='https://codepen.io/joyanna/pen/NWGYLNW'
+								target='_blank'
+								rel='noreferrer'
+							>
+								View Project <Arrow />
+							</a>
+						</figcaption>
+					</figure>
+				</article>
+			</section>
+			<section>
+				<h2>SVG Pulling in Animations from Theme</h2>
+				<em>
+					One way to utlized Styled Components and Animated SVGs is to save your
+					animations to your theme file.
+				</em>
+				<hr />
+				<article>
+					<h3>Importing Themed Animations</h3>
+					<ul>
+						<li>You can import small utility animations into your SVGS</li>
+						<li>
+							By doing this you don't have to load all of your animations in
+							your global style sheet.
+						</li>
+						<li>
+							That way you only load animations when they are present on the
+							page.
+						</li>
+					</ul>
+					<div className='twoCol'>
+						<figure>
+							<img
+								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647526289/theme-to-svg_zztbng.png'
+								alt=''
+							/>
+							<figcaption>
+								Example of pulling animation classes into the svg
+							</figcaption>
+						</figure>
+						<figure>
+							<img
+								className='smallFig'
+								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647526322/circle-animation_ecmsde.gif'
+								alt=''
+							/>
+							<figcaption>Animation Result...</figcaption>
+						</figure>
+					</div>
+				</article>
+			</section>
+			<section>
 				<h2>🍦 Utilizing Javascript + CSS Transitions</h2>
 				<hr />
 				<article className='twoCol'>
@@ -930,85 +1278,7 @@ const CSSAnimations = () => {
 				</p>
 			</section>
 			<section>
-				<h2>Animation Examples</h2>
-				<hr />
-				<article className='twoCol'>
-					<div>
-						<h3>This example is using SVGs and CSS classes.</h3>
-						<ul>
-							<li>Each class contains an animation</li>
-							<li>
-								You can add those classes to different SVG elements and groups
-							</li>
-						</ul>
-						<h3>How this Example was built</h3>
-						<ol>
-							<li>Create a vector in your fav design program</li>
-							<li>Copy as SVG</li>
-							<li>Paste into your fav SVG Optimizer (SVGOMG)</li>
-							<li>
-								Copy and Paste the code into a browser-based code editing
-								platform. (I'm using Codepen, but there many others)
-							</li>
-							<li>Write some fun CSS Animations. 🤩</li>
-						</ol>
-						<em>
-							There is a lot going on in this particular example. Tons of
-							absolute positioned items and pseudo elements. The point here was
-							to show a few svgs animating. ☝️ It's not necessarily the most
-							performant example.
-						</em>
-
-						<p>"props.theme.animation.drawIn"</p>
-						<hr />
-						<h4>References</h4>
-						<a
-							href='https://jakearchibald.github.io/svgomg/'
-							target='_blank'
-							rel='noreferrer'
-						>
-							SVGOMG <Launch />
-						</a>
-						<br />
-						<a
-							href='https://codepen.io/your-work'
-							target='_blank'
-							rel='noreferrer'
-						>
-							Codepen <Launch />
-						</a>
-						<br />
-						<a
-							href='https://codesandbox.io/?from-app=1'
-							target='_blank'
-							rel='noreferrer'
-						>
-							CodeSandbox <Launch />
-						</a>
-						<br />
-					</div>
-					<figure>
-						<img
-							src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647351457/css_svg_animations.gif'
-							alt=''
-						/>
-						<figcaption>
-							<a
-								href='https://codepen.io/joyanna/pen/NWGYLNW'
-								target='_blank'
-								rel='noreferrer'
-							>
-								View Project <Arrow />
-							</a>
-						</figcaption>
-					</figure>
-				</article>
-			</section>
-			<section>
-				<h2>SVG Pulling in Animation from Theme</h2>
-			</section>
-			<section>
-				<h2>🔖 Accessibility: ARIA Tags</h2>
+				<h2>🏷 Accessibility: ARIA Tags</h2>
 				<hr />
 				<article className='twoCol'>
 					<div>
@@ -1049,24 +1319,6 @@ const CSSAnimations = () => {
 					rel='noreferrer'
 				>
 					React: Accessibility <Launch />
-				</a>
-			</section>
-			<section>
-				<h2>Semantic HTML</h2>
-				<hr />
-				<br />
-				<ul>
-					<li>When to use Divs, sections, articles</li>
-					<li>put your text in a p tag pls.</li>
-				</ul>
-
-				<br />
-				<a
-					href='https://bitsofco.de/sectioning-content-in-html5/#:~:text=So%20which%20should%20you%20use,%2C%20use%20a%20.'
-					target='_blank'
-					rel='noreferrer'
-				>
-					Semantics: Article/Section/Div <Launch />
 				</a>
 			</section>
 			<section>
@@ -1133,6 +1385,13 @@ const CSSAnimations = () => {
 				</article>
 			</section>
 			<section>
+				<h2>Conclusion</h2>
+				<hr />
+				<article>
+					<h3>Questions?</h3>
+				</article>
+			</section>
+			{/* <section>
 				<h2>ARIA + React + Styled Components</h2>
 				<hr />
 				<article className='twoCol'>
@@ -1158,7 +1417,7 @@ const CSSAnimations = () => {
 						</figcaption>
 					</figure>
 				</article>
-			</section>
+			</section> */}
 		</Styles>
 	);
 };

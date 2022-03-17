@@ -60,37 +60,37 @@ const theme = {
   }`,
 
 		bounce3: `  
-    .bounce-3 {
-    animation-name: bounce-3;
-    animation-timing-function: ease; }
-   
-    @keyframes bounce-3 {
-    0% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(30px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
+			.bounce-3 {
+			animation-name: bounce-3;
+			animation-timing-function: ease; }
+		
+			@keyframes bounce-3 {
+			0% {
+			transform: translateY(0);
+			}
+			50% {
+			transform: translateY(30px);
+			}
+			100% {
+			transform: translateY(0);
+			}
+		}
   `,
 		drawIn: `.draw-in {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 10;
-    animation: draw 15s ease-in-out alternate infinite;
+	  stroke-dasharray: 1000;
+	  stroke-dashoffset: 10;
+	  animation: draw 15s ease-in-out alternate infinite;
    }
 
-  @keyframes draw {
-    from {
-      stroke-dashoffset: 1000;
-    }
+	@keyframes draw {
+		from {
+		stroke-dashoffset: 1000;
+		}
 
-    to {
-      stroke-dashoffset: 0;
-    }
-  }`,
+		to {
+		stroke-dashoffset: 0;
+		}
+	  }`,
 	},
 };
 export default theme;
