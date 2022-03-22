@@ -48,6 +48,17 @@ export default styled.main`
     padding: 0.3em;
   }
 
+  .progressBar {
+    margin: 0;
+    background: var(--mainGradient);
+    height: 10px;
+    width: 100%;
+    box-shadow: 0 2px 20px 0 rgba(0, 0, 0, .1);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
   *::selection {
     color: var(--black);
     background-color: var(--primary);
@@ -64,6 +75,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
   h1 {
     padding: 0.1em 0.3em 0.3em;
+    margin-top: 10px;
     background: var(--white);
     border: 4px solid var(--black);
     color: var(--black);

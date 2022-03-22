@@ -13,9 +13,11 @@ const CSSAnimations = () => {
 		toolTip === true ? toggleToolTip(false) : toggleToolTip(true);
 		console.log(toolTip);
 	};
+	// const progress = window.innerHeight;
 
 	return (
 		<Styles currentColor={currentColor} className={currentColor}>
+			{/* <div className='progressBar' style={{ width: `${progress}` }}></div> */}
 			<h1>CSS Animations in JavaScript {'&'} React</h1>
 			<div>
 				<button
@@ -89,8 +91,8 @@ const CSSAnimations = () => {
 							<li>What are the Pros {'&'} Cons to using These Tools?</li>
 							<li>How do Animations affect Performance {'&'} SEO</li>
 							<li>How does The Browser Render Animations?</li>
-							<li>React + ARIA + CSS Transitions</li>
-							<li>Accessibility: Semantics {'&'} Aria</li>
+							<li>Improving Accessibility</li>
+							<li>Quick Tip: Themed Animations</li>
 						</ol>
 						<ColorChangeCircle classes={'colorCircle'} />
 						<br />
@@ -129,7 +131,96 @@ const CSSAnimations = () => {
 				</article>
 			</section>
 			<section>
-				<h2>Preface</h2>
+				<h2>✨ Why Animations Matter</h2>
+				<em>Animation Drives User Engagement and Conversion</em>
+				<hr />
+				<article className='twoCol'>
+					<div>
+						<h3>It grabs the User's Attention</h3>
+						<ul>
+							<li>"The human visual system is sensitive to motion..."</li>
+							<li>Which can be a good thing... or a bad thing</li>
+							<li>
+								Subtle animations provide user feedback. It shows the user your
+								app is actually "doing" something.{' '}
+							</li>
+							<li>
+								Either way! If you're using animations, studies show that your
+								users are paying attention. Unless... you're using too much, and
+								then they are annoyed.
+							</li>
+						</ul>
+						<br />
+						<h4>References</h4>
+						<a
+							href='https://www.nngroup.com/articles/animation-purpose-ux/'
+							target='_blank'
+							rel='noreferrer'
+						>
+							The Role of Animation... <Launch />
+						</a>
+					</div>
+					<blockquote>
+						In UX, motion and animation can be helpful and communicative, if
+						used with restraint. Motion is most often appropriate as a form of
+						subtle feedback for microinteractions, rather than to induce delight
+						or entertain users.
+						<br />
+						<cite>Page Laubheimer, Nielson Norman Group • 2020</cite>
+					</blockquote>
+				</article>
+			</section>
+			<section>
+				<h2>🐌 Let's talk about GOOD Animation Practices</h2>
+				<hr />
+				<article className='twoCol'>
+					<div>
+						<ul>
+							<li>Our brains are in-tune with the subtlety of animations.</li>
+							<li>UI elements should enhance an app.</li>
+							<li>
+								Animations shouldn't get in the way of the functionality of the
+								UI elements
+							</li>
+							<li>Animations are different from Mobile to Web</li>
+							<li>
+								The goal is to animate in a way that makes sense to our brains,
+								by mimicing what we see in the real world.{' '}
+							</li>
+							<li>Material Design has guidelines</li>
+						</ul>
+						<br />
+						<h4>References</h4>
+						<a
+							href='https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9'
+							target='_blank'
+							rel='noreferrer'
+						>
+							The Ultimate Guide... <Launch />
+						</a>
+						<br />
+						<a
+							href='https://material.io/design/motion/speed.html'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Material Design: Motion <Launch />
+						</a>
+					</div>
+					<blockquote>
+						So, if we sum up all of the above-mentioned rules and principles,
+						the animation in the interface should reflect the movements that we
+						know from the physical world — friction, acceleration, etc.
+						Imitating the behavior of objects from the real world we can create
+						a sequence that allows users to understand what to expect from the
+						interface.
+						<br />
+						<cite>Taras Skytskyi • UX Collective • 2018</cite>
+					</blockquote>
+				</article>
+			</section>
+			<section>
+				<h2>Quick History: Web Animation Tools</h2>
 				<hr />
 				<h3>The way we create animations</h3>
 				<ul>
@@ -161,98 +252,6 @@ const CSSAnimations = () => {
 				</p> */}
 
 				<br />
-			</section>
-			<section>
-				<h2>❇️ Why Animations Matter</h2>
-				<em>Animation Drives User Engagement and Conversion</em>
-				<hr />
-				<article className='twoCol'>
-					<div>
-						<h3>It grabs the User's Attention</h3>
-						<ul>
-							<li>Which can be a good thing... or a bad thing</li>
-							<li>
-								Subtle animations provide user feedback. It shows the user your
-								app is actually "doing" something.{' '}
-							</li>
-							<li>
-								"The human visual system is sensitive to motion..." which can be
-								used for good or bad.
-							</li>
-							<li>
-								Either way! If you're using animations, studies show that your
-								users are paying attention. Unless... you're using too much, and
-								then they are annoyed.
-							</li>
-						</ul>
-						<br />
-						<h4>References</h4>
-						<a
-							href='https://www.nngroup.com/articles/animation-purpose-ux/'
-							target='_blank'
-							rel='noreferrer'
-						>
-							The Role of Animation... <Launch />
-						</a>
-					</div>
-					<blockquote>
-						In UX, motion and animation can be helpful and communicative, if
-						used with restraint. Motion is most often appropriate as a form of
-						subtle feedback for microinteractions, rather than to induce delight
-						or entertain users.
-						<br />
-						<cite>Page Laubheimer, Nielson Norman Group • 2020</cite>
-					</blockquote>
-				</article>
-			</section>
-			<section>
-				<h2>🐌 Before We Dive Into the Code</h2>
-				<h3>Let's talk about GOOD Animation Practices</h3>
-				<hr />
-				<article className='twoCol'>
-					<div>
-						<ul>
-							<li>Our brains are in-tune with the subtlety of animations.</li>
-							<li>UI elements should enhance an app.</li>
-							<li>
-								Animations shouldn't get in the way of the functionality of the
-								UI elements
-							</li>
-							<li>Material Design has guidelines</li>
-							<li>Animations are different from Mobile to Web</li>
-							<li>
-								The goal is to animate in a way that makes sense to our brains,
-								by mimicing what we see in the real world.{' '}
-							</li>
-						</ul>
-						<h4>References</h4>
-						<a
-							href='https://uxdesign.cc/the-ultimate-guide-to-proper-use-of-animation-in-ux-10bd98614fa9'
-							target='_blank'
-							rel='noreferrer'
-						>
-							The Ultimate Guide... <Launch />
-						</a>
-						<br />
-						<a
-							href='https://material.io/design/motion/speed.html'
-							target='_blank'
-							rel='noreferrer'
-						>
-							Material Design: Motion <Launch />
-						</a>
-					</div>
-					<blockquote>
-						So, if we sum up all of the above-mentioned rules and principles,
-						the animation in the interface should reflect the movements that we
-						know from the physical world — friction, acceleration, etc.
-						Imitating the behavior of objects from the real world we can create
-						a sequence that allows users to understand what to expect from the
-						interface.
-						<br />
-						<cite>Taras Skytskyi • UX Collective • 2018</cite>
-					</blockquote>
-				</article>
 			</section>
 			<section>
 				<h2>🛠 Animation Tools</h2>
@@ -449,7 +448,7 @@ const CSSAnimations = () => {
 						<figure>
 							<img
 								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646795927/SmartAnimateExample_v21bga.png'
-								alt=''
+								alt='Figma Smart Animate Tool'
 							/>
 							<figcaption>Using Prototyping + Smart Animate</figcaption>
 						</figure>
@@ -558,7 +557,7 @@ const CSSAnimations = () => {
 						<img
 							className='smallFig'
 							src='https://res.cloudinary.com/labofthingsimages/image/upload/v1646867435/framer-motion-example_mj34ew.gif'
-							alt=''
+							alt='Framer Motion example of animations'
 						/>
 						<figcaption>
 							<a
@@ -585,7 +584,7 @@ const CSSAnimations = () => {
 					<div>
 						<h3>Should be used sparingly!</h3>
 						<ul>
-							<li>Can Effect Performance</li>
+							<li>Can Effect Performance {'&'} SEO</li>
 							<li>Not always supported in all browsers</li>
 							<li>Not always UX friendly</li>
 						</ul>
@@ -606,7 +605,7 @@ const CSSAnimations = () => {
 							<img
 								className='smallFig'
 								src='https://media.giphy.com/media/SF9Z0shNT07T2/giphy.gif'
-								alt=''
+								alt='Holding back a train'
 							/>
 							<figcaption>
 								Actual footage of the browser loading your animations...
@@ -738,8 +737,8 @@ const CSSAnimations = () => {
 					<div>
 						<h3>Bad UX affects Rankings</h3>
 						<em>
-							Many factors can effect a site's SEO, it's good to stay up-to-date
-							on what is being calculated.{' '}
+							Many factors can play into a site's SEO, it's good to stay
+							up-to-date on what is being calculated.{' '}
 						</em>
 						<ul>
 							<li>Google penalizes you for poor performance.</li>
@@ -957,17 +956,17 @@ const CSSAnimations = () => {
 							<li>
 								Calling out a property
 								<code>
-									transition: color .2s ease-in, transform 8s ease-in-out;{' '}
+									transition: color .2s ease-in, transform .6s ease-in-out;{' '}
 								</code>
 							</li>
 							<li>
 								Can be combined with hover-states and pseudo elements
-								<code>
+								{/* <code>
 									{`a { color: blue;  
                   transform: color .2s ease-in; 
                   &:hover {color: pink}
               }`}
-								</code>
+								</code> */}
 							</li>
 						</ul>
 						<br />
@@ -1055,128 +1054,7 @@ const CSSAnimations = () => {
 					Smooth As Butter Animations <Launch />
 				</a>
 			</section>
-			<section>
-				<h2>Animation Examples</h2>
-				<hr />
-				<article className='twoCol'>
-					<div>
-						<h3>This example is using SVGs and CSS classes.</h3>
-						<ul>
-							<li>Each class contains an animation</li>
-							<li>
-								You can add those classes to different SVG elements and groups
-							</li>
-						</ul>
-						<h3>How this Example was built</h3>
-						<ol>
-							<li>Create a vector in your fav design program</li>
-							<li>Copy as SVG</li>
-							<li>Paste into your fav SVG Optimizer (SVGOMG)</li>
-							<li>
-								Copy and Paste the code into a browser-based code editing
-								platform.
-							</li>
-							<li>Write some fun CSS Animations. 🤩</li>
-						</ol>
-						<em>
-							There is a lot going on in this particular example. Tons of
-							absolute positioned items and pseudo elements. The point here was
-							to show a few svgs animating. ☝️ It's not necessarily the most
-							performant example.
-						</em>
-						<hr />
-						<h4>References</h4>
-						<a
-							href='https://jakearchibald.github.io/svgomg/'
-							target='_blank'
-							rel='noreferrer'
-						>
-							SVGOMG <Launch />
-						</a>
-						<br />
-						<a
-							href='https://codepen.io/your-work'
-							target='_blank'
-							rel='noreferrer'
-						>
-							Codepen <Launch />
-						</a>
-						<br />
-						<a
-							href='https://codesandbox.io/?from-app=1'
-							target='_blank'
-							rel='noreferrer'
-						>
-							CodeSandbox <Launch />
-						</a>
-						<br />
-					</div>
-					<figure>
-						<img
-							src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647351457/css_svg_animations.gif'
-							alt=''
-						/>
-						<figcaption>
-							<a
-								href='https://codepen.io/joyanna/pen/NWGYLNW'
-								target='_blank'
-								rel='noreferrer'
-							>
-								View Project <Arrow />
-							</a>
-						</figcaption>
-					</figure>
-				</article>
-			</section>
-			<section>
-				<h2>SVG Pulling in Animations from Theme</h2>
-				<em>
-					One way to utlized Styled Components and Animated SVGs is to save your
-					animations to your theme file.
-				</em>
-				<hr />
-				<article>
-					<h3>Importing Themed Animations</h3>
-					<ul>
-						<li>You can import small utility animations into your SVGS</li>
-						<li>
-							By doing this you don't have to load all of your animations in
-							your global style sheet.
-						</li>
-						<li>
-							That way you only load animations when they are present on the
-							page.
-						</li>
-					</ul>
-					<div className='twoCol'>
-						<figure>
-							<img
-								className='smallFig'
-								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647916251/utility-animatons_m4r7wk.png'
-								alt=''
-							/>
-							<figcaption>Amimation Classes in Theme</figcaption>
-						</figure>
-						<figure>
-							<img
-								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647531690/theme-to-svg_rmogge.png'
-								alt=''
-							/>
-							<figcaption>
-								Example of bringing animation classes into the svg
-							</figcaption>
-						</figure>
-						<figure>
-							<img
-								className='smallFig'
-								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647526322/circle-animation_ecmsde.gif'
-								alt=''
-							/>
-							<figcaption>Animation Result...</figcaption>
-						</figure>
-					</div>
-				</article>
-			</section>
+
 			<section>
 				<h2>🍦 Utilizing Javascript + CSS Transitions</h2>
 				<hr />
@@ -1223,7 +1101,7 @@ const CSSAnimations = () => {
 				<figure>
 					<img
 						src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647371334/hot-right-now-animation_dtyk1q.gif'
-						alt=''
+						alt='button toggles light and dark'
 					/>
 					<figcaption>
 						<a
@@ -1271,7 +1149,7 @@ const CSSAnimations = () => {
 					<figure>
 						<img
 							src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647451935/cadre5-menu_soxklz.gif'
-							alt=''
+							alt='menu opens when clicked and classes change out'
 						/>
 						<figcaption>
 							You can see the pre-generated classes swap out to open the menu.
@@ -1376,7 +1254,7 @@ const CSSAnimations = () => {
 					<figure>
 						<img
 							src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647458003/aria-expanded_rpvk4f.gif'
-							alt=''
+							alt='example of an accordion opening and closing'
 						/>
 						<figcaption>
 							<a
@@ -1391,11 +1269,147 @@ const CSSAnimations = () => {
 				</article>
 			</section>
 			<section>
-				<h2>Conclusion</h2>
+				<h2>SVG Animation Examples</h2>
+				<hr />
+				<article className='twoCol'>
+					<div>
+						<h3>This example is using SVGs and CSS classes.</h3>
+						<ul>
+							<li>Each class contains an animation</li>
+							<li>
+								You can add those classes to different SVG elements and groups
+							</li>
+						</ul>
+						<h3>How this Example was built</h3>
+						<ol>
+							<li>Create a vector in your fav design program</li>
+							<li>Copy as SVG</li>
+							<li>Paste into your fav SVG Optimizer (SVGOMG)</li>
+							<li>
+								Copy and Paste the code into a browser-based code editing
+								platform.
+							</li>
+							<li>Write some fun CSS Animations. 🤩</li>
+						</ol>
+						<em>
+							There is a lot going on in this particular example. Tons of
+							absolute positioned items and pseudo elements. The point here was
+							to show a few svgs animating. ☝️ It's not necessarily the most
+							performant example.
+						</em>
+						<hr />
+						<h4>References</h4>
+						<a
+							href='https://jakearchibald.github.io/svgomg/'
+							target='_blank'
+							rel='noreferrer'
+						>
+							SVGOMG <Launch />
+						</a>
+						<br />
+						<a
+							href='https://codepen.io/your-work'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Codepen <Launch />
+						</a>
+						<br />
+						<a
+							href='https://codesandbox.io/?from-app=1'
+							target='_blank'
+							rel='noreferrer'
+						>
+							CodeSandbox <Launch />
+						</a>
+						<br />
+					</div>
+					<figure>
+						<img
+							src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647351457/css_svg_animations.gif'
+							alt='animations with SVGs example'
+						/>
+						<figcaption>
+							<a
+								href='https://codepen.io/joyanna/pen/NWGYLNW'
+								target='_blank'
+								rel='noreferrer'
+							>
+								View Project <Arrow />
+							</a>
+						</figcaption>
+					</figure>
+				</article>
+			</section>
+			<section>
+				<h2>Themed Animations</h2>
+				<em>
+					One way to utlized Styled Components and Animated SVGs is to save your
+					animations to your theme file.
+				</em>
 				<hr />
 				<article>
-					<h3>Questions?</h3>
+					<h3>Importing Themed Animations</h3>
+					<ul>
+						<li>You can import small utility animations into your SVGS</li>
+						<li>
+							By doing this you don't have to load all of your animations in
+							your global style sheet.
+						</li>
+						<li>
+							That way you only load animations when they are present on the
+							page.
+						</li>
+					</ul>
+					<div className='twoCol'>
+						<figure>
+							<img
+								className='smallFig'
+								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647916251/utility-animatons_m4r7wk.png'
+								alt='theme file with animations in it'
+							/>
+							<figcaption>Amimation Classes in Theme</figcaption>
+						</figure>
+						<figure>
+							<img
+								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647531690/theme-to-svg_rmogge.png'
+								alt='importing from the theme to the SVG component'
+							/>
+							<figcaption>
+								Example of bringing animation classes into the svg
+							</figcaption>
+						</figure>
+						<figure>
+							<img
+								className='smallFig'
+								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647526322/circle-animation_ecmsde.gif'
+								alt='SVG moves up and down'
+							/>
+							<figcaption>Animation Result...</figcaption>
+						</figure>
+					</div>
 				</article>
+			</section>
+			<section>
+				<h2>Conclusion: The Manifesto!</h2>
+				<hr />
+				<article>
+					<h3>Let's make GOOD Animations</h3>
+					<ul>
+						<li>Keeping in mind that PERFORMANCE changes our SEO scores!</li>
+						<li>Using ARIA tags to make a better user experience</li>
+						<li>
+							If we use libraries or plugins, let's make sure it's justified.
+						</li>
+						<li>
+							Animations add to our UX, let's be mindful of how we use them.
+						</li>
+					</ul>
+				</article>
+			</section>
+			<section>
+				<hr />
+				<h2>Questions?</h2>
 			</section>
 			{/* <section>
 				<h2>ARIA + React + Styled Components</h2>
