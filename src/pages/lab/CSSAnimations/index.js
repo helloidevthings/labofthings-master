@@ -1406,6 +1406,7 @@ const CSSAnimations = () => {
 						</li>
 					</ul>
 				</article>
+				<br />
 				<hr />
 				<h2>THANK YOUUUUUU! 🙏</h2>
 			</section>
