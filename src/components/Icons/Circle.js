@@ -2,8 +2,8 @@ import * as React from 'react';
 import styled from '@emotion/styled';
 
 const StyledCircle = styled.svg`
-	${({ theme }) => theme.animations.bounce3}
 	${({ theme }) => theme.animations.itemTo}
+	${({ theme }) => theme.animations.bounce3}
 `;
 
 const Circle = () => {

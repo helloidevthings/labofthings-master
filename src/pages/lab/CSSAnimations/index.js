@@ -70,12 +70,13 @@ const CSSAnimations = () => {
         <button>Small</button>
       </div> */}
 			<section>
-				<article>
-					<h2>Welcome to the Presentation</h2>
-				</article>
+				<article>{/* <h2>Welcome to the Presentation</h2> */}</article>
 				<article className='twoCol'>
 					<div>
-						<h3>It's actually a webpage...</h3>
+						<h2 className='typeIt'>It's actually a webpage...</h2>
+						<h3>
+							<code>joyanna.dev/css-animations</code>
+						</h3>
 						<br />
 						<p>
 							There's a lot to cover! Feel free to use this webpage as a
@@ -86,10 +87,8 @@ const CSSAnimations = () => {
 							<li>Why do Animations Matter?</li>
 							<li>What Animation Tools Do We Have?</li>
 							<li>What are the Pros {'&'} Cons to using These Tools?</li>
+							<li>How do Animations affect Performance {'&'} SEO</li>
 							<li>How does The Browser Render Animations?</li>
-							<li>What Makes Good UX Animations?</li>
-							<li>CSS Transitions {'&'} Animations</li>
-							<li>JavaScript {'&'} CSS Animations</li>
 							<li>React + ARIA + CSS Transitions</li>
 							<li>Accessibility: Semantics {'&'} Aria</li>
 						</ol>
@@ -97,7 +96,7 @@ const CSSAnimations = () => {
 						<br />
 					</div>
 					<aside>
-						<h3 className='typeIt'>👋 Hello I'm Joyanna</h3>
+						<h3>👋 Hello I'm Joyanna</h3>
 						<h5>Design {'&'} Development</h5>
 						<hr />
 						<p>
@@ -133,7 +132,18 @@ const CSSAnimations = () => {
 				<h2>Preface</h2>
 				<hr />
 				<h3>The way we create animations</h3>
-				<p>
+				<ul>
+					<li>Changed over-time</li>
+					<li>Remember Flash {'&'} JQuery?</li>
+					<li>Relase of CSS3 and HTML5</li>
+					<li>JavaScript Libraries that are physics-based.</li>
+				</ul>
+				<br />
+				<h3>Plenty of Options for Animations</h3>
+				<ul>
+					<li>Pros {'&'} Cons to using these tools</li>
+				</ul>
+				{/* <p>
 					Web animations have changed a lot over the years. We used to use tools
 					like Flash and JQuery. With the release of CSS3 and HTML5 we moved
 					forward with a different way of animating. Today, we have access to a
@@ -148,33 +158,9 @@ const CSSAnimations = () => {
 					which impact performance and accessibility. The purpose of this talk
 					is to go over some of the simple solutions for common UI patterns that
 					don't require downloading packages or using libraries.
-				</p>
+				</p> */}
 
 				<br />
-				<h4>References</h4>
-				<p>
-					<small>
-						<a
-							href='https://developer.mozilla.org/en-US/docs/Web/Performance/CSS_JavaScript_animation_performance'
-							target='_blank'
-							rel='noreferrer'
-						>
-							CSS {'&'} JavaScript Animation Performance - MDMN Web Docs • 2022
-						</a>
-					</small>
-				</p>
-
-				<p>
-					<small>
-						<a
-							href='https://css-tricks.com/myth-busting-css-animations-vs-javascript/'
-							target='_blank'
-							rel='noreferrer'
-						>
-							Myth Busting: CSS Animations vs. JavaScript • 2016
-						</a>
-					</small>
-				</p>
 			</section>
 			<section>
 				<h2>❇️ Why Animations Matter</h2>
@@ -226,7 +212,7 @@ const CSSAnimations = () => {
 				<article className='twoCol'>
 					<div>
 						<ul>
-							<li>Our brains are in-tune with the subtlety of animtations.</li>
+							<li>Our brains are in-tune with the subtlety of animations.</li>
 							<li>UI elements should enhance an app.</li>
 							<li>
 								Animations shouldn't get in the way of the functionality of the
@@ -692,11 +678,13 @@ const CSSAnimations = () => {
 				<hr />
 				<article>
 					<h3>It's all in the Timing!</h3>
-					<p>
-						With how quickly web changes, it's important to take everything with
-						a grain of salt. Each application is different.
-					</p>
-					<br />
+					<ul>
+						<li>
+							With how quickly web changes, it's important to take everything
+							with a grain of salt.
+						</li>
+						<li>Each application is different.</li>
+					</ul>
 					<blockquote>
 						CSS transitions/animations are resampling element styles in the main
 						UI thread before each repaint event happens, which is almost the
@@ -755,6 +743,7 @@ const CSSAnimations = () => {
 						</em>
 						<ul>
 							<li>Google penalizes you for poor performance.</li>
+							<li>First Contentful Paint</li>
 							<li>
 								Check Lighthouse for your performance score and suggested
 								modifications.
@@ -764,7 +753,7 @@ const CSSAnimations = () => {
 								speed plays a big factor.
 							</li>
 							<li>HTML Structure {'&'} Quality</li>
-							<li>Semantic HTML</li>
+							<li>☝️ Use Semantic HTML</li>
 						</ul>
 						<br />
 						<h4>References</h4>
@@ -798,70 +787,24 @@ const CSSAnimations = () => {
 				<h2>🤦🏻‍♀️ Wait... What's Semantic HTML?</h2>
 				<em>
 					Semantic HTML relates the structure of the content to the browser.
-					When search engines crawl the site, or when screen readers dictate the
-					content the relevance remains the same.
 				</em>
 				<hr />
 				<article className='twoCol'>
 					<div>
 						<h3>Visual Hierarchy is well... Visual 👀</h3>
-						<em>
-							So naturally anything that needs to interpret your content is
-							relying on the relationships of HTML elements to convey the
-							structure.
-						</em>
 						<ul>
 							<li>
-								If your text isn't in an HTML tag AT ALL{' '}
-								<code>{`<p>Hello!</p>`}</code> it will not be dictated by a
-								screen reader, that content will not be dictated.
+								Limited time for crawlers to gain benneficial content from your
+								site
 							</li>
-							<li>
-								It's a negative mark on any scoring. (And will influence SEO)
-							</li>
+							<li>Text should be in a tag that relates that it is text.</li>
+							<li>Negative Scoring will Impact SEO</li>
 							<li>
 								You can use plugins to test your accessibility. Axe Dev Tools is
 								a good one.
 							</li>
 							<li>You can test your semantic validation. (see link below)</li>
 						</ul>
-						<br />
-						<h3>When to use which thing? </h3>
-						<em>
-							I tend to struggle knowing which element of these elements to use:
-							div/section/article. I linked an article below on this topic.{' '}
-						</em>
-						<ul>
-							<li>
-								Is the content semantically related? or is the content self
-								contained.
-							</li>
-							<li>When in doubt, decide if it's a content or a wrapper.</li>
-							<li>
-								Does the content go together? Should you then use a
-								header/footer as well?{' '}
-							</li>
-							<li>Linking to an article below.</li>
-						</ul>
-						<br />
-						<h3>☝️ Take Aways</h3>
-						<ul>
-							<li>NO NAKED TEXT! Put a tag on it!</li>
-							<li>Stop using so many DIVS!</li>
-						</ul>
-					</div>
-					<div>
-						<blockquote>
-							When approaching which markup to use, ask yourself, "What
-							element(s) best describe/represent the data that I'm going to
-							populate?" For example, is it a list of data?; ordered,
-							unordered?; is it an article with sections and an aside of related
-							information?; does it list out definitions?; is it a figure or
-							image that needs a caption?; should it have a header and a footer
-							in addition to the global site-wide header and footer?; etc.
-							<br />
-							<cite>MDN Web Docs • 2021</cite>
-						</blockquote>
 						<br />
 						<h4>References</h4>
 						<a
@@ -887,6 +830,62 @@ const CSSAnimations = () => {
 						>
 							Axe DevTools <Launch />
 						</a>
+						<hr />
+					</div>
+					<div>
+						<h3>Example:</h3>
+						<br />
+						<code>{'<div class="wrapper">'}</code>
+						<br />
+						<code>{'<div>Important Headline</div>'}</code>
+						<br />
+						<code>{'<div>Paragraph that explains our headline.</div>'}</code>
+						<br />
+						<code>{'</div>'}</code> 👎
+						<hr />
+						<code>{'<section>'}</code>
+						<br />
+						<code>{'<h2>Important Headline</h2>'}</code>
+						<br />
+						<code>{'<p>Paragraph that explains our headline.</p>'}</code>
+						<br />
+						<code>{'</section>'}</code> 👍
+					</div>
+				</article>
+			</section>
+			<section>
+				<h2>No DIVs?</h2>
+				<em>
+					you can still use divs, but there are a few things to keep in mind.
+				</em>
+				<hr />
+
+				<article className='twoCol'>
+					<div>
+						<h3>When to use which thing? </h3>
+						<ul>
+							<li>
+								Is the content semantically related? or is the content self
+								contained.
+							</li>
+							<li>When in doubt, decide if it's a content or a wrapper.</li>
+						</ul>
+						<br />
+						<h3>☝️ Take Aways</h3>
+						<ul>
+							<li>NO NAKED TEXT! Put a tag on it!</li>
+							<li>Stop using so many DIVS!</li>
+						</ul>
+						<br />
+						<hr />
+						<h4>References</h4>
+						<a
+							href='https://dev.to/kenbellows/stop-using-so-many-divs-an-intro-to-semantic-html-3i9i'
+							target='_blank'
+							rel='noreferrer'
+						>
+							Stop Using so MANY DIVs! <Launch />
+						</a>
 						<br />
 						<a
 							href='https://bitsofco.de/sectioning-content-in-html5/#:~:text=So%20which%20should%20you%20use,%2C%20use%20a%20.'
@@ -895,17 +894,18 @@ const CSSAnimations = () => {
 						>
 							Semantics: Article/Section/Div <Launch />
 						</a>
-						<br />
-						<a
-							href='https://dev.to/kenbellows/stop-using-so-many-divs-an-intro-to-semantic-html-3i9i'
-							target='_blank'
-							rel='noreferrer'
-						>
-							Stop Using so MANY DIVs! <Launch />
-						</a>
-
-						<hr />
 					</div>
+					<blockquote>
+						When approaching which markup to use, ask yourself, "What element(s)
+						best describe/represent the data that I'm going to populate?" For
+						example, is it a list of data?; ordered, unordered?; is it an
+						article with sections and an aside of related information?; does it
+						list out definitions?; is it a figure or image that needs a
+						caption?; should it have a header and a footer in addition to the
+						global site-wide header and footer?; etc.
+						<br />
+						<cite>MDN Web Docs • 2021</cite>
+					</blockquote>
 				</article>
 			</section>
 			<section>
@@ -969,21 +969,23 @@ const CSSAnimations = () => {
               }`}
 								</code>
 							</li>
-							<br />
-							<h3>Animations use Keyframes to change properties</h3>
+						</ul>
+						<br />
+						<h3>Animations use Keyframes to change properties</h3>
+						<ul>
 							<li>
 								Using Keyframes @keyframes
 								<code>{`{from {color:pink} to {color:blue}}`}</code>
 							</li>
 							<li>
-								Keyframe % 0%
+								Keyframe %
 								<code>
-									{`{color: pink} 50%{color: purple} 100%{color:blue}; `}
+									{`0%{color: pink} 50%{color: purple} 100%{color:blue}; `}
 								</code>
 							</li>
 							<li>
-								Using Keyframes @keyframes
-								<code>{`{from {color:pink} to {color:blue}}`}</code>
+								Using Keyframes
+								<code>{`@keyframes { from {color: pink} to {color: blue} }`}</code>
 							</li>
 							<li>
 								Reference the animation on the element you want to apply it to.
@@ -1008,39 +1010,43 @@ const CSSAnimations = () => {
 				<h2>🍿 Buttery Smooth CSS Transitions</h2>
 				<hr />
 				<h3>Understanding How the Browser Works: Critical Rendering Path</h3>
-				<ul>
-					<li>
-						{`Styles > Layout > Paint > Composite`}
-						<ol>
-							<li>
-								Styles:
-								<em> calculates styles/fonts</em>
-							</li>
-							<li>
-								Layout:
-								<em> width/height; left/right/top/bottom;</em>
-							</li>
-							<li>
-								Paint:
-								<em> border-radius;box-shadow; color; background-color;</em>
-							</li>
-							<li>
-								Composite:
-								<em> transform:translate/scale/rotate; opacity;</em>
-							</li>
-						</ol>
-					</li>
-					<li>
-						Creating 60fps by using properties that paint at the end of the
-						process.{' '}
-						<i>
-							“...avoid using transitions with the left/top/right/bottom
-							properties. Those don’t create a fluid animation because they have
-							the browser creating layouts each time, which will affect all of
-							their children.”
-						</i>
-					</li>
-				</ul>
+				<article className='twoCol'>
+					<ul>
+						<li>
+							{`Styles > Layout > Paint > Composite`}
+							<ol>
+								<li>
+									Styles:
+									<em> calculates styles/fonts</em>
+								</li>
+								<li>
+									Layout:
+									<em> width/height; left/right/top/bottom;</em>
+								</li>
+								<li>
+									Paint:
+									<em> border-radius;box-shadow; color; background-color;</em>
+								</li>
+								<li>
+									Composite:
+									<em> transform:translate/scale/rotate; opacity;</em>
+								</li>
+							</ol>
+						</li>
+						<li>
+							Creating 60fps by using properties that paint at the end of the
+							process.{' '}
+						</li>
+					</ul>
+					<blockquote>
+						“...avoid using transitions with the left/top/right/bottom
+						properties. Those don’t create a fluid animation because they have
+						the browser creating layouts each time, which will affect all of
+						their children.”
+					</blockquote>
+				</article>
+				<hr />
+				<h4>References</h4>
 				<a
 					href='https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108'
 					target='_blank'
@@ -1068,7 +1074,7 @@ const CSSAnimations = () => {
 							<li>Paste into your fav SVG Optimizer (SVGOMG)</li>
 							<li>
 								Copy and Paste the code into a browser-based code editing
-								platform. (I'm using Codepen, but there many others)
+								platform.
 							</li>
 							<li>Write some fun CSS Animations. 🤩</li>
 						</ol>
@@ -1078,8 +1084,6 @@ const CSSAnimations = () => {
 							to show a few svgs animating. ☝️ It's not necessarily the most
 							performant example.
 						</em>
-
-						<p>"props.theme.animation.drawIn"</p>
 						<hr />
 						<h4>References</h4>
 						<a
@@ -1147,11 +1151,19 @@ const CSSAnimations = () => {
 					<div className='twoCol'>
 						<figure>
 							<img
+								className='smallFig'
+								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647916251/utility-animatons_m4r7wk.png'
+								alt=''
+							/>
+							<figcaption>Amimation Classes in Theme</figcaption>
+						</figure>
+						<figure>
+							<img
 								src='https://res.cloudinary.com/labofthingsimages/image/upload/v1647531690/theme-to-svg_rmogge.png'
 								alt=''
 							/>
 							<figcaption>
-								Example of pulling animation classes into the svg
+								Example of bringing animation classes into the svg
 							</figcaption>
 						</figure>
 						<figure>
@@ -1241,6 +1253,7 @@ const CSSAnimations = () => {
 							</li>
 							<li>
 								First set up the initial state and the function...
+								<br />
 								<code>const [isOpen, setIsOpen] = useState(true);</code>
 							</li>
 							<li>
@@ -1252,12 +1265,6 @@ const CSSAnimations = () => {
                 {(props) => (props.isOpen ? '-100%' : '0%')}
                 );`}
 								</code>
-								{/* <br />
-              <code>
-                {`transition: transform 0.6s cubic-bezier(0.59, 0, 0.11, 0.97),`}
-                <br />
-                {`background-color 0.7s ease-in-out; }`}
-              </code> */}
 							</li>
 						</ul>
 					</div>
@@ -1270,7 +1277,6 @@ const CSSAnimations = () => {
 							You can see the pre-generated classes swap out to open the menu.
 						</figcaption>
 					</figure>
-					<br />
 				</article>
 				<h3>This is fine... 🤨</h3>
 				<p>
@@ -1297,9 +1303,9 @@ const CSSAnimations = () => {
 						<ul>
 							<li>Drop-downs</li>
 							<li>Accordions</li>
-							<li>Menus</li>
 							<li>Buttons</li>
 							<li>Forms</li>
+							<li>Tool-Tips</li>
 						</ul>
 					</div>
 				</article>

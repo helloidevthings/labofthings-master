@@ -106,7 +106,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
   p {
     font-size: 1em;
-    /* max-width: 40em; */
+    max-width: 50em;
 
     & > a {
       font-size: 1em;
@@ -225,7 +225,7 @@ p, h1, h2, h3, h4, h5, h6 {
     padding: 0; 
     margin: 0; 
     position: relative;
-    transition: all .4s ease-in-out;
+    transition: all .5s ease-in-out;
 
     & svg {
       height: 1.5em;
@@ -247,7 +247,7 @@ p, h1, h2, h3, h4, h5, h6 {
       border-radius: 1.1rem;
       transform-origin: top left;
       transform: scale(.2) translateX(-200%);
-      transition: all .4s ease-in-out;
+      transition: all .4s cubic-bezier(0, 0.42, 0.73, 0.55);
       z-index: 1000;
   
       h5 {
@@ -348,7 +348,7 @@ p, h1, h2, h3, h4, h5, h6 {
       height: 100%; */
       object-fit: contain; 
       max-height: 20rem;
-    }
+        }
 
     figcaption {
       /* position: absolute; */
@@ -444,7 +444,7 @@ p, h1, h2, h3, h4, h5, h6 {
       line-height: 1.6;
       position: relative;
       list-style: none;
-      margin: 0.2em 0;
+      margin: 0.5em 0;
 
       &:after {
         content: '';

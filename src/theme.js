@@ -63,16 +63,17 @@ const theme = {
 			animation-timing-function: ease; 
 		
 			@keyframes bounce-3 {
-			0% {
-			transform: translateY(0);
+				0% {
+				transform: translateY(0);
+				}
+				50% {
+				transform: translateY(30px);
+				}
+				100% {
+				transform: translateY(0);
+				}
 			}
-			50% {
-			transform: translateY(30px);
-			}
-			100% {
-			transform: translateY(0);
-			}
-  `,
+  	   `,
 		drawIn: `.draw-in {
 	  stroke-dasharray: 1000;
 	  stroke-dashoffset: 10;
