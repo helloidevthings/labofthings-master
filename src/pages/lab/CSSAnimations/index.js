@@ -405,7 +405,7 @@ const CSSAnimations = () => {
 						</ul>
 						<h3>Fast {'&'} Easy</h3>
 						<ul>
-							<li>Quick solution for protoyping and communicating an idea.</li>
+							<li>Quick solution for prototyping and communicating an idea.</li>
 							<li>
 								These don't necessarily export code, but there are plugins and
 								other tools.
@@ -1220,8 +1220,8 @@ const CSSAnimations = () => {
 								<code>aria-expanded</code> with our state.
 							</li>
 							<li>
-								Using thesea attributes makes it easy for someone using a
-								screenreader.{' '}
+								Using these attributes makes it easy for someone using a screen
+								reader.{' '}
 							</li>
 							<li>
 								Additionally you can use <code>id</code> and{' '}
