@@ -188,6 +188,8 @@ const CSSAnimations = () => {
 								by mimicing what we see in the real world.{' '}
 							</li>
 							<li>Material Design has guidelines</li>
+							<li>No "Content Shifts", Negative for Usability</li>
+							<li>Use a Lazy Loader instead</li>
 						</ul>
 						<br />
 						<h4>References</h4>
@@ -727,6 +729,55 @@ const CSSAnimations = () => {
 				</article>
 			</section>
 			<section>
+				<h2>🍿 Buttery Smooth CSS Transitions</h2>
+				<hr />
+				<h3>Understanding How the Browser Works: Critical Rendering Path</h3>
+				<article className='twoCol'>
+					<ul>
+						<li>
+							{`Styles > Layout > Paint > Composite`}
+							<ol>
+								<li>
+									Styles:
+									<em> calculates styles/fonts</em>
+								</li>
+								<li>
+									Layout:
+									<em> width/height; left/right/top/bottom;</em>
+								</li>
+								<li>
+									Paint:
+									<em> border-radius;box-shadow; color; background-color;</em>
+								</li>
+								<li>
+									Composite:
+									<em> transform:translate/scale/rotate; opacity;</em>
+								</li>
+							</ol>
+						</li>
+						<li>
+							Creating 60fps by using properties that paint at the end of the
+							process.{' '}
+						</li>
+					</ul>
+					<blockquote>
+						“...avoid using transitions with the left/top/right/bottom
+						properties. Those don’t create a fluid animation because they have
+						the browser creating layouts each time, which will affect all of
+						their children.”
+					</blockquote>
+				</article>
+				<hr />
+				<h4>References</h4>
+				<a
+					href='https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108'
+					target='_blank'
+					rel='noreferrer'
+				>
+					Smooth As Butter Animations <Launch />
+				</a>
+			</section>
+			<section>
 				<h2>💯 Google, SEO {'&'} Lighthouse</h2>
 				<em>
 					We want all these to be good... Therefore we need to pay attention to
@@ -1004,55 +1055,6 @@ const CSSAnimations = () => {
 						/>
 					</figure>
 				</div>
-			</section>
-			<section>
-				<h2>🍿 Buttery Smooth CSS Transitions</h2>
-				<hr />
-				<h3>Understanding How the Browser Works: Critical Rendering Path</h3>
-				<article className='twoCol'>
-					<ul>
-						<li>
-							{`Styles > Layout > Paint > Composite`}
-							<ol>
-								<li>
-									Styles:
-									<em> calculates styles/fonts</em>
-								</li>
-								<li>
-									Layout:
-									<em> width/height; left/right/top/bottom;</em>
-								</li>
-								<li>
-									Paint:
-									<em> border-radius;box-shadow; color; background-color;</em>
-								</li>
-								<li>
-									Composite:
-									<em> transform:translate/scale/rotate; opacity;</em>
-								</li>
-							</ol>
-						</li>
-						<li>
-							Creating 60fps by using properties that paint at the end of the
-							process.{' '}
-						</li>
-					</ul>
-					<blockquote>
-						“...avoid using transitions with the left/top/right/bottom
-						properties. Those don’t create a fluid animation because they have
-						the browser creating layouts each time, which will affect all of
-						their children.”
-					</blockquote>
-				</article>
-				<hr />
-				<h4>References</h4>
-				<a
-					href='https://medium.com/outsystems-experts/how-to-achieve-60-fps-animations-with-css3-db7b98610108'
-					target='_blank'
-					rel='noreferrer'
-				>
-					Smooth As Butter Animations <Launch />
-				</a>
 			</section>
 
 			<section>
