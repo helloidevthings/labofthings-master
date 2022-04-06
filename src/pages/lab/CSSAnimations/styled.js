@@ -114,6 +114,10 @@ p, h1, h2, h3, h4, h5, h6 {
   hr {
     border: 2px solid var(--primary);
     margin: 0.9em 0;
+    &.dotted {
+      border-style: dashed solid;
+      margin: 2em 0;
+    }
   }
 
   p {

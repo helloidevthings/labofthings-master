@@ -767,6 +767,7 @@ const CSSAnimations = () => {
 						their children.”
 					</blockquote>
 				</article>
+				<br />
 				<hr />
 				<h4>References</h4>
 				<a
@@ -777,6 +778,26 @@ const CSSAnimations = () => {
 					Smooth As Butter Animations <Launch />
 				</a>
 			</section>
+			<hr className='dotted' />
+
+			<section className='twoCol'>
+				<div>
+					<h2>Oooooooo!</h2>
+					<h3>This is what we want.</h3>
+					<p>Smooth animations that load quickly.</p>
+					<br />
+				</div>
+				<figure>
+					<img
+						className='smallFig'
+						src='https://c.tenor.com/CeS8QsJa_u4AAAAC/oh-toy-story.gif'
+						alt='aliens saying oooo ahhh'
+					/>
+					<figcaption>Users on your application...</figcaption>
+				</figure>
+			</section>
+			<hr className='dotted' />
+
 			<section>
 				<h2>💯 Google, SEO {'&'} Lighthouse</h2>
 				<em>
@@ -903,8 +924,20 @@ const CSSAnimations = () => {
 					</div>
 				</article>
 			</section>
+			<hr className='dotted' />
+			<section className='twoCol'>
+				<h2 className='center'>Wait... NO DIVs?</h2>
+				<figure>
+					<img
+						className='smalFig'
+						src='https://media.giphy.com/media/zrmTqopWm4W5cPg8Ah/giphy.gif'
+						alt='man saying wait what?'
+					/>
+				</figure>
+			</section>
+			<hr className='dotted' />
 			<section>
-				<h2>No DIVs?</h2>
+				<h2>What! No DIVs?</h2>
 				<em>
 					you can still use divs, but there are a few things to keep in mind.
 				</em>
@@ -923,7 +956,7 @@ const CSSAnimations = () => {
 						<br />
 						<h3>☝️ Take Aways</h3>
 						<ul>
-							<li>NO NAKED TEXT! Put a tag on it!</li>
+							<li>Use a tag that fits the content</li>
 							<li>Stop using so many DIVS!</li>
 						</ul>
 						<br />
@@ -1056,7 +1089,32 @@ const CSSAnimations = () => {
 					</figure>
 				</div>
 			</section>
-
+			<hr className='dotted' />
+			<section className='twoCol'>
+				<div>
+					<h2>So that's cool and all... now what?</h2>
+					<hr />
+					<h3>Let's look at Practical Applications</h3>
+					<br />
+					<h4>Examples</h4>
+					<ul>
+						<li>Vanilla Javascript: Toggle a Class!</li>
+						<li>React + Styled Components: Toggle State!</li>
+						<li>React + Accessibility: Update ARIA Tag!</li>
+					</ul>
+					<br />
+					<hr />
+					<h3>All of these based on CSS Transitions</h3>
+				</div>
+				<figure>
+					<img
+						className='smallFig'
+						src='https://media.giphy.com/media/SVH9y2LQUVVCRcqD7o/giphy.gif'
+						alt='kid with thumbs up saying very cool'
+					/>
+				</figure>
+			</section>
+			<hr className='dotted' />
 			<section>
 				<h2>🍦 Utilizing Javascript + CSS Transitions</h2>
 				<hr />
@@ -1068,6 +1126,7 @@ const CSSAnimations = () => {
 							With the introduction of JavaScript Frameworks. We are able to
 							manage state inside our application.
 						</p>
+						<br />
 						<ol>
 							<li>Query The DOM</li>
 							<li>Grab all the elements</li>
@@ -1158,11 +1217,28 @@ const CSSAnimations = () => {
 						</figcaption>
 					</figure>
 				</article>
-				<h3>This is fine... 🤨</h3>
-				<p>
-					<em>Let's make it even better!</em>
-				</p>
 			</section>
+			<hr className='dotted' />
+			<section className='twoCol'>
+				<div>
+					<h2>This is fine... 🤨</h2>
+					<p>
+						<em>Let's make it even better!</em>
+					</p>
+					<ul>
+						<li>What if I told you we can make this better? </li>
+						<li>...And more Accessible!</li>
+					</ul>
+				</div>
+				<figure>
+					<img
+						className='smallFig'
+						src='https://media.giphy.com/media/yZSrHChwJFmZq/giphy.gif'
+						alt='man saying better'
+					/>
+				</figure>
+			</section>
+			<hr className='dotted' />
 			<section>
 				<h2>🏷 Accessibility: ARIA Tags</h2>
 				<hr />
@@ -1270,6 +1346,30 @@ const CSSAnimations = () => {
 					</figure>
 				</article>
 			</section>
+			<hr className='dotted' />
+			<section className='twoCol'>
+				<div>
+					<h2>It's a lot!</h2>
+					<h3>It's super useful for users.</h3>
+					<p>
+						It impacts Lighthouse scoring and the ability to easily navigate a
+						page with a screen reader.{' '}
+					</p>
+					<hr />
+					<h3>One Last Example! Using CSS Animations</h3>
+					<ul>
+						<li>Animations + SVGs</li>
+					</ul>
+				</div>
+				<figure>
+					<img
+						className='smallFig'
+						src='https://media.giphy.com/media/yS2AMt4LX13Mc/giphy.gif'
+						alt='dog blinking with mouth open'
+					/>
+				</figure>
+			</section>
+			<hr className='dotted' />
 			<section>
 				<h2>SVG Animation Examples</h2>
 				<hr />
