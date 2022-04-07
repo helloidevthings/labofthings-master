@@ -751,7 +751,7 @@ const CSSAnimations = () => {
 							</ol>
 						</li>
 						<li>
-							Creating 60fps by using properties that paint at the end of the
+							Creating 60FPS by using properties that paint at the end of the
 							process.{' '}
 						</li>
 					</ul>
