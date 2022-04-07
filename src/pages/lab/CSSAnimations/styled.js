@@ -94,7 +94,7 @@ p, h1, h2, h3, h4, h5, h6 {
     margin-bottom: 0.3em;
     font-weight: 700;
     font-family: 'loos-wide', sans-serif;
-    line-height: 1.1;
+    /* line-height: 1.1; */
   }
   h3,
   h4,
@@ -114,6 +114,7 @@ p, h1, h2, h3, h4, h5, h6 {
   hr {
     border: 2px solid var(--primary);
     margin: 0.9em 0;
+    
     &.dotted {
       border-style: dashed solid;
       margin: 2em 0;
@@ -534,6 +535,7 @@ p, h1, h2, h3, h4, h5, h6 {
     animation: typing 2s steps(15), effect .5s step-end infinite alternate;
     white-space: nowrap;
     overflow: hidden;
+    line-height: 1.5;
     border-right: 3px solid var(--tertiary);
   }
 

@@ -227,7 +227,6 @@ const CSSAnimations = () => {
 					<h2>Back In MY Day...</h2>
 					<h3>We used JQuery And we LIKED it.</h3>
 					<hr />
-					<br />
 					<h3>The way we create USED to create animations</h3>
 					<ul>
 						<li>Flash?</li>
@@ -809,16 +808,13 @@ const CSSAnimations = () => {
 						</em>
 						<ul>
 							<li>Google penalizes you for poor performance.</li>
+							<li>Users on Mobile Devices with a slow network.</li>
 							<li>First Contentful Paint</li>
+							<li>HTML Structure {'&'} Quality</li>
 							<li>
 								Check Lighthouse for your performance score and suggested
 								modifications.
 							</li>
-							<li>
-								With the increase in users on mobile devices browsers, site
-								speed plays a big factor.
-							</li>
-							<li>HTML Structure {'&'} Quality</li>
 							<li>☝️ Use Semantic HTML</li>
 						</ul>
 						<br />
