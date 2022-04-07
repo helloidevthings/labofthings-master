@@ -1502,6 +1502,11 @@ const CSSAnimations = () => {
 				<br />
 				<hr />
 				<h2>THANK YOUUUUUU! 🙏</h2>
+				<hr />
+				<h3>I'm currently working at Regal Cinemas</h3>
+				<p>
+					<em>psst... we're hiring for front-end developers!</em>
+				</p>
 			</section>
 			<section>
 				<hr />
