@@ -221,40 +221,35 @@ const CSSAnimations = () => {
 					</blockquote>
 				</article>
 			</section>
-			<section>
-				<h2>Quick History: Web Animation Tools</h2>
-				<hr />
-				<h3>The way we create animations</h3>
-				<ul>
-					<li>Changed over-time</li>
-					<li>Remember Flash {'&'} JQuery?</li>
-					<li>Relase of CSS3 and HTML5</li>
-					<li>JavaScript Libraries that are physics-based.</li>
-				</ul>
-				<br />
-				<h3>Plenty of Options for Animations</h3>
-				<ul>
-					<li>Pros {'&'} Cons to using these tools</li>
-				</ul>
-				{/* <p>
-					Web animations have changed a lot over the years. We used to use tools
-					like Flash and JQuery. With the release of CSS3 and HTML5 we moved
-					forward with a different way of animating. Today, we have access to a
-					variety of tools for animating. Including plugins that work with
-					design programs to generate code and JavaScript libraries that use
-					physics-based motion.
-				</p>
-				<br />
-				<p>
-					With so many tools at our disposal, it's important to use the right
-					tool for the right problem. It can be easy to over-use animations
-					which impact performance and accessibility. The purpose of this talk
-					is to go over some of the simple solutions for common UI patterns that
-					don't require downloading packages or using libraries.
-				</p> */}
-
-				<br />
+			<hr className='dotted' />
+			<section className='twoCol'>
+				<div>
+					<h2>Back In MY Day...</h2>
+					<h3>We used JQuery And we LIKED it.</h3>
+					<hr />
+					<br />
+					<h3>The way we create USED to create animations</h3>
+					<ul>
+						<li>Flash?</li>
+						<li>JQuery?</li>
+						<li>Dreamweaver? (you know to swap a photo on hover)</li>
+					</ul>
+					<br />
+					<h3>With the Release of CSS3 {'&'} HTML5 web changed a lot...</h3>
+					<ul>
+						<li>CSS3: 60FPS {'&'} GPU Rendering</li>
+						<li>JavaScript Animation Libraries</li>
+					</ul>
+				</div>
+				<figure>
+					<img
+						className='smallFig'
+						src='https://media.giphy.com/media/xUNda2iBiYqk4mKDRu/giphy.gif'
+						alt='grandpa saying back in my day'
+					/>
+				</figure>
 			</section>
+			<hr className='dotted' />
 			<section>
 				<h2>🛠 Animation Tools</h2>
 				<p>
