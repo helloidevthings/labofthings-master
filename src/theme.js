@@ -89,15 +89,14 @@ const theme = {
 				}
 			}
   	   `,
-  drawIn: `.draw-in {
-	  stroke-dasharray: 1000;
+  drawIn: `
+	  stroke-dasharray: 2000;
 	  stroke-dashoffset: 10;
-	  animation: draw 15s ease-in-out alternate infinite;
-   }
+	  animation: draw 5s ease-in-out alternate infinite;
 
 	@keyframes draw {
 		from {
-		stroke-dashoffset: 1000;
+		stroke-dashoffset: 2000;
 		}
 
 		to {
