@@ -205,6 +205,9 @@ const Slide = styled.section`
  padding: 2rem 1rem;
  transition: all 0.5s ease-in-out;
  z-index: 1;
+ & > * {
+  flex: 1 1 auto;
+ }
 `;
 
 const SlideImg = styled.div`
@@ -264,6 +267,15 @@ const SlideText = styled.div`
    }
   }
  }
+
+ strong {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.9em;
+  letter-spacing: 0.09em;
+  font-family: 'loos-wide', sans-serif;
+  color: #ab9bff;
+ }
 `;
 
 const TypeIt = styled.div`
@@ -282,13 +294,6 @@ const TypeIt = styled.div`
   }
  }
 `;
-
-// const SVGWrap = styled.div`
-//  max-width: 300px;
-
-//  ${(props) => props.theme.animations.itemTo}
-//  ${(props) => props.theme.animations.bounce3}
-// `;
 
 const Home = () => {
  const { ref, inView, entry } = useInView({
@@ -355,6 +360,11 @@ const Home = () => {
     </SlideImg>
     <SlideText>
      <h3>Design</h3>
+     <p>
+      <strong>Work Experience</strong> Robin Easter, Pyxl, Cadre5 {'&'} Regal Cinemas. Internships
+      at Morris Creative {'&'} Designsensory
+     </p>
+     <br />
      <ul>
       <li>Creating User Flows, Conducting User Interviews, Usability Testing and User Research</li>
       <li>Setting Style guides and working with Design Systems</li>
@@ -380,6 +390,10 @@ const Home = () => {
     </SlideImg>
     <SlideText>
      <h3>Development</h3>
+     <p>
+      <strong>Work Experience </strong>Pyxl, Cadre5 {'&'} Regal Cinemas
+     </p>
+     <br />
      <ul>
       <li>React, Styled Components</li>
       <li>CSS/SCSS, Transitions {'&'} Animations</li>
