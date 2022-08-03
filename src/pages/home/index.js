@@ -318,7 +318,13 @@ const Home = () => {
        Portfolio
       </a>
       <a href='/lab'>Dev Lab</a>
-      <a href='/css-animations'>CSS Animations</a>
+      <a
+       href='https://docs.google.com/document/d/10CsHlp-yCXwk11CaAkOvtcKkqlhtP07MlPs5xXnNhfg/edit?usp=sharing'
+       target='_blank'
+      >
+       Resume
+      </a>
+      {/* <a href='/css-animations'>CSS Animations</a> */}
      </nav>
     </header>
     <HeroImg className={entry ? 'show' : 'hide'}>
