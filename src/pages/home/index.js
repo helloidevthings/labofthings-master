@@ -337,9 +337,9 @@ const Home = () => {
     </HeroImg>
    </Hero>
    <QuoteSection>
-    <blockquote ref={ref} className={entry ? 'show' : 'hide'}>
-     I enjoy creating Designs and CSS Animations. The Dev Lab is a testing ground for animations and
-     other projects.
+    <blockquote ref={ref} className={inView ? 'show' : 'hide'}>
+     I create designs and CSS animations. The Dev Lab is a testing ground for animations and other
+     projects.
     </blockquote>
    </QuoteSection>
    <Slide className='slide'>
