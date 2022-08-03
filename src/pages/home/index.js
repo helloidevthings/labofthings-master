@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { useInView } from 'react-intersection-observer';
 
 import CircleOutline from '../../components/Icons/CircleOutline';
+import AbstractLines from '../../components/Icons/AbstractLines';
 
 const MainStyles = styled.section`
  display: flex;
@@ -224,7 +225,8 @@ const SlideImg = styled.div`
  }
 
  svg {
-  position: absolute;
+  width: 100%;
+  max-width: 100vw;
   left: -4em;
   top: 0;
   z-index: -1;
@@ -238,7 +240,7 @@ const SlideText = styled.div`
  transition: all 0.8s ease-in-out;
 
  h3 {
-  font-size: 3em;
+  font-size: 2.5em;
   color: #ab9bff;
   line-height: 1.5;
  }
@@ -349,7 +351,7 @@ const Home = () => {
        alt='floating 3d objects'
       />
      </figure>
-     <CircleOutline strokeColor={'#614add'} className='image2' />
+     <CircleOutline strokeColor={'#614add'} className='image2' style={{ position: 'absolute' }} />
     </SlideImg>
     <SlideText>
      <h3>Design</h3>
@@ -368,19 +370,13 @@ const Home = () => {
    </Slide>
    <Slide className='slide-alt'>
     <SlideImg>
-     <figure className='image1'>
-      <img
-       src='https://res.cloudinary.com/labofthingsimages/image/upload/v1659454578/triangle_square_ffb8wt.png'
-       alt='floating 3d objects'
-      />
-     </figure>
      <figure className='image2'>
       <img
-       src='https://res.cloudinary.com/labofthingsimages/image/upload/v1659454594/circle_cywwfb.png'
-       alt='floating 3d objects'
+       src='https://res.cloudinary.com/labofthingsimages/image/upload/v1659556383/circle-purple_zai3h9.png'
+       alt='floating 3d circle'
       />
      </figure>
-     <CircleOutline strokeColor={'#614add'} className='image2' />
+     <AbstractLines strokeColor={'#614add'} />
     </SlideImg>
     <SlideText>
      <h3>Development</h3>
@@ -396,6 +392,9 @@ const Home = () => {
      </ul>
     </SlideText>
    </Slide>
+   <QuoteSection>
+    <blockquote>Over 10yrs Industry Experience</blockquote>
+   </QuoteSection>
   </MainStyles>
  );
 };

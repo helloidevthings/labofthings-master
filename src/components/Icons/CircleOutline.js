@@ -6,7 +6,13 @@ const CircleOutline = ({ strokeColor, props }) => {
   ${(props) => props.theme.animations.drawIn}
  `;
  return (
-  <Styles xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 395 395' {...props}>
+  <Styles
+   xmlns='http://www.w3.org/2000/svg'
+   fill='none'
+   viewBox='0 0 395 395'
+   {...props}
+   style={{ position: 'absolute' }}
+  >
    <circle
     cx={197.5}
     cy={197.5}
