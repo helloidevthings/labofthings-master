@@ -404,13 +404,15 @@ const Xan = () => {
                 </p>
                 <p>
                   {type
-                    ? type.map(({}, i) => <TypeTag key={i}>{type[i]}</TypeTag>)
+                    ? type.map(({ item }, i) => (
+                        <TypeTag key={i}>{type[i]}</TypeTag>
+                      ))
                     : null}
                 </p>
                 <br />
                 <p>
                   {description
-                    ? description.map(({}, i) => (
+                    ? description.map(({ item }, i) => (
                         <span key={i}>
                           {description[i]}
                           <br />
