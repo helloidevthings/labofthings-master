@@ -244,9 +244,11 @@ const Xan = () => {
       castTime: '1 action',
       range: '30 feet',
       duration: '8 hours',
+      type: ['Buff'],
       ref: 'https://roll20.net/compendium/dnd5e/Aid#content',
       description: [
-        'Your spell bolsters your allies with toughness and resolve. Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration.',
+        'Your spell bolsters your allies with toughness and resolve.',
+        ' 💕💖 Choose up to three creatures within range. Each target’s hit point maximum and current hit points increase by 5 for the duration.',
       ],
     },
     {
@@ -270,7 +272,11 @@ const Xan = () => {
       description: [
         'You craft an illusion that takes root in the mind of a creature that you can see 👀 within range.',
         'The target must make an Intelligence saving throw. On a failed save, you create a phantasmal object, creature, or other visible phenomenon of your choice that is no larger than a 10-foot cube and that is perceivable only to the target for the duration.',
-        'This spell has no effect on undead or constructs. The phantasm includes sound, temperature, and other stimuli, also evident only to the creature. The target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends. While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge. If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall; it was pushed, it slipped, or a strong wind might have knocked it off. An affected target is so convinced of the phantasm’s reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target. Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm’s area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion.',
+        '☠️ This spell has no effect on undead or constructs. The phantasm includes sound, temperature, and other stimuli, also evident only to the creature.',
+        'The target can use its action to examine the phantasm with an Intelligence (Investigation) check against your spell save DC. If the check succeeds, the target realizes that the phantasm is an illusion, and the spell ends.',
+        'While a target is affected by the spell, the target treats the phantasm as if it were real. The target rationalizes any illogical outcomes from interacting with the phantasm. For example, a target attempting to walk across a phantasmal bridge that spans a chasm falls once it steps onto the bridge.',
+        'If the target survives the fall, it still believes that the bridge exists and comes up with some other explanation for its fall; it was pushed, it slipped, or a strong wind might have knocked it off. An affected target is so convinced of the phantasm’s reality that it can even take damage from the illusion. A phantasm created to appear as a creature can attack the target.',
+        'Similarly, a phantasm created to appear as fire, a pool of acid, or lava can burn the target. Each round on your turn, the phantasm can deal 1d6 psychic damage to the target if it is in the phantasm’s area or within 5 feet of the phantasm, provided that the illusion is of a creature or hazard that could logically deal damage, such as by attacking. The target perceives the damage as a type appropriate to the illusion.',
       ],
     },
     {
@@ -278,19 +284,34 @@ const Xan = () => {
       castTime: '1 action',
       range: '30 feet',
       duration: '1 minute',
-      savingThrow: 'Wisdom',
+      savingThrow: 'Wisdom - each turn',
+      goods: '1d8 necrotic dammage',
+      type: ['DOT', 'Dammage'],
       ref: 'https://roll20.net/compendium/dnd5e/Bestow%20Curse#content',
       description: [
-        'You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell. When you cast this spell, choose the nature of the curse from the following options: Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score. While cursed, the target has disadvantage on attack rolls against you. While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing. While the target is cursed, your attacks and spells deal an extra 1d8 necrotic damage to the target. A remove curse spell ends this effect. At the GM’s option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The GM has final say on such a curse’s effect. At Higher Levels: If you cast this spell using a spell slot of 4th level or higher, the Duration is Concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the Duration is 8 hours. If you use a spell slot of 7th level or higher, the Duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a Duration that doesn`t require Concentration.',
+        '👉🏻 You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell.',
+        'When you cast this spell, choose the nature of the curse from the following options: Choose one ability score. While cursed, the target has disadvantage on ability checks and saving throws made with that ability score. ❌ While cursed, the target has disadvantage on attack rolls against you.',
+        'While cursed, the target must make a Wisdom saving throw at the start of each of its turns. If it fails, it wastes its action that turn doing nothing.',
+        'While the target is cursed, your attacks and spells deal an extra 🕷 1d8 necrotic damage to the target. A remove curse spell ends this effect.',
+        'At the GM’s option, you may choose an alternative curse effect, but it should be no more powerful than those described above. The GM has final say on such a curse’s effect.',
+        'At Higher Levels: If you cast this spell using a spell slot of 4th level or higher, the Duration is Concentration, up to 10 minutes. If you use a spell slot of 5th level or higher, the Duration is 8 hours. ',
+        'If you use a spell slot of 7th level or higher, the Duration is 24 hours. If you use a 9th level spell slot, the spell lasts until it is dispelled. Using a spell slot of 5th level or higher grants a Duration that doesn`t require Concentration.',
       ],
     },
     {
       name: 'Enemies Abound',
       castTime: '1 action',
+      range: 'within sight',
       duration: 'Concentration, 1 minute',
+      savingThrow: 'Intelligence',
+      type: ['DOT', 'Control'],
       ref: 'https://roll20.net/compendium/dnd5e/Enemies%20Abound#content',
       description: [
-        'You reach into the mind of one creature you can see and force it to make an Intelligence saving throw. A creature automatically succeeds if it is immune to being frightened. On a failed save, the target loses the ability to distinguish friend from foe, regarding all creatures it can see as enemies until the spell ends. Each time the target takes damage, it can repeat the saving throw, ending the effect on itself on a success. Whenever the affected creature chooses another creature as a target, it must choose the target at random from among the creatures it can see within range of the attack, spell, or other ability it’s using. If an enemy provokes an opportunity attack from the affected creature, the creature must make that attack if it is able to.',
+        'You reach into the mind of one creature you can see and force it to make an 🤯 Intelligence saving throw.',
+        'A creature automatically succeeds if it is immune to being frightened. On a failed save, the target loses the ability to distinguish friend from foe, regarding all creatures it can see as enemies until the spell ends.',
+        'Each time the target takes damage, it can repeat the saving throw, ending the effect on itself on a success.',
+        'Whenever the affected creature chooses another creature as a target, it must choose the target at 🎲 random from among the creatures it can see within range of the attack, spell, or other ability it’s using. ',
+        'If an enemy provokes an opportunity attack from the affected creature, the creature must make that attack if it is able to.',
       ],
     },
     {
@@ -298,9 +319,13 @@ const Xan = () => {
       castTime: '1 action',
       range: 'Self',
       duration: '8 hours',
+      type: ['Utility'],
       ref: 'https://roll20.net/compendium/dnd5e/Lenora%27s%20Tiny%20Hut#content',
       description: [
-        'A 10-foot-radius immobile dome of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area. Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects can’t extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside. Until the spell ends, you can command the interior to become dimly lit or dark. The dome is opaque from the outside, of any color you choose, but it is transparent from the inside.',
+        'A 10-foot-radius immobile dome ⛺️ of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area.',
+        'Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely.',
+        'All other creatures and objects are barred from passing through it. Spells and other magical effects can’t extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside.',
+        'Until the spell ends, you can command the interior to become dimly lit or dark. The dome is opaque from the outside, of any color you choose, but it is transparent from the inside.',
       ],
     },
     {
@@ -308,8 +333,12 @@ const Xan = () => {
       castTime: '1 action',
       range: '120 feet, 30-ft cube within range',
       duration: '1 minute',
+      savingThrow: 'Wisdom',
+      type: ['Illusion', 'Control'],
       description: [
-        'You create a twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes. Each creature in the area who sees the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration. While charmed by this spell, the creature is incapacitated and has a speed of 0. The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.',
+        'You create a 🌀 twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes.',
+        'Each creature in the area who sees 🙈 the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration.',
+        'While charmed by this spell, the creature is incapacitated and has a speed of 0. 😵‍💫 The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.',
       ],
     },
   ];
@@ -354,6 +383,11 @@ const Xan = () => {
                     </>
                   )}
                 </p>
+                {savingThrow && (
+                  <p>
+                    <strong>Saving Throw</strong> {savingThrow}
+                  </p>
+                )}
                 <p>
                   {goods && (
                     <>
@@ -368,11 +402,6 @@ const Xan = () => {
                     </>
                   ) : null}
                 </p>
-                {savingThrow && (
-                  <p>
-                    <strong>Saving Throw</strong> {savingThrow}
-                  </p>
-                )}
                 <p>
                   {type
                     ? type.map(({}, i) => <TypeTag key={i}>{type[i]}</TypeTag>)
