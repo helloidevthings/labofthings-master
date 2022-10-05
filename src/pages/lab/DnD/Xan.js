@@ -12,6 +12,7 @@ const CharacterSheet = styled.section`
   color: white;
   max-width: 100vw;
   height: 100%;
+
   p {
     font-size: 1rem;
     line-height: 1.4;
@@ -24,9 +25,42 @@ const CharacterSheet = styled.section`
   header {
     position: sticky;
     top: 0;
-    padding: 0.2rem;
+    padding: 0.2rem 0.2rem 0.3rem;
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     box-shadow: 0px 3px 11px 0px #16075666;
+  }
+`;
+
+const CharacterName = styled.article`
+  display: flex;
+  margin-bottom: 1rem;
+
+  strong {
+    font-family: 'loos-extended', sans-serif;
+    font-size: 0.88rem;
+    text-transform: uppercase;
+  }
+  em {
+    text-transform: none;
+    font-family: 'Fira Sans', sans-serif;
+  }
+  figure {
+    overflow: hidden;
+
+    img {
+      border-radius: 100%;
+      max-height: 8rem;
+      object-fit: cover;
+    }
+
+    figcaption {
+      background: #3f2f83;
+      a {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        color: #bdb0fc;
+      }
+    }
   }
 `;
 
@@ -72,6 +106,24 @@ const SpellArticle = styled.article`
     font-size: 1.6rem;
     margin: 0;
     color: #6250b2;
+  }
+
+  strong {
+    font-family: 'loos-wide', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.88rem;
+    letter-spacing: 0.05rem;
+    color: #6250b2;
+  }
+`;
+
+const Stats = styled.div`
+  width: 100%;
+  /* display: grid; */
+  /* grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); */
+  display: flex;
+  & > * {
+    margin-right: 1.5rem;
   }
 
   strong {
@@ -164,7 +216,7 @@ const spells = [
     ],
   },
   {
-    name: 'Vicscious Mockery',
+    name: 'Vicious Mockery',
     castTime: '1 action',
     range: '60 feet',
     type: ['DOT', 'Dammage'],
@@ -175,6 +227,7 @@ const spells = [
       'Target: A creature you can see and that can hear you within range.',
       'You unleash a string of insults laced with subtle enchantment 🤬 at a creature you can see within range.',
       '🙉 If the target can hear you (though it need not understand you), it must succeed on a Wisdom saving throw or take 1d4 psychic damage and have disadvantage on the next attack roll it makes before the end of its next turn.',
+      "This spell's damage increases by 1d4 when you reach ☝️ 5th Level (2d4), 11th level (3d4), and 17th level (4d4).",
     ],
   },
   {
@@ -349,6 +402,22 @@ const spells = [
       'While charmed by this spell, the creature is incapacitated and has a speed of 0. 😵‍💫 The spell ends for an affected creature if it takes any damage or if someone else uses an action to shake the creature out of its stupor.',
     ],
   },
+  {
+    name: 'Rapier',
+    goods: '1d8 + ATK Bonus ',
+    range: 'Melee',
+    type: ['Weapon', 'Dammage'],
+    description: ['1d8 piercing'],
+    ref: 'https://roll20.net/compendium/dnd5e/Rapier#content',
+  },
+  {
+    name: 'Short Bow',
+    goods: '1d6 + ATK Bonus ',
+    type: ['Weapon', 'Dammage'],
+    range: '80/320',
+    description: ['1d8 piercing'],
+    ref: 'https://roll20.net/compendium/dnd5e/Shortbow#content',
+  },
 ];
 
 const Xan = () => {
@@ -356,10 +425,54 @@ const Xan = () => {
 
   return (
     <CharacterSheet>
-      <img src="" alt="" />
-      <h2>Xan</h2>
+      <CharacterName>
+        <figure>
+          <img
+            src="https://64.media.tumblr.com/24def3722a5881aee1557c5d8a4e0dbe/402420ff79db394a-9a/s1280x1920/77dd9a8533148d37d72ec1642d527709410aac65.jpg"
+            alt=""
+          />
+          <figcaption>
+            <a
+              href="https://canarydraws.tumblr.com/post/662507906680373248/a-pair-of-commissions-i-got-for-a-lovely-bard"
+              target="_blank"
+              rel="noreferrer"
+            >
+              artist ref
+            </a>
+          </figcaption>
+        </figure>
+        <div>
+          <h2>Xan</h2>
+          <p>
+            <strong>Xanathea Georgiana Parbaresco II</strong>
+          </p>
+          <p>
+            <em>Half Elf Bard from the famous Parbaresco family</em>
+          </p>
+        </div>
+      </CharacterName>
       <section>
         <header>
+          <Stats>
+            <p>
+              <strong>AC</strong> 15
+            </p>
+            <p>
+              <strong>Sp</strong> 30
+            </p>
+            <p>
+              <strong>HP</strong> 37
+            </p>
+            <p>
+              <strong>Spell Save</strong> 15
+            </p>
+            <p>
+              <strong>Spell ATK</strong> 7
+            </p>
+            <p>
+              <strong>ATK Bonus</strong> 6
+            </p>
+          </Stats>
           <FilterButton
             onClick={() => {
               setSpellType('all');
@@ -502,7 +615,7 @@ const Xan = () => {
                         ))
                       : null}
                   </p>
-                  <a href={ref} alt={name}>
+                  <a href={ref} alt={name} target="_blank" rel="noreferrer">
                     Spell Reference
                   </a>
                 </SpellArticle>
