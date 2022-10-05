@@ -311,8 +311,8 @@ p, h1, h2, h3, h4, h5, h6 {
     position: relative;
     padding: 1em 2em;
     margin: .3em; 
-    font-style: italic;
     background: var(--tertLight);
+    font-size: 1em;
 
     &:before {
       content: '"';
@@ -327,9 +327,12 @@ p, h1, h2, h3, h4, h5, h6 {
     cite {
       font-weight: 500;
       color: var(--secondary);
+      font-style: normal;
+      line-height: 2;  
+      font-size: .9em; 
 
       &:before {
-        content: '–';
+        content: '– ';
       }
     }
   }
