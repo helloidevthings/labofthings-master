@@ -256,7 +256,7 @@ const spells = [
   {
     name: 'Animating Performance',
     castTime: '1 action, command with bonus action',
-    type: ['Feat', 'Dammage', 'Minion'],
+    type: ['Feat', 'damage', 'Minion'],
     filterType: 'minion',
     goods: 'HP: 10+(5x Bard Level), Hit: 1d10+PB',
     ref: 'http://dnd5e.wikidot.com/bard:creation',
@@ -307,7 +307,7 @@ const spells = [
     name: 'Vicious Mockery',
     castTime: '1 action',
     range: '60 feet',
-    type: ['DOT', 'Dammage'],
+    type: ['DOT', 'damage'],
     filterType: 'DOT',
     savingThrow: 'Wisdom',
     goods: '1d4 psychic & disadvantage',
@@ -359,7 +359,7 @@ const spells = [
     filterType: 'control',
     Duration: 'Instantaneous',
     savingThrow: 'Wisdom',
-    goods: '3d6 psychic dammage',
+    goods: '3d6 psychic damage',
     ref: 'https://roll20.net/compendium/dnd5e/Dissonant%20Whispers#content',
     description: [
       '🎶 You unleash a horrible discordant note that only one creature of your choice that you can see within range can hear. The target must succeed on a Wisdom saving throw or take 3d6 psychic damage and become frightened of you for the duration.',
@@ -445,8 +445,8 @@ const spells = [
     range: '30 feet',
     duration: '1 minute',
     savingThrow: 'Wisdom - each turn',
-    goods: '1d8 necrotic dammage',
-    type: ['DOT', 'Dammage'],
+    goods: '1d8 necrotic damage',
+    type: ['DOT', 'damage'],
     filterType: 'DOT',
     ref: 'https://roll20.net/compendium/dnd5e/Bestow%20Curse#content',
     description: [
@@ -509,16 +509,16 @@ const spells = [
     name: 'Rapier',
     goods: '1d8 + ATK Bonus ',
     range: 'Melee',
-    type: ['Weapon', 'Dammage'],
-    filterType: 'dammage',
+    type: ['Weapon', 'damage'],
+    filterType: 'damage',
     description: ['1d8 piercing'],
     ref: 'https://roll20.net/compendium/dnd5e/Rapier#content',
   },
   {
     name: 'Short Bow',
     goods: '1d6 + ATK Bonus ',
-    type: ['Weapon', 'Dammage'],
-    filterType: 'dammage',
+    type: ['Weapon', 'damage'],
+    filterType: 'damage',
     range: '80/320',
     description: ['1d8 piercing'],
     ref: 'https://roll20.net/compendium/dnd5e/Shortbow#content',
@@ -534,7 +534,7 @@ const spellFilter = [
   { name: '💊 Heals', slug: 'healing' },
   { name: '🛠 Utility', slug: 'utility' },
   { name: '🤖 Minion', slug: 'minion' },
-  { name: '⚔️ Dammage', slug: 'dammage' },
+  { name: '⚔️ Damage', slug: 'damage' },
 ];
 
 const Xan = () => {
