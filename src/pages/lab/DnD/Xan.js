@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { useState } from 'react';
+import Launch from '../../../components/Icons/Launch';
 
 const CharacterSheet = styled.section`
   font-family: 'Fira Sans', sans-serif;
@@ -17,6 +18,7 @@ const CharacterSheet = styled.section`
     font-size: 1rem;
     line-height: 1.4;
   }
+
   h2 {
     font-size: 6rem;
     margin: 0;
@@ -45,7 +47,8 @@ const CharacterName = styled.article`
     font-family: 'Fira Sans', sans-serif;
   }
   figure {
-    overflow: hidden;
+    margin: 1em;
+    position: relative;
 
     img {
       border-radius: 100%;
@@ -54,14 +57,30 @@ const CharacterName = styled.article`
     }
 
     figcaption {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      bottom: 10px;
+      left: 0;
+      text-align: center;
+      border-radius: 30px;
       background: #3f2f83;
+
       a {
         font-size: 0.8rem;
         text-transform: uppercase;
         color: #bdb0fc;
+
+        svg {
+          margin: 9px;
+        }
       }
     }
   }
+`;
+
+const FlavorText = styled.article`
+  flex: 3;
 `;
 
 const TypeTag = styled.span`
@@ -437,11 +456,11 @@ const Xan = () => {
               target="_blank"
               rel="noreferrer"
             >
-              artist ref
+              <Launch fill="#bdb0fc" />
             </a>
           </figcaption>
         </figure>
-        <div>
+        <FlavorText>
           <h2>Xan</h2>
           <p>
             <strong>Xanathea Georgiana Parbaresco II</strong>
@@ -449,7 +468,7 @@ const Xan = () => {
           <p>
             <em>Half Elf Bard from the famous Parbaresco family</em>
           </p>
-        </div>
+        </FlavorText>
       </CharacterName>
       <section>
         <header>
