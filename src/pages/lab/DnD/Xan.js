@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { useState } from 'react';
+import { useState, Fragment } from 'react';
 import Launch from '../../../components/Icons/Launch';
 
 const CharacterSheet = styled.section`
@@ -7,12 +7,11 @@ const CharacterSheet = styled.section`
   font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (2100 - 300)));
   background: #474453;
   background: linear-gradient(to right, #ffc0cb, #800080);
-
-  padding: 0.5rem;
   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
+  padding: 0.5rem;
   color: white;
+  width: 100%;
   max-width: 100vw;
-  height: 100%;
 
   p {
     font-size: 1rem;
@@ -96,30 +95,21 @@ const TypeTag = styled.span`
   line-height: 2.5;
 `;
 
-const AllSpells = styled.main`
+const SpellBook = styled.main`
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
   grid-gap: 1rem;
-  height: 100%;
-  width: 100%;
   margin: 1rem auto;
 `;
 
-const FilterButton = styled.button`
-  color: white;
-  background: #6250b2;
-  border: none;
-  border-radius: 30px;
-  margin: 0.5rem 0.2rem;
-  padding: 0.2rem 0.8rem;
-`;
-
-const SpellArticle = styled.article`
+const SpellArticle = styled.section`
   background: #0f0c29;
   background: linear-gradient(to bottom, #0f0c29, #231f4c);
-
   padding: 1rem;
   border-radius: 0.5rem;
+  transition: all 1s ease-in-out;
 
   h3 {
     font-size: 1.6rem;
@@ -132,6 +122,54 @@ const SpellArticle = styled.article`
     text-transform: uppercase;
     font-size: 0.88rem;
     letter-spacing: 0.05rem;
+    color: #6250b2;
+  }
+
+  a {
+    font-size: 1rem;
+    color: #bdb0fc;
+    text-decoration: none;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #bdb0fc;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(1);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    svg {
+      max-height: 0.75rem;
+      display: inline;
+    }
+
+    &:focus,
+    &:hover {
+      color: #fff;
+
+      &:after {
+        transform: scaleX(0);
+      }
+    }
+  }
+`;
+
+const FilterButton = styled.button`
+  color: white;
+  background: #6250b2;
+  border: none;
+  border-radius: 30px;
+  margin: 0.5rem 0.2rem;
+  padding: 0.2rem 0.8rem;
+
+  &:hover {
+    background: #fff;
     color: #6250b2;
   }
 `;
@@ -161,6 +199,7 @@ const spells = [
     castTime: 'bonus action',
     duration: '1 minute',
     type: ['Feat', 'Buff'],
+    filterType: 'buff',
     ref: 'http://dnd5e.wikidot.com/bard:creation',
     description: [
       'When you join the College of Creation at 3rd level, whenever you give a creature a Bardic Inspiration die, you can utter a note from the Song of Creation to create a Tiny mote of potential, which orbits within 5 feet of that creature.',
@@ -173,6 +212,7 @@ const spells = [
   {
     name: 'Bardic Inspiration',
     type: ['Feat', 'Buff'],
+    filterType: 'buff',
     range: '60 feet',
     goods: '1d6',
     castTime: 'bonus action',
@@ -191,6 +231,7 @@ const spells = [
     name: 'Animating Performance',
     castTime: '1 action, command with bonus action',
     type: ['Feat', 'Dammage', 'Minion'],
+    filterType: 'minion',
     goods: 'HP: 10+(5x Bard Level), Hit: 1d10+PB',
     ref: 'http://dnd5e.wikidot.com/bard:creation',
     description: [
@@ -205,6 +246,7 @@ const spells = [
   {
     name: 'Song of Rest',
     type: ['Feat', 'Buff'],
+    filterType: 'buff',
     range: 'hearing',
     goods: '1d6 HP',
     duration: '8 hours',
@@ -221,6 +263,7 @@ const spells = [
     range: '10',
     duration: 'up to 1 hour',
     type: ['utility', 'illusion'],
+    filterType: 'illusion',
     ability: 'Cantrip',
     ref: 'http://dnd5e.wikidot.com/spell:prestidigitation',
     description: [
@@ -239,6 +282,7 @@ const spells = [
     castTime: '1 action',
     range: '60 feet',
     type: ['DOT', 'Dammage'],
+    filterType: 'DOT',
     savingThrow: 'Wisdom',
     goods: '1d4 psychic & disadvantage',
     ref: 'https://roll20.net/compendium/dnd5e/Vicious%20Mockery#content',
@@ -254,6 +298,7 @@ const spells = [
     castTime: '1 action',
     range: '120 feet',
     type: ['Utility'],
+    filterType: 'utility',
     duration: '1 round',
     ref: 'https://roll20.net/compendium/dnd5e/Message#content',
     description: [
@@ -269,6 +314,8 @@ const spells = [
     range: '60 feet',
     duration: 'up to 10 minutes',
     type: ['utility', 'illusion'],
+    filterType: 'illusion',
+    ultility: 'illusion',
     savingThrow: 'Intellegence',
     ref: 'https://roll20.net/compendium/dnd5e/Silent%20Image#content',
     description: [
@@ -282,7 +329,8 @@ const spells = [
     name: 'Dissonant Whispers',
     castTime: '1 action',
     range: '60 feet',
-    type: ['DOT', 'Control'],
+    type: ['DOT', 'control'],
+    filterType: 'control',
     Duration: 'Instantaneous',
     savingThrow: 'Wisdom',
     goods: '3d6 psychic dammage',
@@ -298,6 +346,7 @@ const spells = [
     castTime: '1 action',
     range: '30 feet',
     type: ['DOT', 'Control'],
+    filterType: 'DOT',
     savingThrow: 'Wisdom',
     ref: 'https://roll20.net/compendium/dnd5e/Tasha%27s%20Hideous%20Laughter#content',
     description: [
@@ -310,6 +359,8 @@ const spells = [
     name: 'Faerie Fire',
     castTime: '1 action',
     range: '60 feet',
+    type: ['Illusion', 'Control'],
+    filterType: 'illusion',
     duration: 'up to 1 minute',
     savingThrow: 'Dexterity',
     ref: 'https://roll20.net/compendium/dnd5e/Faerie%20Fire#content',
@@ -325,6 +376,7 @@ const spells = [
     range: '30 feet',
     duration: '8 hours',
     type: ['Buff'],
+    filterType: 'buff',
     ref: 'https://roll20.net/compendium/dnd5e/Aid#content',
     description: [
       'Your spell bolsters your allies with toughness and resolve.',
@@ -337,6 +389,7 @@ const spells = [
     castTime: '1 bonus action',
     goods: '1d4 + SC Mod',
     type: ['Healing'],
+    filterType: 'healing',
     description: [
       'A creature of your choice that you can see within range regains hit points equal to 1d4 + your spellcasting ability modifier. This spell has no effect on undead or constructs.',
     ],
@@ -346,6 +399,7 @@ const spells = [
     castTime: '1 action',
     range: '60 feet',
     type: ['Illusion'],
+    filterType: 'illusion',
     duration: '1 minute',
     savingThrow: 'Intellegence',
     ref: 'https://roll20.net/compendium/dnd5e/Phantasmal%20Force#content',
@@ -367,6 +421,7 @@ const spells = [
     savingThrow: 'Wisdom - each turn',
     goods: '1d8 necrotic dammage',
     type: ['DOT', 'Dammage'],
+    filterType: 'DOT',
     ref: 'https://roll20.net/compendium/dnd5e/Bestow%20Curse#content',
     description: [
       '👉🏻 You touch a creature, and that creature must succeed on a Wisdom saving throw or become cursed for the duration of the spell.',
@@ -385,6 +440,7 @@ const spells = [
     duration: 'Concentration, 1 minute',
     savingThrow: 'Intelligence',
     type: ['DOT', 'Control'],
+    filterType: 'control',
     ref: 'https://roll20.net/compendium/dnd5e/Enemies%20Abound#content',
     description: [
       'You reach into the mind of one creature you can see and force it to make an 🤯 Intelligence saving throw.',
@@ -400,6 +456,7 @@ const spells = [
     range: 'Self',
     duration: '8 hours',
     type: ['Utility'],
+    filterType: 'utility',
     ref: 'https://roll20.net/compendium/dnd5e/Lenora%27s%20Tiny%20Hut#content',
     description: [
       'A 10-foot-radius immobile dome ⛺️ of force springs into existence around and above you and remains stationary for the duration. The spell ends if you leave its area.',
@@ -415,6 +472,7 @@ const spells = [
     duration: '1 minute',
     savingThrow: 'Wisdom',
     type: ['Illusion', 'Control'],
+    filterType: 'Illusion',
     description: [
       'You create a 🌀 twisting pattern of colors that weaves through the air inside a 30-foot cube within range. The pattern appears for a moment and vanishes.',
       'Each creature in the area who sees 🙈 the pattern must make a Wisdom saving throw. On a failed save, the creature becomes charmed for the duration.',
@@ -426,6 +484,7 @@ const spells = [
     goods: '1d8 + ATK Bonus ',
     range: 'Melee',
     type: ['Weapon', 'Dammage'],
+    filterType: 'dammage',
     description: ['1d8 piercing'],
     ref: 'https://roll20.net/compendium/dnd5e/Rapier#content',
   },
@@ -433,10 +492,23 @@ const spells = [
     name: 'Short Bow',
     goods: '1d6 + ATK Bonus ',
     type: ['Weapon', 'Dammage'],
+    filterType: 'dammage',
     range: '80/320',
     description: ['1d8 piercing'],
     ref: 'https://roll20.net/compendium/dnd5e/Shortbow#content',
   },
+];
+
+const spellFilter = [
+  { name: '📖 All', slug: 'all' },
+  { name: '⏱ DOT', slug: 'DOT' },
+  { name: '🌀 Control', slug: 'control' },
+  { name: '✨ Illusion', slug: 'illusion' },
+  { name: '✊ Buffs', slug: 'buff' },
+  { name: '💊 Heals', slug: 'healing' },
+  { name: '🛠 Utility', slug: 'utility' },
+  { name: '🤖 Minion', slug: 'minion' },
+  { name: '⚔️ Dammage', slug: 'dammage' },
 ];
 
 const Xan = () => {
@@ -492,27 +564,16 @@ const Xan = () => {
               <strong>ATK Bonus</strong> 6
             </p>
           </Stats>
-          <FilterButton
-            onClick={() => {
-              setSpellType('all');
-              console.log(spellType);
-            }}
-          >
-            ALL
-          </FilterButton>
-          <FilterButton onClick={() => setSpellType('AOE')}>AOE</FilterButton>
-          <FilterButton onClick={() => setSpellType('DOT')}>DOT</FilterButton>
-          <FilterButton onClick={() => setSpellType('all')}>Heals</FilterButton>
-          <FilterButton onClick={() => setSpellType('all')}>Buffs</FilterButton>
-          <FilterButton onClick={() => setSpellType('all')}>
-            Utility
-          </FilterButton>
-          <FilterButton onClick={() => setSpellType('all')}>
-            Just the D
-          </FilterButton>
-          <FilterButton onClick={() => setSpellType('all')}>BA</FilterButton>
+
+          {spellFilter.map(({ name, slug }) => {
+            return (
+              <FilterButton onClick={() => setSpellType(slug)}>
+                {name}
+              </FilterButton>
+            );
+          })}
         </header>
-        <AllSpells>
+        <SpellBook>
           {spells.map(
             (
               {
@@ -522,125 +583,81 @@ const Xan = () => {
                 description,
                 duration,
                 type,
+                filterType,
                 ref,
                 goods,
                 savingThrow,
               },
               i
-            ) =>
-              spellType === 'all' || type === spellType ? (
-                <SpellArticle key={name}>
-                  <h3>{name}</h3>
-                  <p>
-                    <strong>Range</strong> {range}
-                  </p>
-                  <p>
-                    {castTime && (
-                      <>
-                        <strong>Cast Time</strong> {castTime}
-                      </>
-                    )}
-                  </p>
-                  {savingThrow && (
-                    <p>
-                      <strong>Saving Throw</strong> {savingThrow}
-                    </p>
-                  )}
-                  <p>
-                    {goods && (
-                      <>
-                        <strong>goods</strong> {goods}
-                      </>
-                    )}
-                  </p>{' '}
-                  <p>
-                    {duration ? (
-                      <>
-                        <strong>Duration</strong> {duration}
-                      </>
-                    ) : null}
-                  </p>
-                  <p>
-                    {type
-                      ? type.map(({ item }, i) => (
-                          <TypeTag key={i}>{type[i]}</TypeTag>
-                        ))
-                      : null}
-                  </p>
-                  <br />
-                  <p>
-                    {description
-                      ? description.map(({ item }, i) => (
-                          <span key={i}>
-                            {description[i]}
-                            <br />
-                            <br />
-                          </span>
-                        ))
-                      : null}
-                  </p>
-                  <a href={ref} alt={name}>
-                    Spell Reference
-                  </a>
-                </SpellArticle>
-              ) : (
-                <SpellArticle key={name}>
-                  <h3>{name}</h3>
-                  <p>
-                    <strong>Range</strong> {range}
-                  </p>
-                  <p>
-                    {castTime && (
-                      <>
-                        <strong>Cast Time</strong> {castTime}
-                      </>
-                    )}
-                  </p>
-                  {savingThrow && (
-                    <p>
-                      <strong>Saving Throw</strong> {savingThrow}
-                    </p>
-                  )}
-                  <p>
-                    {goods && (
-                      <>
-                        <strong>goods</strong> {goods}
-                      </>
-                    )}
-                  </p>{' '}
-                  <p>
-                    {duration ? (
-                      <>
-                        <strong>Duration</strong> {duration}
-                      </>
-                    ) : null}
-                  </p>
-                  <p>
-                    {type
-                      ? type.map(({ item }, i) => (
-                          <TypeTag key={i}>{type[i]}</TypeTag>
-                        ))
-                      : null}
-                  </p>
-                  <br />
-                  <p>
-                    {description
-                      ? description.map(({ item }, i) => (
-                          <span key={i}>
-                            {description[i]}
-                            <br />
-                            <br />
-                          </span>
-                        ))
-                      : null}
-                  </p>
-                  <a href={ref} alt={name} target="_blank" rel="noreferrer">
-                    Spell Reference
-                  </a>
-                </SpellArticle>
-              )
+            ) => {
+              return (
+                <Fragment key={name}>
+                  {filterType === spellType || spellType === 'all' ? (
+                    <SpellArticle>
+                      <h3>{name}</h3>
+                      <p>
+                        <strong>Range</strong> {range}
+                      </p>
+                      <p>
+                        {castTime && (
+                          <>
+                            <strong>Cast Time</strong> {castTime}
+                          </>
+                        )}
+                      </p>
+                      {savingThrow && (
+                        <p>
+                          <strong>Saving Throw</strong> {savingThrow}
+                        </p>
+                      )}
+                      <p>
+                        {goods && (
+                          <>
+                            <strong>goods</strong> {goods}
+                          </>
+                        )}
+                      </p>{' '}
+                      <p>
+                        {duration ? (
+                          <>
+                            <strong>Duration</strong> {duration}
+                          </>
+                        ) : null}
+                      </p>
+                      <p>
+                        {type
+                          ? type.map(({ item }, i) => (
+                              <TypeTag key={i}>{type[i]}</TypeTag>
+                            ))
+                          : null}
+                      </p>
+                      <br />
+                      <p>
+                        {description
+                          ? description.map(({ item }, i) => (
+                              <span key={i}>
+                                {description[i]}
+                                <br />
+                                <br />
+                              </span>
+                            ))
+                          : null}
+                      </p>
+                      <a
+                        href={ref}
+                        alt={name}
+                        tareget="_blank"
+                        rel="noreferrer"
+                      >
+                        Spell Reference <Launch fill="#bdb0fc" />
+                      </a>
+                    </SpellArticle>
+                  ) : null}
+                </Fragment>
+              );
+            }
           )}
-        </AllSpells>
+        </SpellBook>
       </section>
     </CharacterSheet>
   );
