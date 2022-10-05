@@ -48,6 +48,8 @@ const CharacterName = styled.article`
   figure {
     margin: 1em;
     position: relative;
+    max-height: 8rem;
+    max-width: 8rem;
 
     img {
       border-radius: 100%;
@@ -59,7 +61,7 @@ const CharacterName = styled.article`
       position: absolute;
       width: 30px;
       height: 30px;
-      bottom: 10px;
+      bottom: 3px;
       left: 0;
       text-align: center;
       border-radius: 30px;
@@ -130,6 +132,9 @@ const SpellArticle = styled.section`
     color: #bdb0fc;
     text-decoration: none;
     position: relative;
+    display: flex;
+    align-items: center;
+    width: max-content;
 
     &:after {
       content: '';
@@ -145,7 +150,11 @@ const SpellArticle = styled.section`
     }
 
     svg {
+      width: 100%;
+      height: 100%;
+      max-width: 0.75rem;
       max-height: 0.75rem;
+      margin-left: 0.3rem;
       display: inline;
     }
 
@@ -182,6 +191,23 @@ const Stats = styled.div`
   & > * {
     margin-right: 1.5rem;
   }
+
+  strong {
+    font-family: 'loos-wide', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.88rem;
+    letter-spacing: 0.05rem;
+    color: #6250b2;
+  }
+`;
+
+const Skills = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-gap: 0.5rem;
+  padding: 2rem;
+  background: linear-gradient(to right, #0f0c29, #18153b, #21213d);
+  color: #bdb0fc;
 
   strong {
     font-family: 'loos-wide', sans-serif;
@@ -538,9 +564,18 @@ const Xan = () => {
             <strong>Xanathea Georgiana Parbaresco II</strong>
           </p>
           <p>
-            <em>Half Elf Bard from the famous Parbaresco family</em>
+            <em>Half Elf Bard from the famous Parbaresco family.</em>
           </p>
+          <br />
         </FlavorText>
+        {/* <div>
+          <p>
+            <em>
+              Who cares? I'm better than my family. One day I'll be the most
+              powerful bard and everyone will love me.
+            </em>
+          </p>
+        </div> */}
       </CharacterName>
       <section>
         <header>
@@ -567,7 +602,7 @@ const Xan = () => {
 
           {spellFilter.map(({ name, slug }) => {
             return (
-              <FilterButton onClick={() => setSpellType(slug)}>
+              <FilterButton key={name} onClick={() => setSpellType(slug)}>
                 {name}
               </FilterButton>
             );
@@ -643,12 +678,7 @@ const Xan = () => {
                             ))
                           : null}
                       </p>
-                      <a
-                        href={ref}
-                        alt={name}
-                        tareget="_blank"
-                        rel="noreferrer"
-                      >
+                      <a href={ref} alt={name} target="_blank" rel="noreferrer">
                         Spell Reference <Launch fill="#bdb0fc" />
                       </a>
                     </SpellArticle>
@@ -659,6 +689,67 @@ const Xan = () => {
           )}
         </SpellBook>
       </section>
+      <footer>
+        <Skills>
+          <p>
+            <strong>Acrobatics</strong> +5*
+          </p>
+          <p>
+            <strong>Animal Handling</strong> -1
+          </p>
+          <p>
+            <strong>Arcana</strong> -1
+          </p>
+          <p>
+            <strong>Athletics</strong> +7* E
+          </p>
+          <p>
+            <strong>Deception</strong> +4
+          </p>
+          <p>
+            <strong>History</strong> +2
+          </p>
+          <p>
+            <strong>Insight</strong> +1
+          </p>
+          <p>
+            <strong>Intimidation</strong> +4
+          </p>
+          <p>
+            <strong>Investigation</strong> -1
+          </p>
+          <p>
+            <strong>Medicine</strong> +1
+          </p>
+          <p>
+            <strong>Nature</strong> -1
+          </p>
+          <p>
+            <strong>Nature</strong> -1
+          </p>
+          <p>
+            <strong>Perception</strong> +7*
+          </p>
+          <p>
+            <strong>Performance</strong> +7*
+          </p>
+          <p>
+            <strong>Persuasion</strong> +10* E
+          </p>
+          <p>
+            <strong>Religion</strong> -1
+          </p>
+          <p>
+            <strong>Sleight of Hand</strong> +5
+          </p>
+          <p>
+            <strong>Stealth</strong> +2
+          </p>
+          <p>
+            <strong>Survival</strong> +1
+          </p>
+        </Skills>
+      </footer>
     </CharacterSheet>
   );
 };
