@@ -29,6 +29,7 @@ const CharacterSheet = styled.section`
     padding: 0.2rem 0.2rem 0.3rem;
     background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
     box-shadow: 0px 3px 11px 0px #16075666;
+    z-index: 1000;
   }
 `;
 
