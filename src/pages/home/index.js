@@ -11,17 +11,7 @@ const MainStyles = styled.section`
   width: 100%;
   max-width: 100vw;
   min-height: 100%;
-  background: linear-gradient(
-    56deg,
-    #01016a,
-    #2615a6,
-    #3f28cf,
-    #5c37df,
-    #9b43f7,
-    #f750ff,
-    #fe8dfe
-  );
-  background: linear-gradient(
+  /* background: linear-gradient(
     56deg,
     #01016a,
     #2615a6,
@@ -29,7 +19,8 @@ const MainStyles = styled.section`
     #5c37df,
     #9b43f7,
     #f750ff
-  );
+  ); */
+  background: linear-gradient(56deg, #000000, #272338, #1a1341);
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   line-height: 1.1;
@@ -187,7 +178,7 @@ const QuoteSection = styled.section`
   padding: 2rem 1rem 3rem;
   color: #cbadfa;
   text-align: center;
-  background: linear-gradient(45deg, #070082, #482dd4);
+  background: linear-gradient(45deg, #0d0b2e, #372593);
 
   blockquote {
     transition: all 1s ease-in-out;
