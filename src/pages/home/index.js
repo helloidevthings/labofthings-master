@@ -27,6 +27,11 @@ const MainStyles = styled.section`
   letter-spacing: 0em;
   overflow: hidden;
 
+  *::selection {
+    background: #250e8b;
+    color: white;
+  }
+
   .show {
     opacity: 1;
     transform: translateY(0px);
