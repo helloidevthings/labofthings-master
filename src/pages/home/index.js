@@ -2,8 +2,8 @@ import { React } from 'react';
 import styled from '@emotion/styled';
 import { useInView } from 'react-intersection-observer';
 
-import CircleOutline from '../../components/Icons/CircleOutline';
-import AbstractLines from '../../components/Icons/AbstractLines';
+// import CircleOutline from '../../components/Icons/CircleOutline';
+// import AbstractLines from '../../components/Icons/AbstractLines';
 
 const MainStyles = styled.section`
   display: flex;
@@ -20,7 +20,8 @@ const MainStyles = styled.section`
     #9b43f7,
     #f750ff
   ); */
-  background: linear-gradient(56deg, #000000, #272338, #1a1341);
+  /* background: linear-gradient(56deg, #000000, #272338, #1a1341); */
+  background: linear-gradient(56deg, #000000, #343337);
   font-family: 'Fira Sans', sans-serif;
   color: #ffffff;
   line-height: 1.1;
@@ -139,7 +140,7 @@ const HeroImg = styled.div`
 
   &:after {
     content: '';
-    background: linear-gradient(45deg, #280de373, #e871ff66);
+    background: linear-gradient(45deg, #000, #343337);
     height: 300px;
     width: 300px;
     border-radius: 100%;
@@ -181,9 +182,9 @@ const QuoteSection = styled.section`
   justify-content: center;
   align-items: center;
   padding: 2rem 1rem 3rem;
-  color: #cbadfa;
+  color: #fff;
   text-align: center;
-  background: linear-gradient(45deg, #0d0b2e, #372593);
+  background: linear-gradient(45deg, #111111, #111111);
 
   blockquote {
     transition: all 1s ease-in-out;
@@ -223,31 +224,31 @@ const Slide = styled.section`
   }
 `;
 
-const SlideImg = styled.div`
-  max-width: 300px;
-  position: relative;
-  z-index: 1;
+// const SlideImg = styled.div`
+//   max-width: 300px;
+//   position: relative;
+//   z-index: 1;
 
-  .image1 {
-    max-width: 250px;
-  }
-  .image2 {
-    position: absolute;
-    max-width: 150px;
-    left: -2em;
-    top: -5em;
-    ${(props) => props.theme.animations.itemTo}
-    ${(props) => props.theme.animations.bounce3}
-  }
+//   .image1 {
+//     max-width: 250px;
+//   }
+//   .image2 {
+//     position: absolute;
+//     max-width: 150px;
+//     left: -2em;
+//     top: -5em;
+//     ${(props) => props.theme.animations.itemTo}
+//     ${(props) => props.theme.animations.bounce3}
+//   }
 
-  svg {
-    width: 100%;
-    max-width: 100vw;
-    left: -4em;
-    top: 0;
-    z-index: -1;
-  }
-`;
+//   svg {
+//     width: 100%;
+//     max-width: 100vw;
+//     left: -4em;
+//     top: 0;
+//     z-index: -1;
+//   }
+// `;
 
 const SlideText = styled.div`
   max-width: 40rem;
@@ -345,7 +346,7 @@ const Home = () => {
             {/* <a href='/css-animations'>CSS Animations</a> */}
           </nav>
         </header>
-        <HeroImg className={entry ? 'show' : 'hide'}>
+        {/* <HeroImg className={entry ? 'show' : 'hide'}>
           <figure className="image2">
             <img
               src="https://res.cloudinary.com/labofthingsimages/image/upload/v1658948384/triangle_raztfw.png"
@@ -358,7 +359,7 @@ const Home = () => {
               alt="floating 3d phone"
             />
           </figure>
-        </HeroImg>
+        </HeroImg> */}
       </Hero>
       <QuoteSection>
         <blockquote ref={ref} className={inView ? 'show' : 'hide'}>
@@ -366,7 +367,7 @@ const Home = () => {
         </blockquote>
       </QuoteSection>
       <Slide className="slide">
-        <SlideImg>
+        {/* <SlideImg>
           <figure className="image1">
             <img
               src="https://res.cloudinary.com/labofthingsimages/image/upload/v1659454578/triangle_square_ffb8wt.png"
@@ -384,7 +385,7 @@ const Home = () => {
             className="image2"
             style={{ position: 'absolute' }}
           />
-        </SlideImg>
+        </SlideImg> */}
         <SlideText>
           <h3>Design</h3>
           <p>
@@ -410,7 +411,7 @@ const Home = () => {
         </SlideText>
       </Slide>
       <Slide className="slide-alt">
-        <SlideImg>
+        {/* <SlideImg>
           <figure className="image2">
             <img
               src="https://res.cloudinary.com/labofthingsimages/image/upload/v1659556383/circle-purple_zai3h9.png"
@@ -418,7 +419,7 @@ const Home = () => {
             />
           </figure>
           <AbstractLines strokeColor={'#614add'} />
-        </SlideImg>
+        </SlideImg> */}
         <SlideText>
           <h3>Development</h3>
           <p>
