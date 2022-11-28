@@ -108,7 +108,6 @@ export default styled.main`
   h3,
   h4,
   h5 {
-    font-family: 'loos-normal', sans-serif;
     font-family: 'Fira Sans', sans-serif;
     line-height: 1.3;
   }
@@ -315,12 +314,13 @@ export default styled.main`
   }
 
   blockquote {
-    /* font-family:'loos-normal', sans-serif; */
+    font-family: 'Fira Sans', sans-serif;
     position: relative;
     padding: 1em 2em;
     margin: 0.3em;
     background: var(--tertLight);
     font-size: 1em;
+    font-weight: 500;
 
     &:before {
       content: '"';
@@ -333,7 +333,8 @@ export default styled.main`
       line-height: 1em;
     }
     cite {
-      font-weight: 500;
+      font-family: 'loos-normal', sans-serif;
+      font-weight: 600;
       color: var(--secondary);
       font-style: normal;
       line-height: 2;
