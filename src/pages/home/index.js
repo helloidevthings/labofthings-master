@@ -327,9 +327,9 @@ const Home = () => {
             UX UI Design
           </SiteTitle>
           <nav ref={ref} className={entry ? 'show' : 'hide'}>
-            // <a
-            //   href="https://www.joyannahirst.com"
-            //   target="blank"
+            /*<a
+              href="https://www.joyannahirst.com"
+            target="blank"
             //   rel="noreferrer"
             // >
             //   Portfolio
@@ -337,10 +337,9 @@ const Home = () => {
             // <a href="/lab">Dev Lab</a>
             <a href="https://docs.google.com/document/d/10CsHlp-yCXwk11CaAkOvtcKkqlhtP07MlPs5xXnNhfg/edit?usp=sharing"
               target="_blank"
-              rel="noreferrer"
-            >
+              rel="noreferrer">
               Resume
-            </a>
+            </a>*/
             <a href='/css-animations'>CSS Animations</a> 
           </nav>
         </header>
