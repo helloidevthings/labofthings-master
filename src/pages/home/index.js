@@ -1,9 +1,9 @@
-import { React } from 'react';
-import styled from '@emotion/styled';
-import { useInView } from 'react-intersection-observer';
+import { React } from "react";
+import styled from "@emotion/styled";
+import { useInView } from "react-intersection-observer";
 
-import CircleOutline from '../../components/Icons/CircleOutline';
-import AbstractLines from '../../components/Icons/AbstractLines';
+import CircleOutline from "../../components/Icons/CircleOutline";
+import AbstractLines from "../../components/Icons/AbstractLines";
 
 const MainStyles = styled.section`
   display: flex;
@@ -21,7 +21,7 @@ const MainStyles = styled.section`
     #f750ff
   ); */
   background: linear-gradient(56deg, #000000, #272338, #1a1341);
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
   color: #ffffff;
   line-height: 1.1;
   letter-spacing: 0em;
@@ -68,7 +68,7 @@ const MainStyles = styled.section`
     padding: 0 0.1em;
     position: relative;
     color: #fff;
-    font-family: 'loos-normal', sans-serif;
+    font-family: "loos-normal", sans-serif;
     font-weight: 700;
     font-size: 1.25em;
     letter-spacing: 0.03em;
@@ -76,7 +76,7 @@ const MainStyles = styled.section`
     transition: color 0.6s ease-in-out;
 
     &:after {
-      content: '';
+      content: "";
       background: var(--fuschia);
       height: 3px;
       width: 100%;
@@ -138,7 +138,7 @@ const HeroImg = styled.div`
   }
 
   &:after {
-    content: '';
+    content: "";
     background: linear-gradient(45deg, #280de373, #e871ff66);
     height: 300px;
     width: 300px;
@@ -191,7 +191,7 @@ const QuoteSection = styled.section`
   }
 
   &:after {
-    content: '';
+    content: "";
     background: #614add;
     height: 3px;
     width: 200px;
@@ -273,7 +273,7 @@ const SlideText = styled.div`
       margin-bottom: 0.8em;
 
       &:before {
-        content: '•';
+        content: "•";
         color: var(--fuschia);
         position: absolute;
         left: -0.7em;
@@ -286,7 +286,7 @@ const SlideText = styled.div`
     font-weight: 700;
     font-size: 0.9em;
     letter-spacing: 0.09em;
-    font-family: 'loos-wide', sans-serif;
+    font-family: "loos-wide", sans-serif;
     color: #ab9bff;
   }
 `;
@@ -317,33 +317,34 @@ const Home = () => {
     <MainStyles>
       <Hero>
         <header>
-          <TypeIt ref={ref} className={entry ? 'show' : 'hide'}>
+          <TypeIt ref={ref} className={entry ? "show" : "hide"}>
             Welcome!
           </TypeIt>
-          <MyName ref={ref} className={entry ? 'show' : 'hide'}>
+          <MyName ref={ref} className={entry ? "show" : "hide"}>
             Joyanna
           </MyName>
-          <SiteTitle ref={ref} className={entry ? 'show' : 'hide'}>
+          <SiteTitle ref={ref} className={entry ? "show" : "hide"}>
             UX UI Design
           </SiteTitle>
-          <nav ref={ref} className={entry ? 'show' : 'hide'}>
-            /*<a
-              href="https://www.joyannahirst.com"
-            target="blank"
-            //   rel="noreferrer"
-            // >
-            //   Portfolio
-            // </a>
-            // <a href="/lab">Dev Lab</a>
-            <a href="https://docs.google.com/document/d/10CsHlp-yCXwk11CaAkOvtcKkqlhtP07MlPs5xXnNhfg/edit?usp=sharing"
+          <nav ref={ref} className={entry ? "show" : "hide"}>
+            <a
+              href="https://docs.google.com/document/d/10CsHlp-yCXwk11CaAkOvtcKkqlhtP07MlPs5xXnNhfg/edit?usp=sharing"
               target="_blank"
-              rel="noreferrer">
+              rel="noreferrer"
+            >
               Resume
-            </a>*/
-            <a href='/css-animations'>CSS Animations</a> 
+            </a>
+            <a
+              href="https://docs.google.com/presentation/d/169ykUcMLaohpcd8-Y_M1D-flqYrZMf9ezT3BcWB-rvc/edit?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Work Samples
+            </a>
+            <a href="/css-animations">CSS Animations</a>
           </nav>
         </header>
-        <HeroImg className={entry ? 'show' : 'hide'}>
+        <HeroImg className={entry ? "show" : "hide"}>
           <figure className="image2">
             <img
               src="https://res.cloudinary.com/labofthingsimages/image/upload/v1658948384/triangle_raztfw.png"
@@ -359,7 +360,7 @@ const Home = () => {
         </HeroImg>
       </Hero>
       <QuoteSection>
-        <blockquote ref={ref} className={inView ? 'show' : 'hide'}>
+        <blockquote ref={ref} className={inView ? "show" : "hide"}>
           Work Hard. Be Nice To People.
         </blockquote>
       </QuoteSection>
@@ -378,16 +379,16 @@ const Home = () => {
             />
           </figure>
           <CircleOutline
-            strokeColor={'#614add'}
+            strokeColor={"#614add"}
             className="image2"
-            style={{ position: 'absolute' }}
+            style={{ position: "absolute" }}
           />
         </SlideImg>
         <SlideText>
           <h3>Design</h3>
           <p>
-            <strong>Work Experience</strong> Robin Easter, Pyxl, Cadre5 {'&'}{' '}
-            Regal Cinemas. Internships at Morris Creative {'&'} Designsensory
+            <strong>Work Experience</strong> Robin Easter, Pyxl, Cadre5 {"&"}{" "}
+            Regal Cinemas. Internships at Morris Creative {"&"} Designsensory
           </p>
           <br />
           <ul>
@@ -399,7 +400,7 @@ const Home = () => {
             <li>Communicating with stakeholders and developers</li>
             <li>Training mid and junior designers on best practices</li>
             <li>Fine-tuning animations and interactions</li>
-            <li>Branding, Photoshoots {'&'} Illustration</li>
+            <li>Branding, Photoshoots {"&"} Illustration</li>
             <li>
               Familiar with the Adobe Creative Suite: Photoshop, Illustrator,
               InDesign, and After Effects
@@ -415,18 +416,18 @@ const Home = () => {
               alt="floating 3d circle"
             />
           </figure>
-          <AbstractLines strokeColor={'#614add'} />
+          <AbstractLines strokeColor={"#614add"} />
         </SlideImg>
         <SlideText>
           <h3>Development</h3>
           <p>
-            <strong>Work Experience </strong>Pyxl, Cadre5 {'&'} Regal Cinemas
+            <strong>Work Experience </strong>Pyxl, Cadre5 {"&"} Regal Cinemas
           </p>
           <br />
           <ul>
             <li>React, Styled Components</li>
-            <li>CSS/SCSS, Transitions {'&'} Animations</li>
-            <li>Forms {'&'} ADA Compliance</li>
+            <li>CSS/SCSS, Transitions {"&"} Animations</li>
+            <li>Forms {"&"} ADA Compliance</li>
             <li>Experience using SCRUM</li>
             <li>Experience using Git</li>
             <li>
