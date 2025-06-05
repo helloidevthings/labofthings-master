@@ -361,7 +361,7 @@ const Home = () => {
       </Hero>
       <QuoteSection>
         <blockquote ref={ref} className={inView ? "show" : "hide"}>
-          Work Hard. Be Nice To People.
+          Work Hard. Test Everything. Learn Daily. Repeat.
         </blockquote>
       </QuoteSection>
       <Slide className="slide">
