@@ -18,7 +18,7 @@ const MainStyles = styled.section`
     #3f28cf,
     #5c37df,
     #9b43f7,
-    #f750ff
+rgb(218, 61, 226)
   ); */
   background: linear-gradient(56deg, #000000, #272338, #1a1341);
   font-family: "Fira Sans", sans-serif;
