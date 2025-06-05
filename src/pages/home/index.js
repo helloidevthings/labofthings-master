@@ -425,7 +425,7 @@ const Home = () => {
           </p>
           <br />
           <ul>
-            <li>React, Styled Components</li>
+            <li>React, NextJS, Styled Components & Tailwind</li>
             <li>CSS/SCSS, Transitions {"&"} Animations</li>
             <li>Forms {"&"} ADA Compliance</li>
             <li>Experience using SCRUM</li>
